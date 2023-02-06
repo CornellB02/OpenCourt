@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: steak_book_production
-  username: steak_book
-  password: <%= ENV["STEAK_BOOK_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
