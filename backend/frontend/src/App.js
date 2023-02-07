@@ -1,27 +1,39 @@
-import React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import store from "./store/store"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LoginFormPage from './components/LoginFormsPage/LoginFormPage';
-// import NavBar from './components/Navigation/NavBar';
-// import SplashPage from './components/SplashPage/SplashPage.js';
+import React from "react";
+import { Route, Switch, useHistory, useLocation } from "react-router-dom";
+import LoginFormPage from "./components/LoginFormsPage";
+import SignupFormPage from "./components/SignUpFormPage.js";
+import ProfileForm from "./components/ProfileForm";
+import Navigation from "./components/Navigation";
 
-// let home = SplashPage;
-
-const App = () => (
-	<Router>
-		<>
-      <h1> Form should be below</h1>
+function App() {
+	let history = useHistory();
+	let location = useLocation();
+	let { from } = location.state || { from: { pathname: "/" } };
+  
+	const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  
+	const handleLogin = () => {
+	  setIsLoggedIn(true);
+	  history.replace(from);
+	};
+  return (
+    <>
+	<Navigation />
       <Switch>
-	  		<Route
- 			 path='/login'
-  			component={LoginFormPage}
-			/>
+        <Route path="/login">
+          <LoginFormPage onLogin={handleLogin} />
+        </Route>
+        <Route path="/signup">
+          <SignupFormPage />
+        </Route>
+        {isLoggedIn ? (
+          <Route path="/profile">
+            <ProfileForm />
+          </Route>
+        ) : null}
       </Switch>
-		</>
-	</Router>
-);
-
-
+    </>
+  );
+}
 
 export default App;

@@ -1,61 +1,45 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import configureStore from './store';
-// import store from "./store/store"
-import { createUser, loginUser, logoutUser } from './store/usersReducer.js';
-// import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import csrfFetch, { restoreCSRF } from './store/csrf';
+import * as sessionActions from './store/session';
 
-let initialState = {};
-const store = configureStore(initialState);
+const store = configureStore();
 
 if (process.env.NODE_ENV !== 'production') {
   window.store = store;
   window.csrfFetch = csrfFetch;
+  window.sessionActions = sessionActions;
+  // window.benchActions = benchActions;
+  // window.reviewActions = reviewActions;
 }
 
-
-let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-
-if (currentUser) {
-  initialState = {
-    users: {
-      [currentUser.id]: currentUser
-    }
-  };
-};
-
-
-window.createUser = createUser
-window.loginUser = loginUser
-window.logoutUser = logoutUser
-
-const InitializeApp = () => {
-  ReactDOM.render(
-      <React.StrictMode>
-      <Provider store={store}>
-          <App />
-      </Provider>
-      </React.StrictMode>,
-      document.getElementById('root')
+function Root() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
 ReactDOM.render(
   <React.StrictMode>
-    <InitializeApp />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-restoreCSRF().then(InitializeApp)
-
-if (sessionStorage.getItem("X-CSRF-Token") === null) {
-  restoreCSRF().then(InitializeApp);
+if (
+  sessionStorage.getItem("currentUser") === null ||
+  sessionStorage.getItem("X-CSRF-Token") === null 
+) {
+  store.dispatch(sessionActions.restoreSession()).then(App);
 } else {
-  InitializeApp();
+  App();
 }
