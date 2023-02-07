@@ -1,47 +1,95 @@
-import { csrfFetch } from './csrf';
-
+import csrfFetch from "./csrf";
 
 const SET_CURRENT_USER = 'session/setCurrentUser';
 const REMOVE_CURRENT_USER = 'session/removeCurrentUser';
 
-const setCurrentUser = (user) => {
-  return {
-    type: SET_CURRENT_USER,
-    payload: user
-  };
+export const setCurrentUser = (user) => {
+    return {
+        type: SET_CURRENT_USER,
+        payload: user
+    };
 };
 
-// const removeCurrentUser = () => {
-//   return {
-//     type: REMOVE_CURRENT_USER
-//   };
-// };
+export const removeCurrentUser = () => {
+    return {
+        type: REMOVE_CURRENT_USER
+    };
+};
+
+export const storeCurrentUser = user => {
+    if (user) {
+        sessionStorage.setItem('currentUser', JSON.stringify(user));
+    } else {
+        sessionStorage.removeItem('currentUser');
+    }
+}
 
 export const login = (user) => async (dispatch) => {
-  const { credential, password } = user;
-  const response = await csrfFetch('/api/session', {
-    method: 'POST',
-    body: JSON.stringify({
-      credential,
-      password
-    })
-  });
-  const data = await response.json();
-  dispatch(setCurrentUser(data.user));
-  return response;
-};
+    
+    const { email } = user;
+    const response = await csrfFetch('/api/session', {
+        method: 'POST',
+        body: JSON.stringify({
+            email
+        })
+    });
+    const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return response;
+}
 
-const initialState = { user: null };
+// export const signup = (user) => async (dispatch) => {
+//     const {username, email, password} = user;
+//     const response = await csrfFetch('/api/users', {
+//         method: 'POST',
+//         body: JSON.stringify({
+//             username,
+//             email,
+//             password
+//         })
+//     });
+//     const data = await response.json();
+//     storeCurrentUser(data.user);
+//     dispatch(setCurrentUser(data.user));
+//     return response;
+// };
+
+// export const logout = (userId) => async dispatch => {
+//     const response = await csrfFetch("/api/session", {
+//         method: 'DELETE',
+//         body: JSON.stringify({
+//             userId
+//         })
+//     });
+//     const data = await response.json();
+//     storeCurrentUser(null);
+//     dispatch(removeCurrentUser(userId))
+//     return response;
+// }
+
+// export const restoreSession = () => async dispatch => {
+//     const response = await csrfFetch("/api/session");
+//     storeCSRFToken(response);
+//     const data = await response.json();
+//     storeCurrentUser(data.user);
+//     dispatch(setCurrentUser(data.user));
+//     return response;
+// };
+
+const initialState = {
+    user: JSON.parse(sessionStorage.getItem("currentUser"))
+}
 
 const sessionReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case SET_CURRENT_USER:
-      return { ...state, user: action.payload };
-    case REMOVE_CURRENT_USER:
-      return { ...state, user: null };
-    default:
-      return state;
-  }
+    switch (action.type) {
+        case SET_CURRENT_USER:
+            return { ...state, user: action.payload}
+        case REMOVE_CURRENT_USER:
+            return { ...state, user: null }
+        default:
+            return state;
+    };
 };
 
 export default sessionReducer;

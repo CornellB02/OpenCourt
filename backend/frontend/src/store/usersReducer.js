@@ -1,4 +1,4 @@
-import { csrfFetch } from "../csrf.js";
+import csrfFetch from "./csrf";
 
 // ACTION TYPES
 const RECEIVE_USER = "users/RECEIVE_USER";

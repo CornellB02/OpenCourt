@@ -1,17 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-DOM";
-import LoginFormPage from './components/Sessions/index';
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import store from "./store/store"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LoginFormPage from './components/LoginFormsPage/LoginFormPage';
+// import NavBar from './components/Navigation/NavBar';
+// import SplashPage from './components/SplashPage/SplashPage.js';
+
+// let home = SplashPage;
 
 const App = () => (
-  <div className='app-container'>
-    <NavBar />
-      {/* <h1>Form should be below</h1> */}
+	<Router>
+		<>
+      <h1> Form should be below</h1>
       <Switch>
-      <Route exact path="/login" component={LoginFormPage} />
-      {/* <Route exact path='/signup' component={SignupFormPage}/> */}
-      <Route exact path='/' component={home} />
+	  		<Route
+ 			 path='/login'
+  			component={LoginFormPage}
+			/>
       </Switch>
-  </div>
+		</>
+	</Router>
 );
+
+
 
 export default App;

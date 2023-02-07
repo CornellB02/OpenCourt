@@ -1,48 +1,61 @@
+
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import configureStore from './store/store';
-import csrfFetch from './store/csrf';
-import * as sessionActions from './store/session';
-import logo from './components/Navigation/logo.png'
+import configureStore from './store';
+// import store from "./store/store"
+import { createUser, loginUser, logoutUser } from './store/usersReducer.js';
+// import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import csrfFetch, { restoreCSRF } from './store/csrf';
 
-const store = configureStore();
+let initialState = {};
+const store = configureStore(initialState);
 
 if (process.env.NODE_ENV !== 'production') {
   window.store = store;
   window.csrfFetch = csrfFetch;
-  window.sessionActions = sessionActions
+}
+
+
+let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+
+if (currentUser) {
+  initialState = {
+    users: {
+      [currentUser.id]: currentUser
+    }
+  };
 };
 
-window.logo = logo;
 
-function Root() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  );
-};
+window.createUser = createUser
+window.loginUser = loginUser
+window.logoutUser = logoutUser
 
-const renderApplication = () => {
+const InitializeApp = () => {
   ReactDOM.render(
-    <React.StrictMode>
-      <Root />
-    </React.StrictMode>,
-    document.getElementById('root')
+      <React.StrictMode>
+      <Provider store={store}>
+          <App />
+      </Provider>
+      </React.StrictMode>,
+      document.getElementById('root')
   );
-};
+}
 
-if (
-  sessionStorage.getItem("currentUser") === null ||
-  sessionStorage.getItem("X-CSRF-Token") === null
-) {
-  store.dispatch(sessionActions.restoreSession()).then(renderApplication);
+ReactDOM.render(
+  <React.StrictMode>
+    <InitializeApp />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+restoreCSRF().then(InitializeApp)
+
+if (sessionStorage.getItem("X-CSRF-Token") === null) {
+  restoreCSRF().then(InitializeApp);
 } else {
-  renderApplication();
+  InitializeApp();
 }
