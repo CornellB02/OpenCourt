@@ -130,6 +130,9 @@ import './Navigation.css';
 import { Modal } from '../context/Modal';
 import LoginFormPage from '../LoginFormsPage/login';
 import SignupFormPage from '../SignUpFormPage.js';
+// import steakbooklogo from './steakbooklogo'
+import steakbooklogo from './steakbooklogo.png';
+// import 
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -153,7 +156,7 @@ function Navigation() {
   return (
     <>
       <nav className="navbar">
-        <NavLink exact to="/" className="navbar-brand">Home</NavLink>
+      <NavLink className='nav-logo' exact to='/'><img className='nav-logo-img' src={steakbooklogo} alt="" /><span className='Logo'></span></NavLink>
         <div className="navbar-nav">
           {sessionUser ? <ProfileButton user={sessionUser} /> : (
             <div className="authbuttons">

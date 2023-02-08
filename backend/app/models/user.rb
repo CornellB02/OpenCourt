@@ -1,10 +1,14 @@
 class User < ApplicationRecord
+  has_secure_password
+
+  before_validation :ensure_session_token
 
   attr_accessor :update_profile
 
   validates :email, presence: true
   validates :email, length: { in: 5..600 }, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Must be an email" }
-  validates  :email, uniqueness: true
+  validates :email, uniqueness: true
+  validates :password, length: { in: 6..255 }, allow_nil: true
 
   validate :validate_full_profile, if: :update_profile
   before_validation :ensure_session_token
@@ -35,11 +39,13 @@ class User < ApplicationRecord
     #   user = User.find_by(email: email)
     #   user ? user : nil
     # end
-    def self.find_by_credentials(credential)
+    def self.find_by_credentials(credential, password)
       user = nil
       if URI::MailTo::EMAIL_REGEXP.match?(credential)
         # debugger
-        user = User.find_by(email: credential)
+        user = User.find_by(email: credential, password: password)
+      end
+      if user&.authenticate(password)
         return user
       end
       nil

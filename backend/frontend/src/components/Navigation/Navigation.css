@@ -43,6 +43,27 @@
     color: #000;
   }
 
+  /* .nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: px;
+    height: 49px;
+    padding-right: 10px;
+} */
+
+.nav-logo-img {
+    height: 72px;
+    position: absolute;
+    bottom: -1.2pc;
+    left: 0;
+    /* align-self: left; */
+}
+
+.nav-links {
+    margin-right: 15px;
+    margin-top: -2px;
+}
+
   
 .authbuttons {
     align-items: center;
@@ -83,4 +104,5 @@ button {
     border: none;
     box-sizing: border-box;
     display: flex;
+    cursor: pointer;
   }

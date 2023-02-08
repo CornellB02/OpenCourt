@@ -81,16 +81,18 @@ import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import './SignUpForm.css'
+// import { ModalContext } from "../context/Modal";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
   const history = useHistory();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    return dispatch(sessionActions.signup({ email }))
+    return dispatch(sessionActions.signup({ email, password }))
       .then(() => {
         history.push("/users");
       })
@@ -111,7 +113,7 @@ function SignupFormPage() {
     e.preventDefault();
     e.stopPropagation();
 
-    dispatch(sessionActions.login({ email: 'Demo-lition@user.com' }))
+    dispatch(sessionActions.login({ email: 'Demo-lition@user.com' , password: 'passwordy'}))
       .then(() => {
         history.push("/users");
       });
@@ -123,16 +125,32 @@ function SignupFormPage() {
         <ul>
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
-        <label>
-          Email
+        <div>
+          <h1>Enter your email</h1>
+          <p>Enter the email associated with your OpenTable account, social login or new email. We’ll send a code to that email</p>
+          </div>
+          <div>
           <input
+              placeholder="Email"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
           />
-        </label>
-        <button type="submit">Sign Up</button>
+        </div>
+        <br />
+                {/* <label for="password">Password</label> */}
+                        <input
+                            type='password'
+                            id='password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <div className='password-message'>
+                            <p>Passwords must contain at least six characters.</p>
+                        </div>
+        <button type="submit">Continue</button>
         <br></br>
         <button className='login-form-button' onClick={e => demoLogin(e)}>Demo Login</button>
       </form>
