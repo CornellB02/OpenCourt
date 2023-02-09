@@ -79,6 +79,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+
 // import './LoginForm.css';
 
 function LoginFormPage() {
@@ -87,24 +88,24 @@ function LoginFormPage() {
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState([]);
   const history = useHistory();
+  const [password, setPassword] = useState('');
 
   const demoLogin = (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    dispatch(sessionActions.login({ email: 'Demo-lition@user.com' }))
-      .then(() => {
-        // Redirect the user to the users page once they have successfully signed up and logged in
-        history.push("/users/");
-      });
-  };
+    dispatch(sessionActions.login({ email: 'Demolition@user.com' , password: 'passwordy'}))
+    .then(() => {
+      history.push("/users");
+    });
+};
 
     if (sessionUser) return <Redirect to="/login" />;
 
     const handleSubmit = (e) => {
     e.preventDefault(); 
     setErrors([]);
-    return dispatch(sessionActions.login({ email }))
+    return dispatch(sessionActions.login({ email, password }))
         .catch(async (res) => {
         let data;
         try {
@@ -120,21 +121,36 @@ function LoginFormPage() {
     }
     return (
         <form onSubmit={handleSubmit}>
-          <ul>
+          <ul className='error-list'>
             {errors.map(error => <li key={error}>{error}</li>)}
           </ul>
-          <label>   
-            Email
+          <div>
+          <h1>Enter your email</h1>
+          <p>Enter the email associated with your OpenTable account, social login or new email. We’ll send a code to that email</p>
+          </div>
             <input
+                placeholder="Email"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
             />
-          </label>
-          <button type="submit">Login</button>
+            <br />
+           <input
+                            placeholder="Password"
+                            type='password'
+                            id='password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <div className='password-message'>
+                          <br></br>
+                            {/* <p>Passwords must contain at least six characters.</p> */}
+                        </div>
+          <button type="submit">Continue</button>
           <br></br>
-          <button className='login-form-button' onClick={e => demoLogin(e)}>Demo Login</button>
+          <button className='demo-button' onClick={e => demoLogin(e)}>Demo Login</button>
         </form>
   );
 }

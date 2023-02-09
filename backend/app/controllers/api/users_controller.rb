@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
         # {credential: "username@gmail.com", :password=>"password" }
           @user = User.new(user_params)
 
-        debugger
+        # debugger
     
         if @user.save
           login(@user)

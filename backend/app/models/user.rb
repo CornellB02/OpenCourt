@@ -1,10 +1,11 @@
 class User < ApplicationRecord
   has_secure_password
 
-  before_validation :ensure_session_token
+  # before_validation :ensure_session_token
 
   attr_accessor :update_profile
 
+  
   validates :email, presence: true
   validates :email, length: { in: 5..600 }, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Must be an email" }
   validates :email, uniqueness: true
@@ -19,12 +20,16 @@ class User < ApplicationRecord
     validates :phone_number, presence: true, length: { in: 10..15 }, format: { with: /\A\d{10}\z|\A\d{3}-\d{3}-\d{4}\z|\A\(\d{3}\)\d{3}-\d{4}\z/, message: "Must be a valid phone number" }
   end
 
+  def ensure_session_token
+    self.session_token ||= generate_unique_session_token
+end
+
     # validates :first_name, :last_name, :email, :phone_number, :session_token, presence: true, 
     # validates :email, length: {in: 5..600}, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Must be an email" }
     # validates :session_token, :email, uniqueness: true
     # validates  :email, :session_token, presence: true
     # validates :email, length: {in: 5..600}, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Must be an email" }
-    # validates :session_token, :email, uniqueness: true
+    # validates :session_token, uniqueness: true
     # validates :phone_number, length: { in: 10..15 }, format: { with: /\A\d{10}\z|\A\d{3}-\d{3}-\d{4}\z|\A\(\d{3}\)\d{3}-\d{4}\z/, message: "Must be a valid phone number" }
 
 
@@ -39,33 +44,35 @@ class User < ApplicationRecord
     #   user = User.find_by(email: email)
     #   user ? user : nil
     # end
-    def self.find_by_credentials(credential, password)
+    def self.find_by_credentials(email, password)
       user = nil
-      if URI::MailTo::EMAIL_REGEXP.match?(credential)
+      if URI::MailTo::EMAIL_REGEXP.match?(email)
         # debugger
-        user = User.find_by(email: credential, password: password)
+        user = User.find_by(email: email)
       end
+
       if user&.authenticate(password)
         return user
       end
-      nil
+
+      return nil
     end
   
-    def self.generate_session_token
-      SecureRandom.urlsafe_base64(16)
-    end
+    # def generate_session_token
+    #   SecureRandom.urlsafe_base64(16)
+    # end
   
     def reset_session_token!
-      self.session_token = self.class.generate_session_token
+      self.session_token = generate_unique_session_token
       self.save!
       self.session_token
     end
   
-    private
+    # private
   
-    def ensure_session_token
-      self.session_token ||= self.class.generate_session_token
-    end
+    # def ensure_session_token
+    #   self.session_token ||= self.class.generate_session_token
+    # end
   
     # def reset_session_token!
     #   self.session_token = generate_unique_session_token
@@ -81,9 +88,5 @@ class User < ApplicationRecord
       token
     end
 
-    # private
 
-    # def ensure_session_token
-    #     self.session_token ||= generate_unique_session_token
-    # end
 end

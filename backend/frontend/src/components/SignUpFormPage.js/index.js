@@ -75,13 +75,13 @@
 // );
 // }
 // export default SignupFormPage;
+// import { ModalContext } from "../context/Modal";
 
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import './SignUpForm.css'
-// import { ModalContext } from "../context/Modal";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -113,7 +113,7 @@ function SignupFormPage() {
     e.preventDefault();
     e.stopPropagation();
 
-    dispatch(sessionActions.login({ email: 'Demo-lition@user.com' , password: 'passwordy'}))
+    dispatch(sessionActions.login({ email: 'Demolition@user.com' , password: 'passwordy'}))
       .then(() => {
         history.push("/users");
       });
@@ -129,30 +129,33 @@ function SignupFormPage() {
           <h1>Enter your email</h1>
           <p>Enter the email associated with your OpenTable account, social login or new email. We’ll send a code to that email</p>
           </div>
-          <div>
+          {/* <div> */}
           <input
               placeholder="Email"
               type="text"
-              value={email}
+              // value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
           />
-        </div>
+        {/* </div> */}
         <br />
+        {/* <br /> */}
                 {/* <label for="password">Password</label> */}
                         <input
+                            placeholder="Password"
                             type='password'
                             id='password'
-                            value={password}
+                            // value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                         <div className='password-message'>
-                            <p>Passwords must contain at least six characters.</p>
+                          <br></br>
+                            {/* <p>Passwords must contain at least six characters.</p> */}
                         </div>
         <button type="submit">Continue</button>
         <br></br>
-        <button className='login-form-button' onClick={e => demoLogin(e)}>Demo Login</button>
+        <button className='demo-button' onClick={e => demoLogin(e)}>Demo Login</button>
       </form>
     </div>
   );

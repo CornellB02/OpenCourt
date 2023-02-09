@@ -22,16 +22,29 @@ const storeCurrentUser = user => {
   else sessionStorage.removeItem("currentUser");
 }
 
-export const login = ({ email }) => async dispatch => {
-  const response = await csrfFetch("/api/session", {
-    method: "POST",
-    body: JSON.stringify({ email })
+// export const login = ({ email }) => async dispatch => {
+//   const response = await csrfFetch("/api/session", {
+//     method: "POST",
+//     body: JSON.stringify({ email })
+//   });
+//   const data = await response.json();
+//   storeCurrentUser(data.user);
+//   dispatch(setCurrentUser(data.user));
+//   return response;
+// };
+
+export const login = (user) => async (dispatch) => {
+    debugger
+  // const { credential, password } = user;
+  const response = await csrfFetch('/api/session', {
+      method: 'POST',
+      body: JSON.stringify(user)
   });
   const data = await response.json();
   storeCurrentUser(data.user);
   dispatch(setCurrentUser(data.user));
   return response;
-};
+}
 
 export const restoreSession = () => async dispatch => {
     const response = await csrfFetch("/api/session");
@@ -43,8 +56,8 @@ export const restoreSession = () => async dispatch => {
 };
 
 export const signup = (user) => async (dispatch) => {
-    // const {  email,  } = user;
-    debugger
+    // const {  email, password } = user;
+    // debugger
     const response = await csrfFetch("/api/users", {
     method: "POST",
     body: JSON.stringify({user})
