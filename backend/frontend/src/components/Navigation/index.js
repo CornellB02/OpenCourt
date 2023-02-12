@@ -160,9 +160,9 @@ function Navigation() {
         <div className="navbar-nav">
           {sessionUser ? <ProfileButton user={sessionUser} /> : (
             <div className="authbuttons">
-              <button type="button" class="signup" onClick={handleSignupClick}>Sign Up</button>
+              <button type="button" className="signup" onClick={handleSignupClick}>Sign Up</button>
                 &nbsp;
-              <button type="button" class="login" onClick={handleLoginClick}>Sign In</button>
+              <button type="button" className="login" onClick={handleLoginClick}>Sign In</button>
             </div>
           )}
         </div>

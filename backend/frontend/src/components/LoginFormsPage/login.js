@@ -121,9 +121,6 @@ function LoginFormPage() {
     }
     return (
         <form onSubmit={handleSubmit}>
-          <ul className='error-list'>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
           <div>
           <h1>Enter your email</h1>
           <p>Enter the email associated with your OpenTable account, social login or new email. We’ll send a code to that email</p>
@@ -146,6 +143,9 @@ function LoginFormPage() {
                         />
                         <div className='password-message'>
                           <br></br>
+          <ul className='error-list'>
+            {errors.map(error => <li key={error}>{error}</li>)}
+          </ul>
                             {/* <p>Passwords must contain at least six characters.</p> */}
                         </div>
           <button type="submit">Continue</button>

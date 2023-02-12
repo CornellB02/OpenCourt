@@ -113,7 +113,7 @@ function SignupFormPage() {
     e.preventDefault();
     e.stopPropagation();
 
-    dispatch(sessionActions.login({ email: 'Demolition@user.com' , password: 'passwordy'}))
+    dispatch(sessionActions.login({ email: 'demo@user.io' , password: 'password'}))
       .then(() => {
         history.push("/users");
       });
@@ -122,12 +122,9 @@ function SignupFormPage() {
   return (
     <div className="signup-form-container">
       <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
-        </ul>
         <div>
           <h1>Enter your email</h1>
-          <p>Enter the email associated with your OpenTable account, social login or new email. We’ll send a code to that email</p>
+          <p>Enter the email associated with your Steakbook account. We’ll send a code to that email.</p>
           </div>
           {/* <div> */}
           <input
@@ -136,7 +133,7 @@ function SignupFormPage() {
               // value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-          />
+              />
         {/* </div> */}
         <br />
         {/* <br /> */}
@@ -148,9 +145,13 @@ function SignupFormPage() {
                             // value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
-                        />
+                            />
                         <div className='password-message'>
                           <br></br>
+                            <ul>
+                              {errors.map(error => <li key={error}>{error}</li>)}
+                              <br/>
+                            </ul>
                             {/* <p>Passwords must contain at least six characters.</p> */}
                         </div>
         <button type="submit">Continue</button>

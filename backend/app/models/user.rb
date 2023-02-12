@@ -1,9 +1,27 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                      :bigint           not null, primary key
+#  first_name              :string
+#  last_name               :string
+#  email                   :string           not null
+#  phone_number            :string
+#  review_display_name     :string           default("")
+#  session_token           :string           not null
+#  primary_dining_location :string           default("")
+#  dietary_preferences     :string           default("")
+#  special_requests        :string           default("")
+#  created_at              :datetime         not null
+#  updated_at              :datetime         not null
+#  password_digest         :string           not null
+#
 class User < ApplicationRecord
   has_secure_password
 
   # before_validation :ensure_session_token
 
-  attr_accessor :update_profile
+  # attr_accessor :update_profile
 
   
   validates :email, presence: true
@@ -11,15 +29,17 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { in: 6..255 }, allow_nil: true
 
-  validate :validate_full_profile, if: :update_profile
+  # validate :validate_full_profile
   before_validation :ensure_session_token
 
-  def validate_full_profile
-    validates :first_name, presence: true
-    validates :last_name, presence: true
-    validates :phone_number, presence: true, length: { in: 10..15 }, format: { with: /\A\d{10}\z|\A\d{3}-\d{3}-\d{4}\z|\A\(\d{3}\)\d{3}-\d{4}\z/, message: "Must be a valid phone number" }
-  end
-
+  # def validate_full_profile
+  #   validates :first_name, presence: true
+  #   validates :last_name, presence: true
+  #   validates :phone_number, presence: true, length: { in: 10..15 }, format: { with: /\A\d{10}\z|\A\d{3}-\d{3}-\d{4}\z|\A\(\d{3}\)\d{3}-\d{4}\z/, message: "Must be a valid phone number" }
+  # end
+# 0000000000
+# (000)-000-0000
+# (000)000-0000
   def ensure_session_token
     self.session_token ||= generate_unique_session_token
 end
@@ -40,38 +60,20 @@ end
   
     # after_initialize :ensure_session_token
 
-    # def self.find_by_credentials(email)
-    #   user = User.find_by(email: email)
-    #   user ? user : nil
-    # end
+  
     def self.find_by_credentials(email, password)
-      user = nil
-      if URI::MailTo::EMAIL_REGEXP.match?(email)
-        # debugger
-        user = User.find_by(email: email)
-      end
-
+      user = User.find_by(email: email)
+      # has_secure_password gives us the authenticate method
+      # debugger
       if user&.authenticate(password)
         return user
+      else
+        nil
       end
-
-      return nil
     end
   
     # def generate_session_token
     #   SecureRandom.urlsafe_base64(16)
-    # end
-  
-    def reset_session_token!
-      self.session_token = generate_unique_session_token
-      self.save!
-      self.session_token
-    end
-  
-    # private
-  
-    # def ensure_session_token
-    #   self.session_token ||= self.class.generate_session_token
     # end
   
     # def reset_session_token!
@@ -79,6 +81,20 @@ end
     #   self.save!
     #   self.session_token
     # end
+  
+    # private
+  
+    # def ensure_session_token
+    #   self.session_token ||= self.class.generate_session_token
+    # end
+  
+    def reset_session_token!
+      self.session_token = generate_unique_session_token
+      # debugger
+      self.save!
+      # debugger
+      self.session_token
+    end
   
     def generate_unique_session_token
       token = SecureRandom::urlsafe_base64(16)

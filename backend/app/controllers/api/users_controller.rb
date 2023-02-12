@@ -11,7 +11,8 @@ class Api::UsersController < ApplicationController
     #         render json: @user.errors.full_messages, status: 422
     #     end
     # end
-
+    wrap_parameters include: User.attribute_names + ["password"]
+    
     def create
         # {credential: "username@gmail.com", :password=>"password" }
           @user = User.new(user_params)
@@ -23,11 +24,10 @@ class Api::UsersController < ApplicationController
           render :show
         else
           render json: @user.errors.full_messages, status: 422
-        end
+        endt
       end
     
 
-    wrap_parameters include: User.attribute_names 
 
     private
 

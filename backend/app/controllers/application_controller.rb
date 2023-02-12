@@ -28,7 +28,8 @@ end
     before_action :snake_case_params
     before_action :attach_authenticity_token
 
-    def current_user    
+    def current_user  
+        #   debugger
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
 

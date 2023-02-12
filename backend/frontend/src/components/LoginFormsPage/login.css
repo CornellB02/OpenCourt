@@ -69,3 +69,7 @@ form {
     margin-bottom: 10px;
   }
   
+  .error-list {
+    color: red;
+    padding-left: 90%;
+  }
