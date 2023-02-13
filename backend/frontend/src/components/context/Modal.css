@@ -41,3 +41,23 @@
   background: transparent;
   cursor: pointer;
 }
+
+.calendarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 19vw;
+  margin-top: 19vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.calendar {
+  position: absolute;
+  margin-top: 9vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

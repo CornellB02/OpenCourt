@@ -10,6 +10,8 @@ import configureStore from "./store";
 import csrfFetch from "./store/csrf";
 import * as sessionActions from "./store/session";
 import steakbooklogo from "./components/Navigation"
+import restaurantAction from "./store/restaurants";
+// import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage";
 
 const store = configureStore();
 
@@ -18,6 +20,8 @@ if (process.env.NODE_ENV !== "production") {
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
   window.steakbooklogo = steakbooklogo;
+  // window.Restaurant = Restaurant
+  window.restaurantActions = restaurantActions;
 }
 
 function Root() {
@@ -34,8 +38,7 @@ function Root() {
 
 const renderApplication = () => {
   ReactDOM.render(
-    <React.StrictMode>
-      <Root />
+    <React.StrictMode> <Root />
     </React.StrictMode>,
     document.getElementById('root')
   );

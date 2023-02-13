@@ -66,6 +66,8 @@ import LoginFormPage from "./components/LoginFormsPage/login";
 import SignupFormPage from "./components/SignUpFormPage.js";
 import Navigation from "./components/Navigation";
 import { ModalProvider } from "./components/context/Modal.js";
+import SplashPage from "./components/SplashPage/SplashPage";
+import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage";
 
 function App() {
   return (
@@ -81,6 +83,12 @@ function App() {
             <ModalProvider>
               <LoginFormPage />
             </ModalProvider>
+          </Route>
+            <SplashPage />
+          <Route path="/">
+          </Route>
+          <Route path="/restaurants">
+            <RestaurantsIndexPage />
           </Route>
         </Switch>
     </>

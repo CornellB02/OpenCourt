@@ -12353,3 +12353,859 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 204 No Content in 110ms (ActiveRecord: 41.6ms | Allocations: 4014)
 
 
+  [1m[35m (225.1ms)[0m  [1m[35mCREATE DATABASE "STEAK_BOOK" ENCODING = 'unicode'[0m
+  [1m[35m (109.2ms)[0m  [1m[35mCREATE DATABASE "app_name_test" ENCODING = 'unicode'[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE DATABASE "STEAK_BOOK" ENCODING = 'unicode'[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE "STEAK_BOOK" ENCODING = 'unicode'[0m
+  [1m[35m (71.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "STEAK_BOOK"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "STEAK_BOOK"[0m
+  [1m[35m (294.4ms)[0m  [1m[35mCREATE DATABASE "STEAK_BOOK" ENCODING = 'unicode'[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "STEAK_BOOK" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "restaurants" CASCADE[0m
+  [1m[35m (54.1ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying NOT NULL, "phone_number" character varying NOT NULL, "description" text, "longitude" decimal(10,4) NOT NULL, "latitude" decimal(10,4) NOT NULL, "neighborhood" character varying NOT NULL, "cuisines" character varying NOT NULL, "dress_code" character varying NOT NULL, "parking_details" character varying NOT NULL, "executive_chef" character varying NOT NULL, "additional" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "opentime" character varying NOT NULL, "closetime" character varying NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying NOT NULL, "phone_number" character varying, "review_display_name" character varying DEFAULT '', "session_token" character varying NOT NULL, "primary_dining_location" character varying DEFAULT '', "dietary_preferences" character varying DEFAULT '', "special_requests" character varying DEFAULT '', "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "password_digest" character varying NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (41.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230210031832)[0m
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230205232828),
+(20230206030256),
+(20230207155818),
+(20230208195430),
+(20230208200035),
+(20230209200942),
+(20230210031138),
+(20230210031532);
+
+[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (19.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-12 20:34:41.245680"], ["updated_at", "2023-02-12 20:34:41.245680"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "ea36db77875aeb5c7cd5f21f4a89f079ab0125d8"], ["created_at", "2023-02-12 20:34:41.276862"], ["updated_at", "2023-02-12 20:34:41.276862"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (44.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "restaurants" CASCADE[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying NOT NULL, "phone_number" character varying NOT NULL, "description" text, "longitude" decimal(10,4) NOT NULL, "latitude" decimal(10,4) NOT NULL, "neighborhood" character varying NOT NULL, "cuisines" character varying NOT NULL, "dress_code" character varying NOT NULL, "parking_details" character varying NOT NULL, "executive_chef" character varying NOT NULL, "additional" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "opentime" character varying NOT NULL, "closetime" character varying NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying NOT NULL, "phone_number" character varying, "review_display_name" character varying DEFAULT '', "session_token" character varying NOT NULL, "primary_dining_location" character varying DEFAULT '', "dietary_preferences" character varying DEFAULT '', "special_requests" character varying DEFAULT '', "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "password_digest" character varying NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-02-12 20:34:41.401267"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "demo@user.io"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:41.829113"], ["updated_at", "2023-02-12 20:34:41.829113"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "caleb@borer.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "caleb@borer.io"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:42.450288"], ["updated_at", "2023-02-12 20:34:42.450288"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bettyann.cronin@nitzsche-oconnell.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "bettyann.cronin@nitzsche-oconnell.io"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:42.665791"], ["updated_at", "2023-02-12 20:34:42.665791"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyrone@heathcote.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "tyrone@heathcote.co"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:42.885034"], ["updated_at", "2023-02-12 20:34:42.885034"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dacia_sawayn@oconner-becker.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "dacia_sawayn@oconner-becker.net"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:43.102583"], ["updated_at", "2023-02-12 20:34:43.102583"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lannie_crona@quitzon.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "lannie_crona@quitzon.io"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:43.326931"], ["updated_at", "2023-02-12 20:34:43.326931"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kirsten@wehner.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "kirsten@wehner.name"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:43.542023"], ["updated_at", "2023-02-12 20:34:43.542023"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lon.conn@prohaska.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "lon.conn@prohaska.org"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:43.764785"], ["updated_at", "2023-02-12 20:34:43.764785"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "georgie_stanton@jast.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "georgie_stanton@jast.name"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:43.980808"], ["updated_at", "2023-02-12 20:34:43.980808"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "garry@kohler-zieme.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "garry@kohler-zieme.name"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:44.195144"], ["updated_at", "2023-02-12 20:34:44.195144"], ["password_digest", "[FILTERED]"]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "curt@schuppe-osinski.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "phone_number", "review_display_name", "session_token", "primary_dining_location", "dietary_preferences", "special_requests", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", nil], ["last_name", nil], ["email", "curt@schuppe-osinski.co"], ["phone_number", nil], ["review_display_name", ""], ["session_token", "[FILTERED]"], ["primary_dining_location", ""], ["dietary_preferences", ""], ["special_requests", ""], ["created_at", "2023-02-12 20:34:44.409597"], ["updated_at", "2023-02-12 20:34:44.409597"], ["password_digest", "[FILTERED]"]]
+  [1m[36mRestaurant Create (41.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Peter Luger Steakhouse"], ["phone_number", "(718)387-7400"], ["description", "Famous for its juicy, flavorful steaks, Peter Luger Steakhouse has been a Brooklyn institution for over 130 years. With a menu that focuses exclusively on meat and a casual, family-friendly atmosphere, it's the perfect spot for a hearty meal."], ["longitude", "-73.9638"], ["latitude", "40.7096"], ["neighborhood", "Brooklyn"], ["cuisines", "Steakhouse"], ["dress_code", "Smart Casual"], ["parking_details", "Street parking available"], ["executive_chef", "Cornell Bethea Jr"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.428709"], ["updated_at", "2023-02-12 20:34:44.428709"], ["opentime", "11:30 AM"], ["closetime", "9:30 PM"]]
+  [1m[36mRestaurant Create (1.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Keens Steakhouse"], ["phone_number", "(212)947-3636"], ["description", "Keens Steakhouse is a true New York City institution, with a rich history dating back over a hundred years. The menu features a wide variety of juicy and delicious steaks, cooked to perfection and served in a warm and elegant atmosphere. Whether you're in the mood for a classic porterhouse or a juicy ribeye, Keens is the place to be."], ["longitude", "-73.9886"], ["latitude", "40.7548"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Bill Peet"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.473612"], ["updated_at", "2023-02-12 20:34:44.473612"], ["opentime", "11:30 AM"], ["closetime", "9:30 PM"]]
+  [1m[36mRestaurant Create (1.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Gallagher's Steakhouse"], ["phone_number", "(212)245-5336"], ["description", "For over 90 years, Gallagher's Steakhouse has been serving up some of the best steaks in Manhattan. Their menu features a variety of juicy cuts, including their famous prime rib, as well as a selection of delicious sides and sauces to complement your meal. With its classic, old-school atmosphere, Gallagher's is the perfect place to enjoy a hearty steak dinner in the heart of the city."], ["longitude", "-73.9864"], ["latitude", "40.759"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Street Parking Available"], ["executive_chef", "Chris Basso"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.477584"], ["updated_at", "2023-02-12 20:34:44.477584"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (3.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Old Homestead Steakhouse"], ["phone_number", "(212)687-4600"], ["description", "Old Homestead Steakhouse has been serving up juicy and delicious steaks since 1868. The menu features a variety of cuts, including their signature, dry-aged prime beef, as well as a selection of sides and sauces to complement your meal. With its classic steakhouse atmosphere and a focus on quality ingredients, Old Homestead is a true New York City institution."], ["longitude", "-74.0071"], ["latitude", "40.7138"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Christopher Albrecht"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.481762"], ["updated_at", "2023-02-12 20:34:44.481762"], ["opentime", "11:30 AM"], ["closetime", "9:30 PM"]]
+  [1m[36mRestaurant Create (4.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Smith & Wollensky"], ["phone_number", "(212)753-1530"], ["description", "Smith & Wollensky is a classic New York steakhouse known for its juicy, flavorful steaks and beautiful waterfront views. The menu features a variety of cuts, including their famous, dry-aged prime rib, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and top-notch service, Smith & Wollensky is the perfect place for a special occasion or a night out with friends."], ["longitude", "-74.0112"], ["latitude", "40.7161"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Anthony Walker"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.487568"], ["updated_at", "2023-02-12 20:34:44.487568"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (7.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Del Frisco's Double Eagle Steakhouse"], ["phone_number", "(212)575-5129"], ["description", "Del Frisco's Double Eagle Steakhouse is a premier steakhouse, known for its juicy and delicious steaks, extensive wine list, and top-notch service. The menu features a variety of cuts, including their signature, dry-aged prime beef, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and attention to detail, Del Frisco's is the perfect place for a special occasion or a night out with friends."], ["longitude", "-74.0038"], ["latitude", "40.7581"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Joe Ferrell"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.493882"], ["updated_at", "2023-02-12 20:34:44.493882"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (1.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Wolfgang's Steakhouse"], ["phone_number", "(212)888-4820"], ["description", "Wolfgang's Steakhouse is a modern steakhouse with a focus on classic cuts and quality ingredients. Their menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its stylish atmosphere and friendly service, Wolfgang's is the perfect spot for a special occasion or a night out with friends."], ["longitude", "-73.9783"], ["latitude", "40.7618"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Jimmy Haber"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.502845"], ["updated_at", "2023-02-12 20:34:44.502845"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (6.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Morton's The Steakhouse"], ["phone_number", "(212)972-3315"], ["description", "Morton's The Steakhouse is a classic steakhouse with a focus on quality ingredients and exceptional service. Their menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and top-notch service, Morton's is the perfect place for a special occasion or a night out with friends."], ["longitude", "-73.9793"], ["latitude", "40.7588"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "John Garavaglia"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.506646"], ["updated_at", "2023-02-12 20:34:44.506646"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "BLT Steak"], ["phone_number", "(212)752-7470"], ["description", "BLT Steak is a contemporary steakhouse with a focus on classic cuts and modern flavors. The menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its stylish atmosphere and friendly service, BLT Steak is the perfect spot for a special occasion or a night out with friends."], ["longitude", "-73.9761"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Laurent Tourondel"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.515900"], ["updated_at", "2023-02-12 20:34:44.515900"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Ruth's Chris Steak House"], ["phone_number", "(212)582-7200"], ["description", "Ruth's Chris Steak House is a classic steakhouse serving prime cuts of beef, fresh seafood, and an extensive wine list. With its warm, upscale atmosphere and impeccable service, it's the perfect place for a special occasion or a night out."], ["longitude", "-73.9776"], ["latitude", "40.753"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "David S. Wiedmaier"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.518117"], ["updated_at", "2023-02-12 20:34:44.518117"], ["opentime", "5:00 PM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Strip House"], ["phone_number", "(212)336-5454"], ["description", "Strip House is a classic steakhouse with a modern twist, serving prime cuts of beef, fresh seafood, and an extensive wine list. With its sophisticated atmosphere and impeccable service, it's the perfect place for a special occasion or a night out."], ["longitude", "-74.0008"], ["latitude", "40.7388"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Mark Sunseri"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.520386"], ["updated_at", "2023-02-12 20:34:44.520386"], ["opentime", "5:00 PM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (6.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Delmonico's Restaurant & Bar"], ["phone_number", "(212)796-8040"], ["description", "Delmonico's Restaurant & Bar is a classic steakhouse that offers a warm and inviting atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its exceptional service and attention to detail, Delmonico's is the perfect destination for a special occasion or a night out with friends."], ["longitude", "-73.9761"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "William Gallagher"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.522910"], ["updated_at", "2023-02-12 20:34:44.522910"], ["opentime", "11:30 AM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (1.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "The Breslin Bar & Dining Room"], ["phone_number", "(212)679-1939"], ["description", "The Breslin Bar & Dining Room is a contemporary steakhouse that offers a stylish and relaxed atmosphere. The menu features a variety of juicy steaks, as well as innovative sides and sauces to complement your meal. With its friendly service and focus on quality, The Breslin is the perfect destination for a night out with friends."], ["longitude", "-73.9761"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Street Parking Available"], ["executive_chef", "April Bloomfield"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.531513"], ["updated_at", "2023-02-12 20:34:44.531513"], ["opentime", "12:00 PM"], ["closetime", "11:00 PM"]]
+  [1m[36mRestaurant Create (2.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "The Little Owl"], ["phone_number", "(212)741-4695"], ["description", "The Little Owl is a cozy steakhouse that offers a warm and intimate atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its friendly service and focus on quality, The Little Owl is the perfect destination for a special occasion or a night out with friends."], ["longitude", "-73.9761"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Casual"], ["parking_details", "Street Parking Available"], ["executive_chef", "Joe Dobias"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.534742"], ["updated_at", "2023-02-12 20:34:44.534742"], ["opentime", "5:30 PM"], ["closetime", "11:00 PM"]]
+  [1m[36mRestaurant Create (6.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "Bowery Meat Company"], ["phone_number", "(212)388-7518"], ["description", "Bowery Meat Company is a contemporary steakhouse offering a variety of juicy steaks, cooked to perfection. The menu features classic cuts as well as innovative dishes that are sure to delight. With a focus on quality and flavor, Bowery Meat Company is the perfect destination for steak lovers."], ["longitude", "-73.9921"], ["latitude", "40.7191"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Street Parking Available"], ["executive_chef", "Josh Capon"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.539145"], ["updated_at", "2023-02-12 20:34:44.539145"], ["opentime", "5:00 PM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (1.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "The Prime Rib Restaurant & Lounge"], ["phone_number", "(212)532-4300"], ["description", "The Prime Rib Restaurant & Lounge is a classic steakhouse that offers a warm and elegant atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. Whether you're celebrating a special occasion or just looking for a delicious dinner, The Prime Rib Restaurant & Lounge is the perfect choice."], ["longitude", "-73.976"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "John Doe"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.547969"], ["updated_at", "2023-02-12 20:34:44.547969"], ["opentime", "5:30 PM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "The Capital Grille"], ["phone_number", "(212)627-2308"], ["description", "The Capital Grille is a classic steakhouse that offers a sophisticated atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its exceptional service and attention to detail, The Capital Grille is the perfect destination for a special occasion or a night out with friends."], ["longitude", "-73.976"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Valet Parking Available"], ["executive_chef", "Mark Millitello"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.551750"], ["updated_at", "2023-02-12 20:34:44.551750"], ["opentime", "5:00 PM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "The Flagstone Inn Steakhouse"], ["phone_number", "(212)755-8870"], ["description", "The Flagstone Inn Steakhouse is a classic steakhouse that offers a warm and welcoming atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its delicious cuisine and charming ambiance, The Flagstone Inn Steakhouse is the perfect choice for a romantic dinner or a night out with friends. Executive Chef Richard Chen brings a wealth of experience and culinary expertise to the kitchen, ensuring that each dish is cooked to perfection. With street parking available and a business casual dress code, The Flagstone Inn Steakhouse is a great option for a night out in Manhattan."], ["longitude", "-73.976"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Business Casual"], ["parking_details", "Street Parking Available"], ["executive_chef", "Richard Chen"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.570846"], ["updated_at", "2023-02-12 20:34:44.570846"], ["opentime", "5:00 PM"], ["closetime", "10:00 PM"]]
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "phone_number", "description", "longitude", "latitude", "neighborhood", "cuisines", "dress_code", "parking_details", "executive_chef", "additional", "created_at", "updated_at", "opentime", "closetime") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "L'Artusi"], ["phone_number", "(212)255-5757"], ["description", "L'Artusi is a contemporary steakhouse that offers a stylish and relaxed atmosphere. The menu features a variety of juicy steaks, as well as innovative sides and sauces to complement your meal. With its friendly service and focus on quality, L'Artusi is theperfect choice for a sophisticated dining experience."], ["longitude", "-73.9761"], ["latitude", "40.7649"], ["neighborhood", "Manhattan"], ["cuisines", "Steakhouse"], ["dress_code", "Casual"], ["parking_details", "Street Parking Available"], ["executive_chef", "Gabriel Stulman"], ["additional", nil], ["created_at", "2023-02-12 20:34:44.577860"], ["updated_at", "2023-02-12 20:34:44.577860"], ["opentime", "5:30 PM"], ["closetime", "11:00 PM"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 15:44:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 17ms (Views: 2.1ms | ActiveRecord: 1.6ms | Allocations: 4816)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-12 15:44:38 -0500
+
+Zeitwerk::NameError - expected file /Users/directorj/Desktop/my-repo/Steak-Book/backend/app/controllers/static_pages_controller.rb to define constant StaticPagesController, but didn't
+      raise Zeitwerk::NameError.new("expected file #{file} to define constant #{cpath}, but didn't", cref.last)
+      ^^^^^:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 15:45:39 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 787)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-02-12 15:45:40 -0500
+
+ActionController::RoutingError - uninitialized constant StaticPagesController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 15:46:26 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 15:46:51 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 15:46:59 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:13:09 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 284ms (Views: 1.9ms | ActiveRecord: 39.2ms | Allocations: 3701)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:15:04 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:17:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:21:34 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:27:49 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 44ms (Views: 0.7ms | ActiveRecord: 12.2ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:28:51 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 16:53:47 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 116ms (Views: 0.1ms | ActiveRecord: 16.2ms | Allocations: 3591)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 17:00:11 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 137ms (Views: 0.4ms | ActiveRecord: 38.6ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 17:16:16 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 207ms (Views: 0.1ms | ActiveRecord: 18.0ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 17:16:41 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 18:21:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 158ms (Views: 0.3ms | ActiveRecord: 8.6ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 18:28:11 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 116ms (Views: 0.1ms | ActiveRecord: 26.1ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 18:42:49 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 95ms (Views: 0.1ms | ActiveRecord: 17.9ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 18:44:52 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 19:08:21 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 141ms (Views: 0.1ms | ActiveRecord: 97.6ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 19:08:41 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 19:10:11 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 19:21:26 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 245ms (Views: 0.7ms | ActiveRecord: 225.6ms | Allocations: 3565)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 19:23:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 19:41:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 121ms (Views: 0.3ms | ActiveRecord: 14.8ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:20:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 94ms (Views: 1.1ms | ActiveRecord: 54.7ms | Allocations: 3617)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:28:25 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 10.9ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:31:44 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:32:09 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 12.8ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:33:20 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 7.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:39:14 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 115ms (Views: 0.1ms | ActiveRecord: 10.1ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:47:43 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 236ms (Views: 0.1ms | ActiveRecord: 12.1ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:50:46 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:58:08 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 81ms (Views: 0.1ms | ActiveRecord: 66.6ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:58:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 21:58:23 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:04:32 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 118ms (Views: 0.1ms | ActiveRecord: 10.5ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:04:40 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:06:12 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 48ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:11:31 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:12:42 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:12:47 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:13:05 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:14:02 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 51ms (Views: 0.1ms | ActiveRecord: 18.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:14:19 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 36ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:16:49 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:17:00 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:35:27 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 193ms (Views: 0.1ms | ActiveRecord: 22.0ms | Allocations: 3588)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:37:12 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 13.7ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:41:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:41:41 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:42:00 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:42:44 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:44:03 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:44:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:45:25 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (79.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 93ms (Views: 0.1ms | ActiveRecord: 79.0ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:47:17 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:47:29 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 22:49:56 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:04:07 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 356ms (Views: 0.1ms | ActiveRecord: 12.4ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:05:19 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:07:51 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:10:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:13:16 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:14:28 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:15:09 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-12 23:25:03 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 55.0ms | Allocations: 3562)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-12 23:30:18 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65:in `find_by_credentials'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-13 04:30:18.939365"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 3.8ms | Allocations: 452)
+Completed 200 OK in 366ms (Views: 25.8ms | ActiveRecord: 10.8ms | Allocations: 16488)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:15:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 4.7ms | Allocations: 587)
+Completed 200 OK in 216ms (Views: 11.8ms | ActiveRecord: 7.8ms | Allocations: 14470)
+
+
+Started GET "/main.70e07301767cba5d16b5.hot-update.json" for 127.0.0.1 at 2023-02-13 00:17:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+Zeitwerk::NameError - expected file /Users/directorj/Desktop/my-repo/Steak-Book/backend/app/controllers/static_pages_controller.rb to define constant StaticPagesController, but didn't
+      raise Zeitwerk::NameError.new("expected file #{file} to define constant #{cpath}, but didn't", cref.last)
+      ^^^^^:
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-13 00:26:46 -0500
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-13 05:26:46.632794"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+Completed 204 No Content in 153ms (ActiveRecord: 66.0ms | Allocations: 20356)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:26:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 930)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:30:27 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 751)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:31:26 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 4.7ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:31:37 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:33:04 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:33:45 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:34:13 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:34:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 82ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:38:57 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 83ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:39:18 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:44:46 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 176ms (Views: 0.1ms | ActiveRecord: 84.5ms | Allocations: 3704)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:50:23 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 10.8ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:57:11 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 63ms (Views: 0.2ms | ActiveRecord: 49.8ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:57:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:57:24 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 7.5ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 00:57:28 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 01:01:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 01:04:03 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 70ms (Views: 0.1ms | ActiveRecord: 4.2ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 01:15:20 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 9.4ms | Allocations: 3562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 01:20:14 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 3105)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-13 01:20:24 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65:in `find_by_credentials'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-13 06:20:24.472286"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 2.5ms | Allocations: 452)
+Completed 200 OK in 339ms (Views: 23.3ms | ActiveRecord: 8.7ms | Allocations: 9851)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-13 01:27:10 -0500
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (73.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (5.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-13 06:27:11.365706"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+Completed 204 No Content in 142ms (ActiveRecord: 115.4ms | Allocations: 11626)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 01:27:29 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 826)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-13 01:37:46 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 26.7ms | Allocations: 3562)
+
+
