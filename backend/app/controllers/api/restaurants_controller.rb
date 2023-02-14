@@ -1,12 +1,14 @@
-class RestaurantsController < ApplicationController
+class Api::RestaurantsController < ApplicationController
+
     def index
-    @restaurants = Restaurant.all
+        @restaurants = Restaurant.all
       
-    render json: @restaurants
+        render json: @restaurants
+    end
+
+    def show
+        @restaurants = Restaurant.find(params[:id])
+
+        render :show
+    end
 end
-
-def show
-    @restaurants = Restaurant.find(params[:id])
-
-    render :show
-  end

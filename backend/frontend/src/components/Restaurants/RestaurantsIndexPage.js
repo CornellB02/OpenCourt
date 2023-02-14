@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurants } from "../../store/restaurants";
 import RestaurantDetailPage from "./Restaurant_item";
+import NavBar from "../Navigation/NavBar";
 
 function RestaurantsIndexPage() {
   const dispatch = useDispatch();
@@ -12,6 +13,8 @@ function RestaurantsIndexPage() {
   }, [dispatch]);
 
   return (
+    <>
+    <NavBar />
     <div>
       <h1>Restaurants Index</h1>
       <ul>
@@ -20,6 +23,7 @@ function RestaurantsIndexPage() {
         ))}
       </ul>
     </div>
+    </>
   );
 }
 

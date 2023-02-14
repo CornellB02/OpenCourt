@@ -5,12 +5,14 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./components/context/Modal";
 import "./index.css";
+import "./reset.css";
 import App from "./App";
 import configureStore from "./store";
 import csrfFetch from "./store/csrf";
 import * as sessionActions from "./store/session";
 import steakbooklogo from "./components/Navigation"
-import restaurantAction from "./store/restaurants";
+import * as restaurantActions from "./store/restaurants";
+
 // import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage";
 
 const store = configureStore();

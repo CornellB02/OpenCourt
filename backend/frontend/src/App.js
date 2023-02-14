@@ -73,24 +73,24 @@ function App() {
   return (
     <>
       <Navigation />
-        <Switch>
-          <Route path="/signup">
-            <ModalProvider>
-              <SignupFormPage />
-            </ModalProvider>
-          </Route>
-          <Route path="/login">
-            <ModalProvider>
-              <LoginFormPage />
-            </ModalProvider>
-          </Route>
-            <SplashPage />
-          <Route path="/">
-          </Route>
-          <Route path="/restaurants">
-            <RestaurantsIndexPage />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route path="/signup">
+          <ModalProvider>
+            <SignupFormPage />
+          </ModalProvider>
+        </Route>
+        <Route path="/login">
+          <ModalProvider>
+            <LoginFormPage />
+          </ModalProvider>
+        </Route>
+        <Route exact path="/">
+          <SplashPage />
+        </Route>
+        <Route path="/restaurants">
+          <RestaurantsIndexPage />
+        </Route>
+      </Switch>
     </>
   );
 }

@@ -2,7 +2,9 @@ import React from 'react';
 import CalendarModule from '../context/calenderModule';
 import "./SplashPage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+// import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+// import RestaurantDetailPage from '../Restaurants/Restaurant_item';
+// import RestaurantsIndexPage from '../Restaurants/RestaurantsIndexPage';
 
 
 
@@ -26,9 +28,7 @@ function SplashPage() {
             onClick={() => setIsCalendarVisible(!isCalendarVisible)}>
                 {/* <script src="https://kit.fontawesome.com/babca851fb.js" crossorigin="anonymous"></script> */}
                 <FontAwesomeIcon icon="fa-calendar" />
-              <option> 
-                {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-}</option>
+              <option> {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</option>
             </select>
             <CalendarModule
               date={date}
@@ -62,6 +62,7 @@ function SplashPage() {
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
             <div className='splashinput'>
+            
             <input
               className="splash_search_input"
               type="text"
@@ -74,6 +75,7 @@ function SplashPage() {
           </div>
         </header>
       </div>
+  
     </div>
   );
 }
