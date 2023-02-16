@@ -4,6 +4,8 @@
     align-items: center;
     background-color: #f7f7f7;
     border-radius: 10px;
+    height: 6vw;
+    border-bottom: 1px solid #ccc;
   }
   
   .each-restaurant {
@@ -35,7 +37,9 @@
     /* margin-top: 7vw; */
     /* border-radius: 4px; */
     /* max-width: 55rem; */
-    width: 94% !important;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: 56% !important;
     margin-left: 31.3vw;
     display: flex;
   }
@@ -165,3 +169,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+im {
+  width: 1440px;
+  height: 460px;
+}
+/* .img_c {
+  padding-left: 20pxx;
+  width: 200%;
+  height: 460px;
+  
+} */

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getRestaurants } from "../../store/restaurants";
 import RestaurantDetailPage from "./Restaurant_item";
 import NavBar from "../Navigation/NavBar";
+import Restaurant_item from "./Restaurant_item";
 
 function RestaurantsIndexPage() {
   const dispatch = useDispatch();
@@ -64,7 +65,8 @@ function RestaurantsIndexPage() {
             else if (range === "$30 and under") range = "$$";
             return range === priceRange;
           }).map(restaurant => (
-          <RestaurantDetailPage key={restaurant.id} restaurant={restaurant} />
+          // <RestaurantDetailPage key={restaurant.id} restaurant={restaurant} />
+          <Restaurant_item key={restaurant.id} restaurant={restaurant} />
         ))}
       </ul>
       </div>

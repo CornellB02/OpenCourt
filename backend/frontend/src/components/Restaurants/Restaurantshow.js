@@ -38,8 +38,10 @@ const RestaurantShowPage = () => {
                 {/* ::after */}
             </li>
         </ol>
-        <div className='img_show'>
-        <a href="https://placeholder.com"><img src="https://via.placeholder.com/1440x460"></img></a>
+        <div className='img_c'>
+        <a href="#">
+                  <img src={`https://steak-book-seeds.s3.amazonaws.com/picture${restaurant.id}.jpeg`} alt="Restaurant" /></a>
+        {/* <a href="https://placeholder.com"><img src="https://via.placeholder.com/1440x460"></img></a> */}
         </div>
           <div className='main_whole_show'>
           <div className='main_left_show'>
@@ -62,19 +64,3 @@ const RestaurantShowPage = () => {
 }
 
 export default RestaurantShowPage
-
-// import React from "react";
-
-// function RestaurantShowPage({ location }) {
-//   const restaurant = location.state.restaurant;
-
-//   return (
-//     <div>
-//       <h1>{restaurant.name}</h1>
-//       <p>Price range: {restaurant.price_range}</p>
-//       <p>Neighborhood: {restaurant.neighborhood}</p>
-//     </div>
-//   );
-// }
-
-// export default RestaurantShowPage;

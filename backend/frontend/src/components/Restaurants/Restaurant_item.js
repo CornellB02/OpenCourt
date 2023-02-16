@@ -35,26 +35,22 @@ function Restaurant_item({restaurant}) {
 
   return (
     <div className="item-container">
+               <Link to={`/restaurants/${restaurant.id}`}>
         <div className="each-restaurant">
-        <div className="img-div">
-        <div className="img-div">
-        <a href="#"><img src={`https://steak-book-seeds.s3.amazonaws.com/picture${restaurant.id}.jpeg`} alt="Restaurant" /></a>
-        </div>
-
-        {/* <a href=""><img src='https://steak-book-seeds.s3.amazonaws.com/picture1.jpeg'></img> */}
-        {/* </a> */}
-        </div>
-        <div className="info">
-         <h1>
-         <Link to={`/restaurants/${restaurant.id}`}>
-             {restaurant.name}
-          </Link>
-        <p>{priceRange} &nbsp;•&nbsp; Steakhouse &nbsp;•&nbsp; {restaurant.neighborhood}</p>
-        {/* <p>{restaurant.neighborhood}</p> */}
-        </h1>
-        </div>
+            <div className="img-div">
+                {/* <a href="#">
+                  <img src={`https://steak-book-seeds.s3.amazonaws.com/picture${restaurant.id}.jpeg`} alt="Restaurant" /></a> */}
+            </div>
+          <div className="info">
+            <h1>
+              {/* <Link to={`/restaurants/${restaurant.id}`}> */}
+              {restaurant.name}
+              {/* </Link> */}
+                  <p>{priceRange} &nbsp;•&nbsp; Steakhouse &nbsp;•&nbsp; {restaurant.neighborhood}</p>
+            </h1>
+          </div>
       </div>
-      {/* <p>Address: {restaurant.address}</p> */}
+                </Link>
     </div>
   );
 }

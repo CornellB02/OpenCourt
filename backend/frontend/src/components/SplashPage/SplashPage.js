@@ -5,6 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurants } from "../../store/restaurants";
+import Restaurant_item from "../Restaurants/Restaurant_item";
+import Splash_item_rs from "../Restaurants/splash_item_rs";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -12,7 +17,7 @@ function SplashPage() {
   const dispatch = useDispatch();
   const [date, setDate] = React.useState(new Date());
   const [isCalendarVisible, setIsCalendarVisible] = React.useState(false);
-  const restaurants = useSelector(state => Object.values(state.restaurants));
+  const restaurants = useSelector(state => Object.values(state.restaurants).slice(0,5));
 
   useEffect(() => {
     dispatch(getRestaurants());
@@ -84,13 +89,25 @@ function SplashPage() {
         </header>
       </div>
       <div className='loca'>
-        It looks like your in Manhatten. Not correct? <i class="fa-sharp fa-solid fa-location-arrow"></i>
+        It looks like your in Manhattan Not correct? <i class="fa-sharp fa-solid fa-location-arrow"></i>
       </div>
       <div className='category_container'>
         <div className='category'>
           <h1 className='splashh1'>Random Restaurants Near you</h1>
           <div className='restaurant_i'> 
-            {restaurants.name}
+          {/* {restaurants.select(restaurant =>{ */}
+
+          <div className='restaurant-container'> 
+          {restaurants.map(restaurant => (
+             <li key={restaurant.name} className='restaurant-box'>
+              <Splash_item_rs restaurant={restaurant} />
+              </li>
+          ))}
+          </div>
+  
+          {/* // })} */}
+          {/* <Restaurant_item key={restaurants.name} restaurant={restaurants} /> */}
+          {/* <RestaurantDetailPage key={restaurant.id} restaurant={restaurant} /> */}
           </div>
         </div>
       </div>

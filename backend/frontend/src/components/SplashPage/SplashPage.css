@@ -188,3 +188,27 @@
 
   /* font */
 }
+
+.restaurant-container {
+  /* padding-right: 30vw; */
+  /* margin-top: -8px; */
+    /* overflow-x: auto; */
+    overflow: -moz-scrollbars-none;
+    padding-top: 8px;
+    scrollbar-width: none;
+    white-space: nowrap;
+  width: 76vw;
+  max-height: 6px;
+}
+
+.restaurant-box {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center;2 */
+  width: 20%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
