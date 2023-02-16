@@ -279,7 +279,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        width: 100vw;
+        width: 90vw;
         margin-top: 2.4vw;
         /* margin-right: -20px; */
       }
@@ -328,3 +328,4 @@ button {
 .search-button{
   background-color: white;
 }
+

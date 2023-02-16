@@ -36,14 +36,15 @@ function ProfileButton({ user }) {
 
   return (
     <div>
-      <button type="" onClick={openMenu}>
-      <FontAwesomeIcon icon="fa-regular fa-user" />
+      <div className="userbutton"></div>
+      <button type="button" onClick={openMenu}>
+      <i class="fa-regular fa-user"></i>
       {/* <FontAwesomeIcon icon={faUserCircle} size="lg" style={{ color: 'red' }} /> */}
       </button>
       {showMenu && (
         <ul className="profile-dropdown">
-          <li>{user.first_name}</li>
-          <li>{user.last_name}</li>
+          {/* <li>{user.first_name}</li> */}
+          {/* <li>{user.last_name}</li> */}
           <li>{user.email}</li>
           <li>
             <button onClick={logout}>Log Out</button>

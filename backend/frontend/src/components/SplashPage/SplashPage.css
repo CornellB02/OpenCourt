@@ -149,9 +149,11 @@
     margin-left: 12vw;
     display: flex;
     background-color: white;
-    border-radius: 34pc;
+    border-radius: 4px;
     height: 1.38cm;
-    border: 1px solid black
+    border: 1px solid black;
+    width: 33vw;
+    
 }
 
 /* .fa-solid.fa-magnifying-glass {
@@ -165,3 +167,24 @@
         height: 1.76vw;
 } */
 
+
+.splashh1{
+  font-size: 2pc;
+  margin-top: 17px;
+  border-top: 1px solid #ccc;
+  padding-top: 2.9ch;
+  padding-left: 4pc;
+  /* border-bottom: 1px solid #ccc; */
+
+}
+
+.loca{
+  margin-top: 21px;
+  padding-left: 4pc;
+  max-width: 800px;
+  
+  /* margin-bottom: -2px; */
+  /* border-bottom: 1px solid #ccc; */
+
+  /* font */
+}

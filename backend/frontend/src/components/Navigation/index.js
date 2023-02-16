@@ -67,7 +67,10 @@ function Navigation() {
       <nav className="navbar">
       <NavLink className='nav-logo' exact to='/'><img className='nav-logo-img' src={steakbooklogo} alt="" /><span className='Logo'></span></NavLink>
         <div className="navbar-nav">
-          {sessionUser ? <ProfileButton user={sessionUser} /> : (
+          {sessionUser ? <div className='user_logged'>
+          <ProfileButton user={sessionUser} /> 
+          </div>
+           : (
             <div className="authbuttons">
               <button type="button" className="signup" onClick={handleSignupClick}>Sign Up</button>
                 &nbsp;

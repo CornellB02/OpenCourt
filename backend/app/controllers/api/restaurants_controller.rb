@@ -7,7 +7,8 @@ class Api::RestaurantsController < ApplicationController
     end
 
     def show
-        @restaurants = Restaurant.find(params[:id])
+        # debugger
+        @restaurant = Restaurant.find(params[:id])
 
         render :show
     end

@@ -76,7 +76,7 @@ function NavBar() {
                 />
                 
                 <>&nbsp;&nbsp;&nbsp;&nbsp;</>
-                <button className="submit">Let's go</button>
+                <button className="submit">Find a table</button>
                 </div>
               </div>
             </header>

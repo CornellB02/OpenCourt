@@ -94,7 +94,7 @@ function LoginFormPage() {
     e.preventDefault();
     e.stopPropagation();
 
-    dispatch(sessionActions.login({ email: 'Demolition@user.com' , password: 'passwordy'}))
+    dispatch(sessionActions.login({ email: 'demo@user.io' , password: 'password'}))
     .then(() => {
       history.push("/users");
     });

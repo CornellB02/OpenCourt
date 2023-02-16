@@ -17,7 +17,7 @@ const SearchModule = () => {
             <div className="findtable">Find your table for any occasion</div>
             <div className="s-container">
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
-            <div className="splash_select">
+            <div className="search_select">
                 <select className="date_selector" onClick={() => setIsCalendarVisible(!isCalendarVisible)}>
                 <FontAwesomeIcon icon="fa-calendar" />
                 <option>

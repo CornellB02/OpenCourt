@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import CalendarModule from '../context/calenderModule';
 import "./SplashPage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCalendar } from '@fortawesome/free-solid-svg-icons';
-// import RestaurantDetailPage from '../Restaurants/Restaurant_item';
-// import RestaurantsIndexPage from '../Restaurants/RestaurantsIndexPage';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from "react-redux";
+import { getRestaurants } from "../../store/restaurants";
 
 
 
 function SplashPage() {
+  const dispatch = useDispatch();
   const [date, setDate] = React.useState(new Date());
   const [isCalendarVisible, setIsCalendarVisible] = React.useState(false);
+  const restaurants = useSelector(state => Object.values(state.restaurants));
+
+  useEffect(() => {
+    dispatch(getRestaurants());
+  }, [dispatch]);
+
   const onChange = (selectedDate) => {
     setDate(selectedDate);
     setIsCalendarVisible(false);
@@ -26,9 +33,11 @@ function SplashPage() {
             <div className='splash_select'>
             <select className='date_selector'
             onClick={() => setIsCalendarVisible(!isCalendarVisible)}>
-                {/* <script src="https://kit.fontawesome.com/babca851fb.js" crossorigin="anonymous"></script> */}
+                <script src="https://kit.fontawesome.com/babca851fb.js" crossorigin="anonymous"></script>
                 <FontAwesomeIcon icon="fa-calendar" />
-              <option> {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</option>
+              <option> 
+                {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+}</option>
             </select>
             <CalendarModule
               date={date}
@@ -62,7 +71,6 @@ function SplashPage() {
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
             <div className='splashinput'>
-            
             <input
               className="splash_search_input"
               type="text"
@@ -75,7 +83,17 @@ function SplashPage() {
           </div>
         </header>
       </div>
-  
+      <div className='loca'>
+        It looks like your in Manhatten. Not correct? <i class="fa-sharp fa-solid fa-location-arrow"></i>
+      </div>
+      <div className='category_container'>
+        <div className='category'>
+          <h1 className='splashh1'>Random Restaurants Near you</h1>
+          <div className='restaurant_i'> 
+            {restaurants.name}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

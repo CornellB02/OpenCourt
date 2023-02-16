@@ -62,16 +62,19 @@
 
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormsPage/login";
 import SignupFormPage from "./components/SignUpFormPage.js";
 import Navigation from "./components/Navigation";
 import { ModalProvider } from "./components/context/Modal.js";
 import SplashPage from "./components/SplashPage/SplashPage";
 import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage";
+import RestaurantShowPage from "./components/Restaurants/Restaurantshow";
 
 function App() {
   return (
-    <>
+    <BrowserRouter >
+ <>
       <Navigation />
       <Switch>
         <Route path="/signup">
@@ -84,6 +87,7 @@ function App() {
             <LoginFormPage />
           </ModalProvider>
         </Route>
+        <Route path="/restaurants/:restaurantId" component={RestaurantShowPage} />
         <Route exact path="/">
           <SplashPage />
         </Route>
@@ -92,6 +96,8 @@ function App() {
         </Route>
       </Switch>
     </>
+    </BrowserRouter>
+   
   );
 }
 

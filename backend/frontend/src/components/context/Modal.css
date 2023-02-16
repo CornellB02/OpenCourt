@@ -73,3 +73,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
 }
+
+.search_select{
+  margin-left: 12vw;
+    display: flex;
+    background-color: white;
+    border-radius: 4px;
+    height: 1.38cm;
+    border: 1px solid black;
+    width: 33vw;
+}

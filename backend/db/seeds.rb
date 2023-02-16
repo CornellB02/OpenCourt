@@ -1,3 +1,5 @@
+require "open-uri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -31,6 +33,9 @@ ApplicationRecord.transaction do
       }) 
     end
 
+    R1.photos.attach([
+      {io:URI.open('https://steak-book-seeds.s3.amazonaws.com/picture1.jpeg'), filename: 'rest1.jpeg'}
+    ])
 
 
     restaurants = [
@@ -46,6 +51,7 @@ ApplicationRecord.transaction do
         executive_chef: "Cornell Bethea Jr",
         longitude: -73.963768,
         latitude: 40.709616,
+        price_range: "$50 and over",
         description: "Famous for its juicy, flavorful steaks, Peter Luger Steakhouse has been a Brooklyn institution for over 130 years. With a menu that focuses exclusively on meat and a casual, family-friendly atmosphere, it's the perfect spot for a hearty meal."
       },
       {
@@ -60,6 +66,7 @@ ApplicationRecord.transaction do
         executive_chef: "Bill Peet",
         longitude: -73.988646,
         latitude: 40.754771,
+        price_range: "$50 and over",
         description: "Keens Steakhouse is a true New York City institution, with a rich history dating back over a hundred years. The menu features a wide variety of juicy and delicious steaks, cooked to perfection and served in a warm and elegant atmosphere. Whether you're in the mood for a classic porterhouse or a juicy ribeye, Keens is the place to be."
       },
       {
@@ -74,6 +81,7 @@ ApplicationRecord.transaction do
         executive_chef: "Chris Basso",
         longitude: -73.986400,
         latitude: 40.758969,
+        price_range: "$31 and 50",
         description: "For over 90 years, Gallagher's Steakhouse has been serving up some of the best steaks in Manhattan. Their menu features a variety of juicy cuts, including their famous prime rib, as well as a selection of delicious sides and sauces to complement your meal. With its classic, old-school atmosphere, Gallagher's is the perfect place to enjoy a hearty steak dinner in the heart of the city."
       },
       {
@@ -88,6 +96,7 @@ ApplicationRecord.transaction do
         executive_chef: "Christopher Albrecht",
         longitude: -74.007126,
         latitude: 40.713839,
+        price_range: "$50 and over",
         description: "Old Homestead Steakhouse has been serving up juicy and delicious steaks since 1868. The menu features a variety of cuts, including their signature, dry-aged prime beef, as well as a selection of sides and sauces to complement your meal. With its classic steakhouse atmosphere and a focus on quality ingredients, Old Homestead is a true New York City institution."
       },
       {
@@ -102,6 +111,7 @@ ApplicationRecord.transaction do
         executive_chef: "Anthony Walker",
         longitude: -74.011179,
         latitude: 40.716067,
+        price_range: "$50 and over",
         description: "Smith & Wollensky is a classic New York steakhouse known for its juicy, flavorful steaks and beautiful waterfront views. The menu features a variety of cuts, including their famous, dry-aged prime rib, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and top-notch service, Smith & Wollensky is the perfect place for a special occasion or a night out with friends."
         },
         {
@@ -116,6 +126,7 @@ ApplicationRecord.transaction do
         executive_chef: "Joe Ferrell",
         longitude: -74.003820,
         latitude: 40.758111,
+        price_range: "$50 and over",
         description: "Del Frisco's Double Eagle Steakhouse is a premier steakhouse, known for its juicy and delicious steaks, extensive wine list, and top-notch service. The menu features a variety of cuts, including their signature, dry-aged prime beef, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and attention to detail, Del Frisco's is the perfect place for a special occasion or a night out with friends."
         },
         {
@@ -127,6 +138,7 @@ ApplicationRecord.transaction do
           parking_details: "Valet Parking Available",
           opentime: "11:30 AM",
           closetime: "10:00 PM",
+          price_range: "$30 and under",
           executive_chef: "Jimmy Haber",
           longitude: -73.978252,
           latitude: 40.761810,
@@ -145,6 +157,7 @@ ApplicationRecord.transaction do
           executive_chef: "John Garavaglia",
           longitude: -73.979312,
           latitude: 40.758807,
+          price_range: "$50 and over",
           description: "Morton's The Steakhouse is a classic steakhouse with a focus on quality ingredients and exceptional service. Their menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and top-notch service, Morton's is the perfect place for a special occasion or a night out with friends."
           },
           
@@ -160,6 +173,7 @@ ApplicationRecord.transaction do
           executive_chef: "Laurent Tourondel",
           longitude: -73.976112,
           latitude: 40.764879,
+          price_range: "$31 and 50",
           description: "BLT Steak is a contemporary steakhouse with a focus on classic cuts and modern flavors. The menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its stylish atmosphere and friendly service, BLT Steak is the perfect spot for a special occasion or a night out with friends."
           },
           {
@@ -174,6 +188,7 @@ ApplicationRecord.transaction do
             executive_chef: "David S. Wiedmaier",
             longitude: -73.977568,
             latitude: 40.752980,
+            price_range: "$50 and over",
             description: "Ruth's Chris Steak House is a classic steakhouse serving prime cuts of beef, fresh seafood, and an extensive wine list. With its warm, upscale atmosphere and impeccable service, it's the perfect place for a special occasion or a night out."
             },
             {
@@ -188,6 +203,7 @@ ApplicationRecord.transaction do
               executive_chef: "Mark Sunseri",
               longitude: -74.000800,
               latitude: 40.738804,
+              price_range: "$31 and 50",
               description: "Strip House is a classic steakhouse with a modern twist, serving prime cuts of beef, fresh seafood, and an extensive wine list. With its sophisticated atmosphere and impeccable service, it's the perfect place for a special occasion or a night out."
               },
               {
@@ -202,6 +218,7 @@ ApplicationRecord.transaction do
                 executive_chef: "William Gallagher",
                 longitude: -73.976114,
                 latitude: 40.764875,
+                price_range: "$50 and over",
                 description: "Delmonico's Restaurant & Bar is a classic steakhouse that offers a warm and inviting atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its exceptional service and attention to detail, Delmonico's is the perfect destination for a special occasion or a night out with friends."
                 },
                 {
@@ -216,6 +233,7 @@ ApplicationRecord.transaction do
                 executive_chef: "April Bloomfield",
                 longitude: -73.976103,
                 latitude: 40.764918,
+                price_range: "$30 and under",             
                 description: "The Breslin Bar & Dining Room is a contemporary steakhouse that offers a stylish and relaxed atmosphere. The menu features a variety of juicy steaks, as well as innovative sides and sauces to complement your meal. With its friendly service and focus on quality, The Breslin is the perfect destination for a night out with friends."
                 },
                 {
@@ -230,6 +248,7 @@ ApplicationRecord.transaction do
                 executive_chef: "Joe Dobias",
                 longitude: -73.976102,
                 latitude: 40.764884,
+                price_range: "$30 and under",
                 description: "The Little Owl is a cozy steakhouse that offers a warm and intimate atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its friendly service and focus on quality, The Little Owl is the perfect destination for a special occasion or a night out with friends."
                 },
                 {
@@ -244,6 +263,7 @@ ApplicationRecord.transaction do
                 executive_chef: "Josh Capon",
                 longitude: -73.992062,
                 latitude: 40.719127,
+                price_range: "$31 and 50",
                 description: "Bowery Meat Company is a contemporary steakhouse offering a variety of juicy steaks, cooked to perfection. The menu features classic cuts as well as innovative dishes that are sure to delight. With a focus on quality and flavor, Bowery Meat Company is the perfect destination for steak lovers."
                 },
                 {
@@ -258,6 +278,7 @@ ApplicationRecord.transaction do
                 executive_chef: "John Doe",
                 longitude: -73.975957,
                 latitude: 40.764865,
+                price_range: "$50 and over",
                 description: "The Prime Rib Restaurant & Lounge is a classic steakhouse that offers a warm and elegant atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. Whether you're celebrating a special occasion or just looking for a delicious dinner, The Prime Rib Restaurant & Lounge is the perfect choice."
                 },
                 {
@@ -272,6 +293,7 @@ ApplicationRecord.transaction do
                 executive_chef: "Mark Millitello",
                 longitude: -73.976024,
                 latitude: 40.764888,
+                price_range: "$50 and over",
                 description: "The Capital Grille is a classic steakhouse that offers a sophisticated atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its exceptional service and attention to detail, The Capital Grille is the perfect destination for a special occasion or a night out with friends."
                 },
                 {
@@ -284,6 +306,7 @@ ApplicationRecord.transaction do
                 opentime: "5:00 PM",
                 closetime: "10:00 PM",
                 executive_chef: "Richard Chen",
+                price_range: "$31 and 50",
                 longitude: -73.976041,
                 latitude: 40.764906,
                 description: "The Flagstone Inn Steakhouse is a classic steakhouse that offers a warm and welcoming atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its delicious cuisine and charming ambiance, The Flagstone Inn Steakhouse is the perfect choice for a romantic dinner or a night out with friends. Executive Chef Richard Chen brings a wealth of experience and culinary expertise to the kitchen, ensuring that each dish is cooked to perfection. With street parking available and a business casual dress code, The Flagstone Inn Steakhouse is a great option for a night out in Manhattan."
@@ -300,6 +323,7 @@ ApplicationRecord.transaction do
                 executive_chef: "Gabriel Stulman",
                 longitude: -73.976107,
                 latitude: 40.764902,
+                price_range: "$50 and over",
                 description: "L'Artusi is a contemporary steakhouse that offers a stylish and relaxed atmosphere. The menu features a variety of juicy steaks, as well as innovative sides and sauces to complement your meal. With its friendly service and focus on quality, L'Artusi is theperfect choice for a sophisticated dining experience."
                 }
         ]
