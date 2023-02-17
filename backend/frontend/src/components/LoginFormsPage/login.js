@@ -96,7 +96,7 @@ function LoginFormPage() {
 
     dispatch(sessionActions.login({ email: 'demo@user.io' , password: 'password'}))
     .then(() => {
-      history.push("/users");
+      history.push("/");
     });
 };
 
@@ -123,7 +123,7 @@ function LoginFormPage() {
         <form onSubmit={handleSubmit}>
           <div>
           <h1>Enter your email</h1>
-          <p>Enter the email associated with your OpenTable account, social login or new email. We’ll send a code to that email</p>
+          <p>Enter the email associated with your SteakBook account, social login or new email. We’ll send a code to that email</p>
           </div>
             <input
                 placeholder="Email"

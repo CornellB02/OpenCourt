@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFont } from "@fortawesome/free-solid-svg-icons";
 // import { regular }
-
 
 
 
@@ -35,22 +35,25 @@ function ProfileButton({ user }) {
   };
 
   return (
-    <div>
-      <div className="userbutton"></div>
-      <button type="button" onClick={openMenu}>
-      <i class="fa-regular fa-user"></i>
-      {/* <FontAwesomeIcon icon={faUserCircle} size="lg" style={{ color: 'red' }} /> */}
+    <div className="right_side">
+    <div className='profile-button'>
+      <button onClick={openMenu} className='profile-icon'>
+        {/* <i className="fa-solid fa-user-circle" /> */}
+        <i class="fa-regular fa-user"></i>
       </button>
       {showMenu && (
         <ul className="profile-dropdown">
-          {/* <li>{user.first_name}</li> */}
-          {/* <li>{user.last_name}</li> */}
+          <li>{user.username}</li>
           <li>{user.email}</li>
           <li>
-            <button onClick={logout}>Log Out</button>
+            <button onClick={logout}  className="button">Log Out</button>
           </li>
         </ul>
       )}
+    </div>
+      {/* <i class="fa-light fa-calendar"></i> */}
+    {/* <div className="dates-button"> */}
+    {/* </div> */}
     </div>
   );
 }

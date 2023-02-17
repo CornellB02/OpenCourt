@@ -124,7 +124,7 @@ export const getRestaurant = (restaurantId) => async dispatch => {
     if (res.ok) {
       const data = await res.json();
     //   debugger
-      dispatch(receiveRestaurant(data.restaurant))
+      dispatch(receiveRestaurant(data))
     }
 };
 

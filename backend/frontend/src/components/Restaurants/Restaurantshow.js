@@ -38,9 +38,10 @@ const RestaurantShowPage = () => {
                 {/* ::after */}
             </li>
         </ol>
-        <div className='img_c'>
+        <div className='img_d'>
         <a href="#">
-                  <img src={`https://steak-book-seeds.s3.amazonaws.com/picture${restaurant.id}.jpeg`} alt="Restaurant" /></a>
+                  <img src={`https://steak-book-seeds.s3.amazonaws.com/steak${restaurant.id}.jpeg`} alt="Restaurant" className='img_c'/></a>
+                  {/* https://steak-book-seeds.s3.amazonaws.com/steak1.jpeg */}
         {/* <a href="https://placeholder.com"><img src="https://via.placeholder.com/1440x460"></img></a> */}
         </div>
           <div className='main_whole_show'>

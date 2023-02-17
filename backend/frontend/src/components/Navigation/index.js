@@ -8,7 +8,7 @@ import LoginFormPage from '../LoginFormsPage/login';
 import SignupFormPage from '../SignUpFormPage.js';
 // import steakbooklogo from './steakbooklogo'
 import steakbooklogo from './steakbooklogo.png';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SearchModule from '../context/searchModule';
 import CalendarModule from '../context/calenderModule';
 
@@ -69,6 +69,8 @@ function Navigation() {
         <div className="navbar-nav">
           {sessionUser ? <div className='user_logged'>
           <ProfileButton user={sessionUser} /> 
+          <i class="fa-light fa-calendar"></i>
+          <i class="fa-light fa-bell"></i>
           </div>
            : (
             <div className="authbuttons">

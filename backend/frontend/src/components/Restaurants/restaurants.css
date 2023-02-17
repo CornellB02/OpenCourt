@@ -158,25 +158,128 @@
  }
 
  .img-div {
-  width: 205px;
-  height: 205px;
-  border-radius: 4px;
-  overflow: hidden;
+  width: 234px;
+  height: 132px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+
+  
+  /* overflow: hidden; */
 }
 
 .img-div img {
-  width: 100%;
-  height: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 234px;
+  height: 132px;
   object-fit: cover;
 }
 
-im {
+/* .img {
   width: 1440px;
   height: 460px;
-}
-/* .img_c {
-  padding-left: 20pxx;
-  width: 200%;
-  height: 460px;
-  
 } */
+
+  .img_c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 460px;
+
+  overflow: hidden;
+}
+
+.img_d {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+} 
+
+.box-name{
+  text-align: left;
+  font-size: 16px;
+  margin-top: 0.8vw;
+  color: rgba(26, 24, 24, 0.906);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-weight: 400vw; */
+  width: 9vw;
+  display: flex;
+  flex-direction: row;
+  /* position: relative; */
+}
+
+.ratingreviews{
+  /* font-size: 15px; */
+    font-size: .995rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+  letter-spacing: 0.2vw;
+  color: #da3743;
+}
+.ratingnreviewsc {
+  margin-top: 0.25vw;
+  /* padding-left: -1vw; */
+}
+
+.box-info{
+  /* display:flex; */
+  margin-top: .35vw;
+  font-size: .875rem;
+  letter-spacing: 0.02em;
+}
+
+.pcn{
+  display: flex;
+  /* max-height: 16vw; */
+  /* justify-content: baseline; */
+  /* margin-bottom: 3vw; */
+  padding-bottom: 2vw;
+  padding-left: 1vw;
+  padding-right: 0.4vw;
+
+}
+
+.each-restaurant-sp{
+  max-height: 22vw;
+  /* justify-content: baseline; */
+  /* justify-items: baseline; */
+}
+
+.cuisinenn{
+  margin-top: .35vw;
+  color: black;
+}
+
+.reservebtn {
+  display: flex;
+  flex-direction: row;
+  /* letter-spacing: 3vw; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* position: absolute;
+  bottom: 0; */
+  padding-right: -2vw;
+  margin-left: -.22vw;
+}
+
+.reservebtn button {
+  background-color: #da3743;
+  color: white;
+  padding: 0.5rem;
+  /* text-align: right; */
+  border: none;
+  cursor: pointer;
+  height: 2.1vw;
+  margin-top: 1.2vw;
+  width: 4.81vw;
+  font-size: 1.1em;
+  text-align: center;
+  display: flex;
+  /* margin-right: -1.2vw; */
+  padding-left: .8vw;
+  /* letter-spacing: 3vw; */
+}
+
+.reservebtn button:hover {
+  background-color: #8b0000;
+}
