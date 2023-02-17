@@ -34484,3 +34484,2561 @@ Processing by Api::RestaurantsController#index as JSON
 Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 5241)
 
 
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 20:48:27 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 20:51:18 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 20:51:22 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (6.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 8.8ms | ActiveRecord: 6.4ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 20:52:27 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 20:52:28 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (2.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 2.5ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 20:58:49 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 48ms (Views: 0.9ms | ActiveRecord: 12.8ms | Allocations: 3616)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 20:58:50 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 20:58:51 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.7ms | Allocations: 5287)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 20:58:53 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/2" for 127.0.0.1 at 2023-02-16 21:00:40 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.8ms | Allocations: 309)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1051)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:01:43 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:03:38 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:03:39 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:03:40 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:03:44 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:04:23 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:04:23 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:04:23 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:04:26 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:05:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:05:54 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:05:55 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.8ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:06:00 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.7ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:17:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 31ms (Views: 1.4ms | ActiveRecord: 10.7ms | Allocations: 3588)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:17:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 750)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:17:35 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.6ms | Allocations: 5287)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:17:36 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:28:40 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 11.4ms | Allocations: 3562)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:28:41 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 5286)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:31:24 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:31:24 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:31:25 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:31:26 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:32:07 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:32:07 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:32:09 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:32:10 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:33:02 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:33:03 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:33:04 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:33:05 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:35:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 21:35:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:35:08 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:35:09 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 21:48:05 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 9.6ms | Allocations: 8096)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:26:10 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 9.6ms | Allocations: 8070)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:26:14 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:28:02 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:28:19 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 28ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 777)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:28:19 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:28:42 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:28:43 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.9ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:30:36 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:30:36 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:30:38 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:30:39 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:34:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:34:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:34:17 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:34:18 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 1.0ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:35:29 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:35:29 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:35:31 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:35:31 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:40:09 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:40:09 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 750)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:40:11 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:40:12 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:46:07 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 10.7ms | Allocations: 3616)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:46:07 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 750)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:46:09 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 5286)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:46:10 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:48:38 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:48:39 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:49:26 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:49:26 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:49:28 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:49:29 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:52:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:52:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:52:08 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:52:08 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:53:58 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:53:58 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:53:59 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:53:59 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:57:03 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:57:03 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:57:05 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:57:06 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:58:22 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:58:22 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 750)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:58:25 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:58:25 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:59:56 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 22:59:56 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:59:58 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 22:59:58 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:00:04 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:00:05 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 750)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:00:06 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:00:06 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:02:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:02:34 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:02:37 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:02:37 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:03:21 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:03:21 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:03:23 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:03:23 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:04:42 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:04:42 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:04:44 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:04:44 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:05:17 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:05:17 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:05:20 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:05:20 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:15:32 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 10.2ms | Allocations: 3616)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:15:33 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.5ms | Allocations: 5287)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:17:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:17:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:17:55 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:17:57 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:24:26 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 8.2ms | Allocations: 3563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:24:27 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:24:27 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 5286)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:24:29 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:24:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:24:34 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:24:36 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:24:38 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:24:52 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:24:53 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (11.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 13.0ms | ActiveRecord: 11.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:29:54 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:29:57 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:31:01 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:31:04 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:34:08 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:34:12 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:35:16 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:35:18 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:44:04 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 10.9ms | Allocations: 8096)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:46:25 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 777)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:46:31 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:49:43 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:49:49 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.8ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:50:24 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:50:27 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:54:14 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 750)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:54:19 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-16 23:55:27 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-16 23:55:37 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 5241)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:01:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 7.3ms | Allocations: 4810)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:01:41 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 411ms (Views: 329.7ms | ActiveRecord: 13.6ms | Allocations: 17225)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:07:50 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 10.6ms | Allocations: 3868)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:07:52 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (4.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 4.9ms | Allocations: 5303)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:10:38 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 764)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:10:39 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/4" for 127.0.0.1 at 2023-02-17 00:11:51 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (2.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 5.7ms | Allocations: 600)
+Completed 200 OK in 64ms (Views: 53.5ms | ActiveRecord: 2.4ms | Allocations: 6704)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:11:52 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 5361)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 00:12:03 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (2.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 307)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 2.4ms | Allocations: 1093)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:12:09 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (4.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 4.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:15:32 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:17:33 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 784)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:17:34 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (9.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 14.0ms | ActiveRecord: 9.8ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:30:17 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 9.8ms | Allocations: 8187)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:32:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 778)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:32:54 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:36:56 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:36:57 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 00:38:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:38:31 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:39:10 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (6.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 6.0ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/3" for 127.0.0.1 at 2023-02-17 00:40:29 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (1.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 1.4ms | Allocations: 307)
+Completed 200 OK in 29ms (Views: 3.4ms | ActiveRecord: 1.7ms | Allocations: 1047)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:31 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (2.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 2.7ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 00:40:33 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (3.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 3.4ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:34 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.9ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/3" for 127.0.0.1 at 2023-02-17 00:40:36 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:44 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (7.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 44ms (Views: 35.1ms | ActiveRecord: 7.6ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 00:40:46 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (5.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 311)
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 5.6ms | Allocations: 1054)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:48 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 1.6ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/3" for 127.0.0.1 at 2023-02-17 00:40:49 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 307)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1046)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:50 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (6.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 6.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/3" for 127.0.0.1 at 2023-02-17 00:40:52 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (1.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:53 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/3" for 127.0.0.1 at 2023-02-17 00:40:56 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 1045)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:40:56 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 1.3ms | Allocations: 5241)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-17 00:53:12 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (5.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-17 05:53:13.025756"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.0ms | Allocations: 276)
+Completed 200 OK in 508ms (Views: 2.2ms | ActiveRecord: 39.0ms | Allocations: 15517)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-17 00:54:36 -0500
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (5.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-17 05:54:36.806118"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+Completed 204 No Content in 33ms (ActiveRecord: 15.4ms | Allocations: 4118)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-17 00:54:39 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (22.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-17 05:54:39.678523"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 134)
+Completed 200 OK in 413ms (Views: 0.5ms | ActiveRecord: 40.4ms | Allocations: 4737)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-17 00:56:15 -0500
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Exists? (4.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-17 05:56:15.397433"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+Completed 204 No Content in 29ms (ActiveRecord: 16.8ms | Allocations: 3772)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-17 00:56:18 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"email"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:65:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-17 05:56:18.712949"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 134)
+Completed 200 OK in 265ms (Views: 0.6ms | ActiveRecord: 17.9ms | Allocations: 4704)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 00:56:19 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 5295)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:00:54 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (5.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 5.1ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:01:13 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:21:50 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 8.5ms | Allocations: 8181)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:21:53 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:22:05 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:22:06 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:26:47 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.7ms | Allocations: 5241)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:27:04 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:29:40 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:29:57 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 01:30:21 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 5240)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-17 01:38:38 -0500
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:101:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-17 06:38:38.996015"], ["id", 1]]
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:94:in `reset_session_token!'
+Completed 204 No Content in 60ms (ActiveRecord: 30.1ms | Allocations: 6632)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:38:44 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (1.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 1.1ms | Allocations: 311)
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 1.8ms | Allocations: 1103)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:47:12 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 29ms (Views: 2.3ms | ActiveRecord: 12.3ms | Allocations: 3901)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:47:16 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (4.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 4.8ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:47:20 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:47:23 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:47:25 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:47:26 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:51:57 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 01:53:06 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 751)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:53:08 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.6ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 01:53:10 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:53:11 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 01:54:19 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 5.4ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:54:19 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:09 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.8ms | Allocations: 306)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:13 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:16 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.5ms | Allocations: 306)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:20 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:24 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:29 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 01:58:30 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:02:12 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:02:14 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:03:04 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:03:04 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.5ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:05:11 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:05:12 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:22 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:26 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 310)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1050)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:32 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:35 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.7ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1043)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:39 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:47 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.5ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:48 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:52 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:56 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.8ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:07:57 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:08:15 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:08:17 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:11:49 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:11:50 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.6ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:12:15 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:12:28 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 307)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1044)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:12:51 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:12:53 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 309)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1048)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:13:52 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:13:54 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:14:05 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 749)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:14:06 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:16:05 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:16:25 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:16:45 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:17:07 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:18:02 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (2.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.5ms | Allocations: 306)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 2.4ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:18:04 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.7ms | Allocations: 306)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:18:30 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:18:32 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:08 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:17 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:22 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:23 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:43 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.6ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:53 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:55 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:19:58 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.6ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:20:03 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:20:08 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:20:18 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:20:20 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:20:29 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:20:40 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:21:03 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.7ms | Allocations: 306)
+Completed 200 OK in 11ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:21:10 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:21:44 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:22:01 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 750)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:22:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:23:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 3.7ms | Allocations: 4804)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:23:30 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 788)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:23:45 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 765)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:25:34 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:26:23 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:27:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (44.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 45.9ms | Allocations: 4810)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:27:08 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 7.4ms | Allocations: 787)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 02:27:08 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 104ms (Views: 58.5ms | ActiveRecord: 9.7ms | Allocations: 17204)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:27:11 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (2.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 2.8ms | Allocations: 601)
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 2.0ms | Allocations: 4525)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:27:24 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 307)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1154)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:27:30 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 307)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:27:33 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:27:53 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 817)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:27:59 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:28:02 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 751)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 02:28:02 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 5269)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:28:04 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 1.4ms | Allocations: 1043)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:28:43 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:29:28 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 752)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 02:29:28 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 4.0ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:29:29 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 307)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 1045)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:31:22 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 307)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1045)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:31:23 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.5ms | Allocations: 306)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:31:28 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:31:32 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1042)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:31:45 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:32:21 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:32:27 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 02:32:27 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:32:29 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:33:04 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 749)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-17 02:33:13 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 749)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-02-17 02:33:13 -0500
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (2.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 2.3ms | Allocations: 5240)
+
+
+Started GET "/api/restaurants/1" for 127.0.0.1 at 2023-02-17 02:33:15 -0500
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (1.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.9ms | Allocations: 1042)
+
+

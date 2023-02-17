@@ -83,3 +83,25 @@
     border: 1px solid black;
     width: 33vw;
 }
+
+.footer {
+  background-color: #2d333f;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5vw 1vw;
+}
+
+.in-footer {
+  color: white;
+  text-align: center;
+  font-size: 1.2vw;
+  margin: 0 1vw 1vw;
+}
+
+.bottom-footer {
+  color: white;
+  text-align: center;
+  font-size: 1.1vw;
+  margin-top: 1.1vw;
+}

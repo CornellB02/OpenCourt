@@ -94,7 +94,7 @@ function SignupFormPage() {
     e.preventDefault();
     return dispatch(sessionActions.signup({ email, password }))
       .then(() => {
-        history.push("/users");
+        history.push("/"); 
       })
       .catch(async (res) => {
         let data;
@@ -115,7 +115,7 @@ function SignupFormPage() {
 
     dispatch(sessionActions.login({ email: 'demo@user.io' , password: 'password'}))
       .then(() => {
-        history.push("/users");
+        history.push("/");
       });
   };
 

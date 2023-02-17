@@ -8,6 +8,7 @@ import { getRestaurants } from "../../store/restaurants";
 import Restaurant_item from "../Restaurants/Restaurant_item";
 import Splash_item_rs from "../Restaurants/splash_item_rs";
 import { Link } from "react-router-dom";
+import Footer from "../context/footer";
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -174,6 +175,7 @@ function SplashPage() {
         </div>
       {/* </div> */}
 
+              <Footer/>
     </div>
   );
 }

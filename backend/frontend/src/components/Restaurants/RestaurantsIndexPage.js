@@ -4,12 +4,16 @@ import { getRestaurants } from "../../store/restaurants";
 import RestaurantDetailPage from "./Restaurant_item";
 import NavBar from "../Navigation/NavBar";
 import Restaurant_item from "./Restaurant_item";
+import Map from "../context/map";
+// import Map from "../context/map";
+
 
 function RestaurantsIndexPage() {
   const dispatch = useDispatch();
   const restaurants = useSelector(state => Object.values(state.restaurants));
   const [priceRange, setPriceRange] = useState("");
   const [isChecked, setIsChecked] = useState([false, false, false]);
+  const [showMap, setShowMap] = useState(false);
 
   const handlePriceRangeChange = (range) => {
     if (range === priceRange) {
@@ -24,11 +28,24 @@ function RestaurantsIndexPage() {
     dispatch(getRestaurants());
   }, [dispatch]);
 
+  const handleShowMap = () => {
+    setShowMap(true);
+  };
+  
+
   return (
     <>
     <NavBar />
     <div>
       <h1 className="results">Results for </h1>
+      <div className="map_container">
+      {showMap && (
+          <div className="map-container">
+            <Map/>
+          </div>
+        )}
+      </div>
+      <div className="filter-box">
       <div className="filter-container">
       <input
         type="checkbox"
@@ -49,6 +66,13 @@ function RestaurantsIndexPage() {
       />
       <label>$$$$</label>
     </div>
+    <button className="show-map-button" onClick={handleShowMap}>Show Map</button>
+        {showMap && (
+          <div className="map-container">
+            <Map/>
+          </div> 
+          )}
+          </div>
       {/* <div className="filter-container">
         <button onClick={() => setPriceRange("$$")}>$$</button>
         <button onClick={() => setPriceRange("$$$")}>$$$</button>
