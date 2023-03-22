@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: center;
   }
+
+  .highlight {
+    border: 2px solid blue;
+  }
+  
   
   .splash-search {
     display: flex;

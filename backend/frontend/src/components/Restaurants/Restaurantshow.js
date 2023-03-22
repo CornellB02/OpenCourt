@@ -20,13 +20,15 @@ const RestaurantShowPage = () => {
 
     // useEffect(() =)
 
-    let priceRange = restaurant.price_range;
-  if (priceRange === "$50 and over") {
-    priceRange = "$$$$";
-  } else if (priceRange === "$31 and 50") {
-    priceRange = "$$$";
-  } else if (priceRange === "$30 and under") {
-    priceRange = "$$";
+    let priceRange = '';
+  if (restaurant) {
+    if (restaurant.price_range === "$50 and over") {
+      priceRange = "$$$$";
+    } else if (restaurant.price_range === "$31 and 50") {
+      priceRange = "$$$";
+    } else if (restaurant.price_range === "$30 and under") {
+      priceRange = "$$";
+    }
   }
 
     if (!restaurant){

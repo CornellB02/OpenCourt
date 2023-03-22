@@ -12,7 +12,8 @@ function RestaurantsIndexPage() {
   const dispatch = useDispatch();
   const restaurants = useSelector(state => Object.values(state.restaurants));
   const [priceRange, setPriceRange] = useState("");
-  const [isChecked, setIsChecked] = useState([false, false, false]);
+  // const [isChecked, setIsChecked] = useState([false, false, false]);
+  const [isChecked, setIsChecked] = useState(false);
   const [showMap, setShowMap] = useState(false);
 
   const handlePriceRangeChange = (range) => {
@@ -47,25 +48,25 @@ function RestaurantsIndexPage() {
       </div>
       <div className="filter-box">
       <div className="filter-container">
-      <input
-        type="checkbox"
-        checked={isChecked}
-        onChange={() => handlePriceRangeChange("$$")}
-      />
-      <label>$$</label>
-      <input
-        type="checkbox"
-        checked={isChecked && priceRange === "$$$"}
-        onChange={() => handlePriceRangeChange("$$$")}
-      />
-      <label>$$$</label>
-      <input
-        type="checkbox"
-        checked={isChecked && priceRange === "$$$$"}
-        onChange={() => handlePriceRangeChange("$$$$")}
-      />
-      <label>$$$$</label>
-    </div>
+  <input
+    type="checkbox"
+    checked={isChecked && priceRange === "$$"}
+    onChange={() => handlePriceRangeChange("$$")}
+  />
+  <label>$$</label>
+  <input
+    type="checkbox"
+    checked={isChecked && priceRange === "$$$"}
+    onChange={() => handlePriceRangeChange("$$$")}
+  />
+  <label>$$$</label>
+  <input
+    type="checkbox"
+    checked={isChecked && priceRange === "$$$$"}
+    onChange={() => handlePriceRangeChange("$$$$")}
+  />
+  <label>$$$$</label>
+</div>
     <button className="show-map-button" onClick={handleShowMap}>Show Map</button>
         {showMap && (
           <div className="map-container">

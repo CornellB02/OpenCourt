@@ -72,6 +72,7 @@ import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage"
 import RestaurantShowPage from "./components/Restaurants/Restaurantshow";
 
 function App() {
+  // debugger
   return (
     <BrowserRouter >
  <>

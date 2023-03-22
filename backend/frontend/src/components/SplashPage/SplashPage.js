@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import CalendarModule from '../context/calenderModule';
 import "./SplashPage.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,7 +22,18 @@ function SplashPage() {
   const restaurants = useSelector(state => Object.values(state.restaurants).slice(0,10));
   const restaurants_2 = useSelector(state => Object.values(state.restaurants).slice(9,19));
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+    const linkClicked = useRef(false);
 
+  const handleRestaurantClick = (restaurant) => {
+    if (!linkClicked.current) {
+      linkClicked.current = true;
+      setSelectedRestaurant(restaurant);
+
+      setTimeout(() => {
+        linkClicked.current = false;
+      }, 2000); // wait for 2 seconds before enabling the link again
+    }
+  };
 
   useEffect(() => {
     dispatch(getRestaurants());

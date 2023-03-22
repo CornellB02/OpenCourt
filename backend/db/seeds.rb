@@ -52,7 +52,8 @@ ApplicationRecord.transaction do
         longitude: -73.963768,
         latitude: 40.709616,
         price_range: "$50 and over",
-        description: "Famous for its juicy, flavorful steaks, Peter Luger Steakhouse has been a Brooklyn institution for over 130 years. With a menu that focuses exclusively on meat and a casual, family-friendly atmosphere, it's the perfect spot for a hearty meal."
+        description: "Famous for its juicy, flavorful steaks, Peter Luger Steakhouse has been a Brooklyn institution for over 130 years. With a menu that focuses exclusively on meat and a casual, family-friendly atmosphere, it's the perfect spot for a hearty meal.",
+        delivery: true
       },
       {
         name: "Keens Steakhouse",
@@ -67,6 +68,7 @@ ApplicationRecord.transaction do
         longitude: -73.988646,
         latitude: 40.754771,
         price_range: "$50 and over",
+        delivery: true,
         description: "Keens Steakhouse is a true New York City institution, with a rich history dating back over a hundred years. The menu features a wide variety of juicy and delicious steaks, cooked to perfection and served in a warm and elegant atmosphere. Whether you're in the mood for a classic porterhouse or a juicy ribeye, Keens is the place to be."
       },
       {
@@ -97,6 +99,7 @@ ApplicationRecord.transaction do
         longitude: -74.007126,
         latitude: 40.713839,
         price_range: "$50 and over",
+        delivery: true,
         description: "Old Homestead Steakhouse has been serving up juicy and delicious steaks since 1868. The menu features a variety of cuts, including their signature, dry-aged prime beef, as well as a selection of sides and sauces to complement your meal. With its classic steakhouse atmosphere and a focus on quality ingredients, Old Homestead is a true New York City institution."
       },
       {
@@ -142,6 +145,7 @@ ApplicationRecord.transaction do
           executive_chef: "Jimmy Haber",
           longitude: -73.978252,
           latitude: 40.761810,
+          delivery: true,
           description: "Wolfgang's Steakhouse is a modern steakhouse with a focus on classic cuts and quality ingredients. Their menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its stylish atmosphere and friendly service, Wolfgang's is the perfect spot for a special occasion or a night out with friends."
           },
           
@@ -204,6 +208,7 @@ ApplicationRecord.transaction do
               longitude: -74.000800,
               latitude: 40.738804,
               price_range: "$31 and 50",
+              delivery: true,
               description: "Strip House is a classic steakhouse with a modern twist, serving prime cuts of beef, fresh seafood, and an extensive wine list. With its sophisticated atmosphere and impeccable service, it's the perfect place for a special occasion or a night out."
               },
               {
@@ -233,7 +238,8 @@ ApplicationRecord.transaction do
                 executive_chef: "April Bloomfield",
                 longitude: -73.976103,
                 latitude: 40.764918,
-                price_range: "$30 and under",             
+                price_range: "$30 and under",
+                delivery: true,
                 description: "The Breslin Bar & Dining Room is a contemporary steakhouse that offers a stylish and relaxed atmosphere. The menu features a variety of juicy steaks, as well as innovative sides and sauces to complement your meal. With its friendly service and focus on quality, The Breslin is the perfect destination for a night out with friends."
                 },
                 {
@@ -264,6 +270,7 @@ ApplicationRecord.transaction do
                 longitude: -73.992062,
                 latitude: 40.719127,
                 price_range: "$31 and 50",
+                delivery: true,
                 description: "Bowery Meat Company is a contemporary steakhouse offering a variety of juicy steaks, cooked to perfection. The menu features classic cuts as well as innovative dishes that are sure to delight. With a focus on quality and flavor, Bowery Meat Company is the perfect destination for steak lovers."
                 },
                 {
@@ -279,6 +286,7 @@ ApplicationRecord.transaction do
                 longitude: -73.975957,
                 latitude: 40.764865,
                 price_range: "$50 and over",
+                delivery: true,
                 description: "The Prime Rib Restaurant & Lounge is a classic steakhouse that offers a warm and elegant atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. Whether you're celebrating a special occasion or just looking for a delicious dinner, The Prime Rib Restaurant & Lounge is the perfect choice."
                 },
                 {
@@ -294,6 +302,7 @@ ApplicationRecord.transaction do
                 longitude: -73.976024,
                 latitude: 40.764888,
                 price_range: "$50 and over",
+                delivery: true,
                 description: "The Capital Grille is a classic steakhouse that offers a sophisticated atmosphere. The menu features a variety of juicy steaks, as well as classic sides and sauces to complement your meal. With its exceptional service and attention to detail, The Capital Grille is the perfect destination for a special occasion or a night out with friends."
                 },
                 {
@@ -324,6 +333,7 @@ ApplicationRecord.transaction do
                 longitude: -73.976107,
                 latitude: 40.764902,
                 price_range: "$50 and over",
+                delivery: true,
                 description: "L'Artusi is a contemporary steakhouse that offers a stylish and relaxed atmosphere. The menu features a variety of juicy steaks, as well as innovative sides and sauces to complement your meal. With its friendly service and focus on quality, L'Artusi is theperfect choice for a sophisticated dining experience."
                 }
         ]

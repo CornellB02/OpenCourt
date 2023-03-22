@@ -84,6 +84,7 @@ import * as sessionActions from "../../store/session";
 import './SignUpForm.css'
 
 function SignupFormPage() {
+  // debugger
   const dispatch = useDispatch();
   const history = useHistory();
   const [email, setEmail] = useState("");

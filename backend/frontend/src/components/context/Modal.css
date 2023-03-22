@@ -55,7 +55,7 @@
 }
 
 .calendar {
-  position: absolute;
+  position: fixed;
   margin-top: 9vw;
   top: 50%;
   left: 50%;
