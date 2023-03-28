@@ -65,7 +65,7 @@ function Navigation() {
 
 
       <nav className="navbar">
-      <NavLink className='nav-logo' exact to='/'><img className='nav-logo-img' src={steakbooklogo} alt="" /><span className='Logo'></span></NavLink>
+      <NavLink className='nav-logo' exact to='/'><span className='Logo'><img className='nav-logo-img' src={steakbooklogo} alt="" /></span></NavLink>
         <div className="navbar-nav">
           {sessionUser ? <div className='user_logged'>
           <ProfileButton user={sessionUser} /> 

@@ -104,12 +104,12 @@ function Restaurant_item({restaurant}) {
                 &nbsp; 
                 <FontAwesomeIcon icon={faStar} />   
               </div>
-          <p>
+          <div>
             <div className="aspectsindex">
             {priceRange} &nbsp;•&nbsp; Steakhouse &nbsp;•&nbsp;
             {restaurant.neighborhood}
             </div>
-          </p>
+          </div>
           <div className="reservebtnidx">
           {buttons}
                   &nbsp;

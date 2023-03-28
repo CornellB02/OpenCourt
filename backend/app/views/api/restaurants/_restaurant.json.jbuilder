@@ -1,1 +1,1 @@
-json.extract! restaurant, :id, :name, :description, :longitude, :latitude, :neighborhood, :cuisines, :dress_code, :parking_details, :executive_chef, :additional, :created_at, :updated_at, :opentime, :closetime, :delivery
+json.extract! restaurant, :id, :name, :description, :longitude, :latitude, :neighborhood, :cuisines, :dress_code, :parking_details, :executive_chef, :additional, :created_at, :updated_at, :opentime, :closetime, :delivery, :price_range

@@ -33,9 +33,9 @@ ApplicationRecord.transaction do
       }) 
     end
 
-    R1.photos.attach([
-      {io:URI.open('https://steak-book-seeds.s3.amazonaws.com/picture1.jpeg'), filename: 'rest1.jpeg'}
-    ])
+    # R1.photos.attach([
+    #   {io:URI.open('https://steak-book-seeds.s3.amazonaws.com/picture1.jpeg'), filename: 'rest1.jpeg'}
+    # ])
 
 
     restaurants = [
