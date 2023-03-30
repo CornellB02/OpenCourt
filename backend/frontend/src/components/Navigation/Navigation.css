@@ -1,0 +1,411 @@
+.navbar {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #F7F7F7; */
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  height: 1.6rem;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: relative;
+}
+
+.businesses {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Navpage {
+  width: 100%;
+  margin: 0;
+}
+  
+
+.businesses{
+  background-color: rgb(237, 237, 237);
+  height: 3.8ch;
+}
+  nav {
+    display: block;
+    }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: #000;
+  }
+
+  /* .nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: px;
+    height: 49px;
+    padding-right: 10px;
+} */
+
+.nav-logo-img {
+    height: 228px;
+    /* size: -399pc; */
+    position: absolute;
+    bottom: -7.8pc;
+    left: -34px;
+    /* align-self: left; */
+}
+
+.nav-links {
+    margin-right: 15px;
+    margin-top: -2px;
+}
+
+  
+.authbuttons {
+    margin-top: 1vw;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .4s ease-in-out;
+    }
+
+    button, input {
+        overflow: visible;
+    }
+
+    button, select {
+        text-transform: none;
+    }
+
+.login {
+        background-color: initial;
+        border: 0.0625rem solid #d8d9db;
+        color: #2d333f;
+        font-size: 14px;
+        margin: 0;
+    }
+
+.signup {
+    background-color: #2f8aa8;
+    border: 0.0625rem solid #2c86a4;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 17px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+  }
+ 
+  button[type="user"] {
+    background-color: transparent;
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .location_route {
+    background-color: white;
+    width: 100% vw;
+    border: 1px solid #E9E9E9;
+    height: 3.7vh;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .link-style {
+    text-decoration: none;
+    color: cornflowerblue;
+    cursor: pointer;
+  }
+
+
+  .nav-main {
+    background-image: url('https://besthqwallpapers.com/Uploads/22-4-2019/88252/blue-wooden-planks-wooden-blue-texture-blue-wooden-background-wood.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 10.4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .nav-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    margin-top: -4ch;
+  }
+  
+  .findtable {
+    font-size: 55px;
+    font-weight: bold;
+    margin-top: 2vw;
+    color: white;
+    margin-bottom: 20px;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.06ch;
+    margin-bottom: 0.4ch;
+  }
+  
+  .date_selector {
+        background-color: #F5F5F5;
+        border: 1px solid #E9E9E9;
+        border-radius: 4px;
+        color: #555;
+        font-size: 16px;
+        padding: 12px 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px
+        /* width: px; */ 
+    /* font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    width: 120px;
+    text-align: center; */
+    }
+    
+    .time_selector {
+        background-color: #F5F5F5;
+        border: 1px solid #E9E9E9;
+        border-radius: 4px;
+        color: #555;
+        font-size: 16px;
+        padding: 12px 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px
+        /* width: 200px; */
+      }
+      
+      
+      
+    
+    .num_of_ppl_selector {
+        background-color: #F5F5F5;
+        border: 1px solid #E9E9E9;
+        border-radius: 4px;
+        color: #555;
+        font-size: 16px;
+        padding: 12px 16px;
+        width: 200px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px
+    }
+    .navinput{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 40vw;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+ 
+      .nav_search_input {
+        font-size: 18px;
+        width: 250px;
+        background-color: white !important;
+        height: 1.4cm;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+      }
+      
+  
+  
+      .submit {
+        background-color: red;
+        border-radius: 4px;
+        color: white;
+        font-size: 16px;
+        padding: 12px 16px;
+        width: 200px;
+        height: 1.3cm;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+
+  
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 90vw;
+        margin-top: 2.4vw;
+        /* margin-right: -20px; */
+      }
+  
+
+  .calendarContainer {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.nav_select{
+    margin-left: 12vw;
+    display: flex;
+    background-color: white;
+    border-radius: 34pc;
+    height: 1.38cm;
+    border: 1px solid black
+}
+
+#language-select{
+  background-color: transparent;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+  color: #555;
+  font-size: 10px;
+  text-align: right;
+  margin-right: 1vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.github{
+  margin-right: 2.4vw;
+}
+
+
+.search-button{
+  background-color: white;
+}
+
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  /* background-color: transparent; */
+  background: rgb(242, 240, 240);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  /* font-size: 24px; */
+  margin-top: 9px;
+  border: 1px solid grey;
+  /* margin-left: 3em; */
+  /* padding-left: 3ch; */
+
+}
+
+.dropdown-user {
+  margin-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 66px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.4px;
+  text-size-adjust: 100%;
+  color: rgb(45, 51, 63);
+
+}
+
+.user-button {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: block;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: 100%;
+  line-height: 18.4px;
+  text-align: left;
+  /* text-size-adjust: 100%;
+  color: rgb(45, 51, 63); */
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+.profile-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent; 
+}
+
+.profile-dropdown {
+  position: absolute;
+  /* border: 1px solid grey; */
+  border-radius: 5px;
+  padding: 5px;
+  top: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  z-index: 1;
+}
+
+.profile-dropdown li {
+  text-align: right;
+  margin: 5px;
+}
+
+.fa-user {
+  font-size: 0.6em;
+  margin-left: 2pxx;
+}

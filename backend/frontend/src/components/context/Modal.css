@@ -1,0 +1,107 @@
+/* frontend/src/context/Modal.css */
+
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+  }
+  
+  #modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  #modal-content {
+    position: absolute;
+    background-color:white;
+    height: 85%;
+    width: 33%;
+    border-radius: 5px;
+  }
+
+#modal-close {
+  position: absolute;
+  right: 26px;
+  top: 10px;
+  padding: 5px;
+  font-size: 28px;
+  font-weight: lighter;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.calendarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 19vw;
+  margin-top: 19vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.calendar {
+  position: fixed;
+  margin-top: 9vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin-left: vw; */
+  margin-top:7.8vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.search_select{
+  margin-left: 12vw;
+    display: flex;
+    background-color: white;
+    border-radius: 4px;
+    height: 1.38cm;
+    border: 1px solid black;
+    width: 33vw;
+}
+
+.footer {
+  background-color: #2d333f;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5vw 1vw;
+}
+
+.in-footer {
+  color: white;
+  text-align: center;
+  font-size: 1.2vw;
+  margin: 0 1vw 1vw;
+}
+
+.bottom-footer {
+  color: white;
+  text-align: center;
+  font-size: 1.1vw;
+  margin-top: 1.1vw;
+}
