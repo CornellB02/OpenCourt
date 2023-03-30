@@ -12,12 +12,14 @@
 #  cuisines        :string           not null
 #  dress_code      :string           not null
 #  parking_details :string           not null
-#  opentime        :time             not null
-#  closetime       :time             not null
 #  executive_chef  :string           not null
 #  additional      :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  opentime        :string           not null
+#  closetime       :string           not null
+#  price_range     :string           not null
+#  delivery        :boolean          default(FALSE)
 #
 class Restaurant < ApplicationRecord
     validates :name, :phone_number, :neighborhood, :cuisines, :dress_code, :parking_details, :opentime, :closetime, :executive_chef, presence: true
