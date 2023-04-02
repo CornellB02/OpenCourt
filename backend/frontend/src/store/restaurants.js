@@ -4,6 +4,7 @@ import csrfFetch from "./csrf";
 const RECEIVE_RESTAURANT = "restaurants/receiveRestaurant"
 const RECEIVE_RESTAURANTS = "restaurants/receiveRestaurants"
 
+
 const receiveRestaurant = (restaurant) => ({
     type: RECEIVE_RESTAURANT,
     restaurant
@@ -32,6 +33,8 @@ export const getRestaurant = (restaurantId) => async dispatch => {
       dispatch(receiveRestaurant(data))
     }
 };
+
+
 
 const restaurantsReducer = (state={}, action) => {
     const newState = { ...state }
