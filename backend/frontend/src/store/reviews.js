@@ -34,7 +34,7 @@ const deleteReview = (reviewId) => ({
 });
 
 export const getRestaurantReviews = (restaurantId) => async dispatch => {
-    const res = await csrfFetch(`/api/restaurants/${restaurantId}`)
+    const res = await csrfFetch(`/api/restaurants/${restaurantId}/reviews`)
     if (res.ok) {
     const data = await res.json()
     dispatch(receiveRestaurantReviews(data))
@@ -78,34 +78,42 @@ export const removeReview = (reviewId) => async (dispatch) => {
 }
 
 
-const reviewsReducer = (state={}, action) => {
-    const newState = { ...state }
-
-    switch(action.type) {
-        case RECEIVE_RESTAURANT_REVIEWS:
-            // debugger
-            action.reviews.array.forEach(review => {
-                newState[review.id] = review
-            });
-            // newState[action.review.id] = action.review
-            return newState
-        case RECEIVE_USER_REVIEWS:
-            // debugger
-            newState = {}
-            action.reviews.array.forEach(review => {
-                newState[review.id] = review
-            });
-            return newState
-        case ADD_NEW_REVIEW:
-            // newState = {...state}
-            newState[action.review.id] = action.review;
-            return newState;
-        case DELETE_REVIEW:
-            delete newState[action.reviewId];
-            return newState;
-        default:
-            return state
+const reviewsReducer = (state = {}, action) => {
+    switch (action.type) {
+      case RECEIVE_RESTAURANT_REVIEWS:
+        return {
+          ...state,
+          ...action.reviews.reduce((accumulator, review) => {
+            accumulator[review.id] = review;
+            return accumulator;
+          }, {})
+        };
+      case RECEIVE_USER_REVIEWS:
+        return {
+          ...state,
+          ...action.reviews.reduce((accumulator, review) => {
+            accumulator[review.id] = review;
+            return accumulator;
+          }, {})
+        };
+      case ADD_NEW_REVIEW:
+        return {
+          ...state,
+          [action.review.id]: action.review
+        };
+      case UPDATE_REVIEW:
+        return {
+          ...state,
+          [action.review.id]: action.review
+        };
+      case DELETE_REVIEW:
+        const newState = { ...state };
+        delete newState[action.reviewId];
+        return newState;
+      default:
+        return state;
     }
-}
+  };
+  
 
 export default reviewsReducer

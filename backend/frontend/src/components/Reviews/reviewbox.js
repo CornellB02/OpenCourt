@@ -31,7 +31,7 @@ function ReviewsBox({ restaurant }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    debugger
+    // debugger
     // const errors = [];
     const reviewData = {
       ...formData,
