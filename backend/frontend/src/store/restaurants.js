@@ -15,6 +15,14 @@ const receiveRestaurants = (restaurants) => ({
     restaurants
 })
 
+export const fetchRestaurants = (state) => {
+    return state.restaurants ? Object.values(state.restaurants) : [];
+};
+
+export const fetchRestaurant = (id) => (state) => {
+    return state.restaurants? state.restaurants[id] : null;
+};
+
 export const getRestaurants = () => async dispatch => {
     const res = await csrfFetch(`/api/restaurants`)
     if (res.ok) {

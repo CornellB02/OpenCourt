@@ -117,8 +117,10 @@ const RestaurantShowPage = () => {
           <a href="#d" class="read-less">Read less</a>
       </div>
                 <div className='underDes'>
+                <div className='reviewSec'>
                   {/* llklkl */}
-                <ReviewsBox/>
+                <ReviewsBox restaurant={restaurant}/>
+                </div>
                 </div>
             </div>
         </div>

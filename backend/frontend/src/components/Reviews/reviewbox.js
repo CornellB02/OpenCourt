@@ -1,10 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getReviews, composeReview, removeReview } from "../../store/reviews";
-import { selectUserId } from "../../store/session";
+import { composeReview } from "../../store/reviews";
+import { useHistory } from "react-router-dom";
+// import { selectUserId } from "../../store/session";
+import { getRestaurant } from "../../store/restaurants";
 
-function ReviewsBox({ restaurantId }) {
+function ReviewsBox({ restaurant }) {
   const dispatch = useDispatch();
+  const history = useHistory();
+  const [review, setReview] = useState('');
+  const [rating, setRating] = useState(5);
+  const [validationErrors, setValidationErrors] = useState([]);
+  const user = useSelector((state) => state.session.user);
   const [formData, setFormData] = useState({
     nickname: "",
     body: "",
@@ -13,20 +20,26 @@ function ReviewsBox({ restaurantId }) {
     ambience: "",
     value: "",
     overall: "",
+    // user_id: userId,
+    // restaurant_id: restaurantId,
   });
 
-  const reviews = useSelector((state) => state.reviews);
-  const userId = useSelector(selectUserId);
+  
 
-  const handleSubmit = (e) => {
+  // const reviews = useSelector((state) => state.reviews);
+  
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     debugger
-    const review = {
+    // const errors = [];
+    const reviewData = {
       ...formData,
-      user_id: userId,
-      restaurant_id: restaurantId,
+      user_id: user.id,
+      restaurant_id: restaurant.id,
     };
-    dispatch(composeReview(review)).then(() => {
+    // dispatch(getRestaurant(restaurant));
+    await dispatch(composeReview(reviewData, restaurant.id )).then(() => {
       setFormData({
         nickname: "",
         body: "",
@@ -35,19 +48,21 @@ function ReviewsBox({ restaurantId }) {
         ambience: "",
         value: "",
         overall: "",
+        // user_id: userId,
+        // restaurant_id: restaurantId,
       });
     });
   };
 
-  const handleDelete = (reviewId) => {
-    dispatch(removeReview(reviewId));
-  };
+  // const handleDelete = (reviewId) => {
+  //   dispatch(removeReview(reviewId));
+  // };
 
   return (
     <div>
-      <h2>Reviews:</h2>
-      <ul>
-        {Object.values(reviews)
+      {/* <h2>Reviews:</h2> */}
+      {/* <ul> */}
+        {/* {Object.values(reviews)
           .filter((review) => review.restaurant_id === restaurantId)
           .map((review) => (
             <li key={review.id}>
@@ -62,8 +77,8 @@ function ReviewsBox({ restaurantId }) {
               <p>Overall: {review.overall}</p>
               <button onClick={() => handleDelete(review.id)}>Delete</button>
             </li>
-          ))}
-      </ul>
+          ))} */}
+      {/* </ul> */}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="nickname">Nickname:</label>
