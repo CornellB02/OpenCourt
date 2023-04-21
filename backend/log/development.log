@@ -50415,3 +50415,29 @@ Processing by Api::ReviewsController#index as JSON
 Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2622)
 
 
+Started GET "/api/restaurants/[object%20Object]/reviews" for 127.0.0.1 at 2023-04-21 18:54:22 -0400
+Started GET "/api/restaurants/2" for 127.0.0.1 at 2023-04-21 18:54:22 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"restaurant_id"=>"[object Object]"}
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.3ms | Allocations: 353)
+Completed 200 OK in 54ms (Views: 0.9ms | ActiveRecord: 11.1ms | Allocations: 6026)
+
+
+  [1m[36mReview Load (28.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/api/reviews_controller.rb:6:in `index'
+Completed 200 OK in 85ms (Views: 83.9ms | ActiveRecord: 39.1ms | Allocations: 10661)
+
+
+Started GET "/api/restaurants/[object%20Object]/reviews" for 127.0.0.1 at 2023-04-21 18:54:22 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"restaurant_id"=>"[object Object]"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/api/reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2622)
+
+
