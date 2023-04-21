@@ -4,6 +4,7 @@ import csrfFetch from "./csrf";
 const RECEIVE_RESTAURANT = "restaurants/receiveRestaurant"
 const RECEIVE_RESTAURANTS = "restaurants/receiveRestaurants"
 
+
 const receiveRestaurant = (restaurant) => ({
     type: RECEIVE_RESTAURANT,
     restaurant
@@ -13,6 +14,14 @@ const receiveRestaurants = (restaurants) => ({
     type: RECEIVE_RESTAURANTS,
     restaurants
 })
+
+export const fetchRestaurants = (state) => {
+    return state.restaurants ? Object.values(state.restaurants) : [];
+};
+
+export const fetchRestaurant = (id) => (state) => {
+    return state.restaurants? state.restaurants[id] : null;
+};
 
 export const getRestaurants = () => async dispatch => {
     const res = await csrfFetch(`/api/restaurants`)
@@ -32,6 +41,8 @@ export const getRestaurant = (restaurantId) => async dispatch => {
       dispatch(receiveRestaurant(data))
     }
 };
+
+
 
 const restaurantsReducer = (state={}, action) => {
     const newState = { ...state }

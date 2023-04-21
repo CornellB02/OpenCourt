@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faMessages } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faMessage, faMoneyBill, faUtensils } from "@fortawesome/free-solid-svg-icons";
-
+import ReviewsBox from '../Reviews/reviewbox'
 
 
 const RestaurantShowPage = () => {
@@ -117,7 +117,10 @@ const RestaurantShowPage = () => {
           <a href="#d" class="read-less">Read less</a>
       </div>
                 <div className='underDes'>
-
+                <div className='reviewSec'>
+                  {/* llklkl */}
+                <ReviewsBox restaurant={restaurant}/>
+                </div>
                 </div>
             </div>
         </div>
