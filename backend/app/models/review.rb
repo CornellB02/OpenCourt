@@ -16,6 +16,8 @@
 #  updated_at    :datetime         not null
 #
 class Review < ApplicationRecord
+
+    attr_accessor :user_email
     validates :body, :food, :service, :ambience, :value, presence: true
     validates :food, :service, :ambience, :value, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
     # validate :calculate_overall_rating

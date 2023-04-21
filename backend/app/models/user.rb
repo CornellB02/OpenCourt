@@ -32,6 +32,11 @@ class User < ApplicationRecord
   # validate :validate_full_profile
   before_validation :ensure_session_token
 
+  has_many :reviews,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Review
+    
   # def validate_full_profile
   #   validates :first_name, presence: true
   #   validates :last_name, presence: true
