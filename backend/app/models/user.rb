@@ -36,7 +36,8 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Review
-    
+  
+  has_many :restaurants, through: :reviews
   # def validate_full_profile
   #   validates :first_name, presence: true
   #   validates :last_name, presence: true

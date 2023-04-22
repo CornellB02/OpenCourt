@@ -18,7 +18,7 @@ function Reviews({ restaurant }) {
         {reviews &&
           reviews.map((review) => (
             <div key={review.id}>
-              <div>{review.id} - {review.user} - {review.nickname} - {review.body} - {review.food} - {review.service} - {review.value} - {review.overall}</div>
+              <div>{review.id} - {review.user.first_name} - {review.nickname} - {review.body} - {review.food} - {review.service} - {review.value} - {review.overall}</div>
             </div>
           ))}
       </div>

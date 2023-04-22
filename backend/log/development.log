@@ -50441,3 +50441,93 @@ Processing by Api::ReviewsController#index as JSON
 Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2622)
 
 
+Started GET "/api/session" for 127.0.0.1 at 2023-04-22 12:48:08 -0400
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-04-22 12:48:08 -0400
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 500 Internal Server Error in 10ms (Allocations: 3030)
+
+
+
+ArgumentError - File /Users/directorj/Desktop/my-repo/Steak-Book/backend/public/index.html does not exist:
+  app/controllers/static_pages_controller.rb:3:in `frontend_index'
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:33:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.0ms | Allocations: 299)
+Completed 200 OK in 110ms (Views: 2.3ms | ActiveRecord: 49.7ms | Allocations: 21324)
+
+
+Started GET "/api/restaurants" for 127.0.0.1 at 2023-04-22 12:48:09 -0400
+Processing by Api::RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/api/restaurants_controller.rb:6:in `index'
+Completed 200 OK in 36ms (Views: 26.6ms | ActiveRecord: 1.0ms | Allocations: 10895)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-04-22 12:48:10 -0400
+Started GET "/api/restaurants/2" for 127.0.0.1 at 2023-04-22 12:48:10 -0400
+Started GET "/api/restaurants/[object%20Object]/reviews" for 127.0.0.1 at 2023-04-22 12:48:10 -0400
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1066)
+
+
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"2"}
+
+ArgumentError - File /Users/directorj/Desktop/my-repo/Steak-Book/backend/public/index.html does not exist:
+  app/controllers/static_pages_controller.rb:3:in `frontend_index'
+
+  [1m[36mRestaurant Load (2.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.7ms | Allocations: 413)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 2.3ms | Allocations: 4746)
+
+
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"restaurant_id"=>"[object Object]"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/api/reviews_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 0.7ms | Allocations: 6610)
+
+
+Started GET "/api/restaurants/[object%20Object]/reviews" for 127.0.0.1 at 2023-04-22 12:48:11 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"restaurant_id"=>"[object Object]"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/api/reviews_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 2634)
+
+
+Started GET "/api/restaurants/2" for 127.0.0.1 at 2023-04-22 12:48:43 -0400
+Processing by Api::RestaurantsController#show as JSON
+  Parameters: {"id"=>"2"}
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-04-22 12:48:43 -0400
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/restaurants_controller.rb:11:in `show'
+  Rendering api/restaurants/show.json.jbuilder
+  Rendered api/restaurants/show.json.jbuilder (Duration: 0.6ms | Allocations: 371)
+Completed 200 OK in 28ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 2199)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 921)
+
+
+
+ArgumentError - File /Users/directorj/Desktop/my-repo/Steak-Book/backend/public/index.html does not exist:
+  app/controllers/static_pages_controller.rb:3:in `frontend_index'
+
+Started GET "/api/restaurants/[object%20Object]/reviews" for 127.0.0.1 at 2023-04-22 12:48:43 -0400
+Processing by Api::ReviewsController#index as JSON
+  Parameters: {"restaurant_id"=>"[object Object]"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/api/reviews_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 2622)
+
+
