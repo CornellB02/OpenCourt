@@ -1,0 +1,5 @@
+class Changereviewsaddnull < ActiveRecord::Migration[7.0]
+  def change
+    change_column_null  :reviews, :reviewer_firstname, :false
+  end
+end

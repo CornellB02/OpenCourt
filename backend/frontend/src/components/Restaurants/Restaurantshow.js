@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faMessages } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faMessage, faMoneyBill, faUtensils } from "@fortawesome/free-solid-svg-icons";
-import ReviewsBox from '../Reviews/restaurantsReviews'
-import Reviews from '../Reviews/reviewbox'
+import Reviews from '../Reviews/restaurantsReviews'
+import ReviewsBox from '../Reviews/reviewbox'
 
 
 const RestaurantShowPage = () => {
@@ -120,7 +120,7 @@ const RestaurantShowPage = () => {
                 <div className='underDes'>
                 <div className='reviewSec'>
                   {/* llklkl */}
-                <Reviews restaurant={restaurant}/>
+                <Reviews restaurant={restaurantId}/>
                 <ReviewsBox restaurant={restaurant}/>
                 </div>
                 </div>
