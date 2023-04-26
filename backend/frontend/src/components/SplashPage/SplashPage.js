@@ -26,6 +26,7 @@ function SplashPage() {
 
   const handleRestaurantClick = (restaurant) => {
     if (!linkClicked.current) {
+      // debugger
       linkClicked.current = true;
       setSelectedRestaurant(restaurant);
 

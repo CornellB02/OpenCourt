@@ -1,0 +1,94 @@
+.review-list {
+    display: flexbox;
+    padding-left: 16vw;
+
+}
+.review-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 48.5%;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    /* border-radius: 20px; */
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .review-nickname {
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  .review-stats {
+    display: flex;
+    align-items: center;
+    padding-right: 3px;
+  }
+  
+  .review-rating-star {
+    color: #f9a825;
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  
+  .review-body {
+    margin-bottom: 8px;
+    padding-bottom: 25px;
+  }
+  
+  .review-overall {
+    display: flex;
+    /* margin-left: 1vw; */
+    font-weight: bold;
+  }
+
+.review-food {
+    display: flex;
+    margin-right: 1vw;
+    font-weight: bold;
+}
+
+.review-service {
+    display: flex;
+    margin-right: 1vw;
+    font-weight: bold;
+}
+
+  .review-value {
+    display: flex;
+    margin-right: 1vw;
+    font-weight: bold;
+  }
+  
+  .review-date {
+    font-size: 12px;
+    letter-spacing: -0.3px;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+  .review-ambience {
+    display: flex;
+    margin-right: 1vw;
+    font-weight: bold;
+  }
+  
+  .review-response {
+    font-style: italic;
+    color: #808080;
+  }
+
+.numberstat{
+    color: red;
+}
+  
+/* .review-cat {
+
+} */

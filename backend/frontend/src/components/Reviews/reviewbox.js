@@ -20,7 +20,7 @@ function ReviewsBox({ restaurant }) {
     ambience: "",
     value: "",
     overall: "",
-    // user_id: userId,
+    reviewer_firstname: user.email,
     // restaurant_id: restaurantId,
   });
 

@@ -31,7 +31,7 @@ class Restaurant < ApplicationRecord
     validates :longitude, :latitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
 
     # has_many :reservations
-    # has_many :reviews
+    has_many :reviews
    
 
     has_one_attached :photo

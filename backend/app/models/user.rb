@@ -32,10 +32,7 @@ class User < ApplicationRecord
   # validate :validate_full_profile
   before_validation :ensure_session_token
 
-  has_many :reviews,
-    primary_key: :id,
-    foreign_key: :user_id,
-    class_name: :Review
+  has_many :reviews
   
   has_many :restaurants, through: :reviews
   # def validate_full_profile
