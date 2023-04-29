@@ -52,6 +52,22 @@ export const getUserReviews = (userId) => async dispatch => {
     }
 };
 
+export const editReview = (reviewId, review) => async (dispatch) => {
+    console.log(reviewId)
+    console.log( "-------------------------")
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(review)
+    })
+
+    if (response.ok) {
+        const review = await response.json();
+        dispatch(updateReview(review));
+        return review;
+    }
+}
+
 export const composeReview = (reviewData, restaurantId) => async (dispatch) => {
     const response = await csrfFetch(`/api/restaurants/${restaurantId}/reviews`, {
         method: 'POST',

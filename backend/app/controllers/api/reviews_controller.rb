@@ -37,6 +37,15 @@ class Api::ReviewsController < ApplicationController
         end
     end
 
+    def destroy 
+        @review = Review.find(params[:id])
+
+        if @review && @review.reviewer_firstname == current_user.email
+            @review.destroy
+        end
+    end 
+      
+
     private
 
     def review_params

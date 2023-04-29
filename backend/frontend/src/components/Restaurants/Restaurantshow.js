@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { getRestaurant } from '../../store/restaurants'
@@ -7,8 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faMessages } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faMessage, faMoneyBill, faUtensils } from "@fortawesome/free-solid-svg-icons";
-import ReviewsBox from '../Reviews/restaurantsReviews'
-import Reviews from '../Reviews/reviewbox'
+import Reviews from '../Reviews/restaurantsReviews'
+import ReviewsBox from '../Reviews/reviewbox'
 
 
 const RestaurantShowPage = () => {
@@ -119,9 +120,11 @@ const RestaurantShowPage = () => {
       </div>
                 <div className='underDes'>
                 <div className='reviewSec'>
+                <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" restaurant ={restaurant}>
+          Write a review
+        </Link>
                   {/* llklkl */}
                 <Reviews restaurant={restaurant}/>
-                <ReviewsBox restaurant={restaurant}/>
                 </div>
                 </div>
             </div>
@@ -131,3 +134,7 @@ const RestaurantShowPage = () => {
 }
 
 export default RestaurantShowPage
+
+//  {/* llklkl */}
+//  <Reviews restaurant={restaurant}/>
+//  <ReviewsBox restaurant={restaurant}/>

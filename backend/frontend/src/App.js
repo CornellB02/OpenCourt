@@ -70,6 +70,7 @@ import { ModalProvider } from "./components/context/Modal.js";
 import SplashPage from "./components/SplashPage/SplashPage";
 import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage";
 import RestaurantShowPage from "./components/Restaurants/Restaurantshow";
+import ReviewsBox from "./components/Reviews/reviewbox";
 
 function App() {
   // debugger
@@ -89,6 +90,7 @@ function App() {
           </ModalProvider>
         </Route>
         <Route path="/restaurants/:restaurantId" component={RestaurantShowPage} />
+        <Route path="/restaurant/:restaurantId/review" component={ReviewsBox}/>
         <Route exact path="/">
           <SplashPage />
         </Route>

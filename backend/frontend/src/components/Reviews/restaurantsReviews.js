@@ -2,15 +2,18 @@ import { useEffect } from "react";
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurantReviews } from "../../store/reviews";
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./reviews.css"
 import moment from 'moment';
+import DeleteReviewButton from "./review_remove";
+import UpdateReviewButton from "./update-review";
 
 function Reviews({ restaurant }) {
     const dispatch = useDispatch();
-    const { reviewId } = useParams()
+    // const { reviewId } = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews));
+  const user = useSelector((state) => state.session.user);
   
     
 
@@ -68,6 +71,13 @@ function Reviews({ restaurant }) {
                         </div>
                     </div>
                         <div className="review-body">{review.body}</div>
+                        {review.reviewer_firstname === user.email && (
+  <div className="review-body">
+    <DeleteReviewButton reviewId={review.id} />
+    <UpdateReviewButton review={review} />
+
+  </div>
+)} 
                 </div>
             </div>
             ))}
