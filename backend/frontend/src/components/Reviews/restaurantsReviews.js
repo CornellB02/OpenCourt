@@ -17,7 +17,7 @@ function Reviews({ restaurant }) {
 
     useEffect(() => {
         if (restaurant) {
-            dispatch(getRestaurantReviews(restaurant));
+            dispatch(getRestaurantReviews(restaurant.id));
         }
     }, [dispatch, restaurant]);
   
@@ -36,37 +36,35 @@ function Reviews({ restaurant }) {
 
     return (
         <div className="review-list">
-        <h3>Reviews:</h3>
-        {reviews &&
+       <h3>Reviews:</h3>
+    {reviews.length === 0 ? (
+      <div>No reviews found for this restaurant.</div>
+    ) : 
             reviews.map((review) => (
             <div key={review.id} className="review-container">
                 <div className="reviewer-info">
-                <div className="review-area">
-                            <div className="area"></div><div className="numberstat">{restaurant.neighborhood}</div>
-                        </div>
+                  <div className="reviewer-circle">{review.reviewer_firstname.slice(0,1)} </div> 
+                  <div className="reviewer-email"> {review.reviewer_firstname}</div> 
                 </div>
+                <div className="review-details">
                 <div className="review-date">
                 Review Left {getTimeElapsed(review.created_at)} Ago
                 </div>
-                <div className="review-header">
-                {/* <span className="review-nickname">{review.nickname}</span> */}
-                </div>
-                <div className="review-details">
                     <div className="review-stats">
                         <div className="review-food">
-                            <div className="review-cat">Food - &nbsp; </div><div className="numberstat">{review.food}</div>
+                            <div className="review-cat">Food  • &nbsp; </div><div className="numberstat">{review.food}</div>
                         </div>
                         <div className="review-service">
-                            <div className="review-cat">Service - &nbsp; </div><div className="numberstat">{review.service}</div>
+                            <div className="review-cat">Service  •  &nbsp; </div><div className="numberstat">{review.service}</div>
                         </div>
                         <div className="review-ambience ">
-                            <div className="review-cat">Ambience - &nbsp; </div><div className="numberstat">{review.ambience}</div>
+                            <div className="review-cat">Ambience  • &nbsp; </div><div className="numberstat">{review.ambience}</div>
                         </div>
                         <div className="review-value ">
-                            <div className="review-cat">Value - &nbsp; </div><div className="numberstat">{review.value}</div>
+                            <div className="review-cat">Value  • &nbsp; </div><div className="numberstat">{review.value}</div>
                         </div>
                         <div className="review-overall ">
-                            <div className="review-cat">Overall - &nbsp; </div><div className="numberstat">{review.overall}</div>
+                            <div className="review-cat">Overall  • &nbsp; </div><div className="numberstat">{review.overall}</div>
                         </div>
                     </div>
                         <div className="review-body">{review.body}</div>

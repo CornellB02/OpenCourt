@@ -79,41 +79,41 @@ export const removeReview = (reviewId) => async (dispatch) => {
 
 
 const reviewsReducer = (state = {}, action) => {
-    switch (action.type) {
-      case RECEIVE_RESTAURANT_REVIEWS:
-        return {
-          ...state,
-          ...action.reviews.reduce((accumulator, review) => {
-            accumulator[review.id] = review;
-            return accumulator;
-          }, {})
-        };
-      case RECEIVE_USER_REVIEWS:
-        return {
-          ...state,
-          ...action.reviews.reduce((accumulator, review) => {
-            accumulator[review.id] = review;
-            return accumulator;
-          }, {})
-        };
-      case ADD_NEW_REVIEW:
-        return {
-          ...state,
-          [action.review.id]: action.review
-        };
-      case UPDATE_REVIEW:
-        return {
-          ...state,
-          [action.review.id]: action.review
-        };
-      case DELETE_REVIEW:
-        const newState = { ...state };
-        delete newState[action.reviewId];
-        return newState;
-      default:
-        return state;
-    }
-  };
-  
+  switch (action.type) {
+    case RECEIVE_RESTAURANT_REVIEWS:
+      return {
+        ...state,
+        ...action.reviews.reduce((accumulator, review) => {
+          accumulator[review.id] = review;
+          return accumulator;
+        }, {})
+      };
+    case RECEIVE_USER_REVIEWS:
+      return {
+        ...state,
+        ...action.reviews.reduce((accumulator, review) => {
+          accumulator[review.id] = review;
+          return accumulator;
+        }, {})
+      };
+    case ADD_NEW_REVIEW:
+      return {
+        ...state,
+        [action.review.id]: action.review
+      };
+    case UPDATE_REVIEW:
+      return {
+        ...state,
+        [action.review.id]: action.review
+      };
+    case DELETE_REVIEW:
+      const newState = { ...state };
+      delete newState[action.reviewId];
+      return newState;
+    default:
+      return state;
+  }
+};
+
 
 export default reviewsReducer

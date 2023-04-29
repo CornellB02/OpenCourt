@@ -21,6 +21,7 @@ function ReviewsBox({ restaurant }) {
     value: "",
     overall: "",
     reviewer_firstname: user.email,
+    // user_id: userId,
     // restaurant_id: restaurantId,
   });
 
