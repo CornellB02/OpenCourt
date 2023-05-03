@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { composeReview } from "../../store/reviews";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 // import { selectUserId } from "../../store/session";
 import { getRestaurant } from "../../store/restaurants";
 
-function ReviewsBox({ restaurant }) {
+function ReviewsBox() {
   const dispatch = useDispatch();
+  const {restaurantId} = useParams();
   const history = useHistory();
-  const [review, setReview] = useState('');
-  const [rating, setRating] = useState(5);
-  const [validationErrors, setValidationErrors] = useState([]);
+  // const [review, setReview] = useState('');
+  // const [rating, setRating] = useState(5);
+  // const [validationErrors, setValidationErrors] = useState([]);
   const user = useSelector((state) => state.session.user);
+  // const location = useLocation();
   const [formData, setFormData] = useState({
     nickname: "",
     body: "",
@@ -20,11 +22,10 @@ function ReviewsBox({ restaurant }) {
     ambience: "",
     value: "",
     overall: "",
-    reviewer_firstname: user.email,
+    reviewer_firstname: user.email 
+    // user_id: userId,
     // restaurant_id: restaurantId,
   });
-
-  
 
   // const reviews = useSelector((state) => state.reviews);
   
@@ -36,10 +37,10 @@ function ReviewsBox({ restaurant }) {
     const reviewData = {
       ...formData,
       user_id: user.id,
-      restaurant_id: restaurant.id,
+      restaurant_id: restaurantId
     };
-    // dispatch(getRestaurant(restaurant));
-    await dispatch(composeReview(reviewData, restaurant.id )).then(() => {
+    await dispatch(getRestaurant(restaurantId));
+    await dispatch(composeReview(reviewData, restaurantId )).then(() => {
       setFormData({
         nickname: "",
         body: "",

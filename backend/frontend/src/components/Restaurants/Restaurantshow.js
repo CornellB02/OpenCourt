@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { getRestaurant } from '../../store/restaurants'
@@ -119,9 +120,12 @@ const RestaurantShowPage = () => {
       </div>
                 <div className='underDes'>
                 <div className='reviewSec'>
+                <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" >
+          Write a review
+        </Link>
                   {/* llklkl */}
-                <Reviews restaurant={restaurantId}/>
-                <ReviewsBox restaurant={restaurant}/>
+                <Reviews restaurant={restaurant}/>
+{/* //  <ReviewsBox restaurant={restaurant}/> */}
                 </div>
                 </div>
             </div>
@@ -131,3 +135,7 @@ const RestaurantShowPage = () => {
 }
 
 export default RestaurantShowPage
+
+//  {/* llklkl */}
+//  <Reviews restaurant={restaurant}/>
+//  <ReviewsBox restaurant={restaurant}/>

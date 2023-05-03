@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     max-width: 48.5%;
-    padding: 16px;
-    margin-bottom: 16px;
+    /* padding: 2px; */
+    /* margin-bottom: px; */
     background-color: #fff;
     border-bottom: 1px solid #e6e6e6;
     /* border-radius: 20px; */
@@ -39,7 +39,7 @@
   }
   
   .review-body {
-    margin-bottom: 8px;
+    margin-top: 22px;
     padding-bottom: 25px;
   }
   
@@ -47,48 +47,89 @@
     display: flex;
     /* margin-left: 1vw; */
     font-weight: bold;
+    font-size: 14px;
   }
 
 .review-food {
     display: flex;
     margin-right: 1vw;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .review-service {
     display: flex;
     margin-right: 1vw;
     font-weight: bold;
+    font-size: 14px;
 }
 
   .review-value {
     display: flex;
     margin-right: 1vw;
     font-weight: bold;
+    font-size: 14px;
   }
   
   .review-date {
     font-size: 12px;
     letter-spacing: -0.3px;
     color: #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif,
+    'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
 }
 
   .review-ambience {
     display: flex;
     margin-right: 1vw;
     font-weight: bold;
-  }
-  
-  .review-response {
-    font-style: italic;
-    color: #808080;
+    font-size: 14px;
   }
 
 .numberstat{
     color: red;
 }
   
-/* .review-cat {
+.review-details {
+    margin-left: 7.5vw;
+    margin-top: -4.8vw;
+}
 
-} */
+.reviewer-info{
+    margin-top: 20px;
+    max-width: 7vw;
+}
+
+.reviewer-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+    margin-left: 10px;
+    /* margin-top: 1vw; */
+  }
+
+.review-crud {
+    background-color: #f9a825;
+    height: 2.7vw;
+    display: flex;
+    margin-bottom: 1.7vw;
+}
+
+.review-update {
+    padding-left: 4vw;
+    color: red
+}
+
+.delete{
+    color: red;
+}
+
+/* .rev */
