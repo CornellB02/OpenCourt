@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { removeReview } from "../../store/reviews";
+import "./reviews.css"
 
 function DeleteReviewButton({ reviewId }) {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function DeleteReviewButton({ reviewId }) {
 
   return (
     <>
-      <button onClick={() => setIsDeleting(true)}>Delete</button>
+      <button class="delete" onClick={() => setIsDeleting(true)}>Delete</button>
       {isDeleting && (
         <div>
           <p>Are you sure you want to delete this review?</p>

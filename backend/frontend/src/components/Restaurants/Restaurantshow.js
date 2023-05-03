@@ -120,11 +120,12 @@ const RestaurantShowPage = () => {
       </div>
                 <div className='underDes'>
                 <div className='reviewSec'>
-                <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" restaurant ={restaurant}>
+                <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" >
           Write a review
         </Link>
                   {/* llklkl */}
                 <Reviews restaurant={restaurant}/>
+{/* //  <ReviewsBox restaurant={restaurant}/> */}
                 </div>
                 </div>
             </div>

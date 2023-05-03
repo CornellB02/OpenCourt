@@ -90,7 +90,7 @@ function App() {
           </ModalProvider>
         </Route>
         <Route path="/restaurants/:restaurantId" component={RestaurantShowPage} />
-        <Route path="/restaurant/:restaurantId/review" component={ReviewsBox}/>
+        <Route exact path="/restaurant/:restaurantId/review" component={ReviewsBox}/>
         <Route exact path="/">
           <SplashPage />
         </Route>
