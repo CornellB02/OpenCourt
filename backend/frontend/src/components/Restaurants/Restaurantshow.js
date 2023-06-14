@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faMessage, faMoneyBill, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import Reviews from '../Reviews/restaurantsReviews'
 import ReviewsBox from '../Reviews/reviewbox'
+import PhotosCarousel from './pictures'
 
 
 const RestaurantShowPage = () => {
@@ -91,16 +92,13 @@ const RestaurantShowPage = () => {
                 <FontAwesomeIcon icon={faStar} />
                 </div>
                 <div className='reviews'>
-                <FontAwesomeIcon icon={faMessage} className="m-icon" />
-                <div className='reviewstext'>Reviews</div>
+                <div className='reviewstext'><FontAwesomeIcon icon={faMessage} className="m-icon" /> Reviews</div>
                 </div>
                 <div className='priceCon'>
-                <FontAwesomeIcon icon={faMoneyBill} className="p-icon"/>
-                <div className='price'> {restaurant.priceRange} </div>
+                <div className='price'><FontAwesomeIcon icon={faMoneyBill} className="p-icon"/> {restaurant.priceRange} </div>
                 </div>
                 <div className='att'>
-                <FontAwesomeIcon icon={faUtensils} className="a-icon"/>
-                <div className='cuisine'> {restaurant.cuisines} </div>
+                <div className='cuisine'> <FontAwesomeIcon icon={faUtensils} className="a-icon"/> {restaurant.cuisines} </div>
                 </div> 
                 {/* &nbsp;&nbsp; {restaurant.price_range} {restaurant.neighborhood} */}
                 {/* &nbsp;&nbsp;  */}
@@ -113,16 +111,17 @@ const RestaurantShowPage = () => {
                 </ul>
       </div>
       </div>
-      <div class="descrip" id="description">
-      <div class="desctext" id="description">
+      <div class="descrip" id="descrip">
+      <div class="desctext">
 
         <p>{restaurant.description}</p>
-          <a href="#description" class="read-more">... Read more</a>
-          <a href="#d" class="read-less">Read less</a>
+          <a href="#descrip" class="read-more">... Read more</a>
+          <a href="#descri" class="read-less">Read less</a>
       </div>
       </div>
       </div>
                 <div className='underDes'>
+                <PhotosCarousel restaurant={restaurant}/>
                 <div className='reviewSec'>
                 <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" >
           Write a review

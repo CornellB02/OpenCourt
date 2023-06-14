@@ -24,6 +24,49 @@
   /* .idx-img{ */
     /* margin-bottom: 170vw; */
   /* } */
+
+  .carousel {
+    padding: 11px;
+    overflow: hidden;
+  } 
+
+  .space{
+  padding-right: 11vw;
+}
+
+  .c_pics {
+    /* padding-right: 30vw; */
+    /* margin-top: -8px; */
+      /* overflow-x: auto; */
+      /* overflow: -moz-scrollbars-none; */
+      /* padding-top: 8px;
+      scrollbar-width: none;
+      white-space: nowrap;
+    width: 76vw;
+    max-height: 6px; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    overflow: auto;
+    padding-left: 6.6vw;
+    /* padding-right: 90vw; */
+    /* margin-right: 190vw; */
+    /* padding */
+  }
+
+  h2{
+    margin-left: 19vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+  }
+
+  .other{
+    height: 12vw; 
+    width: 15vw; 
+    justify-content: center;
+    padding-right: 8px;
+  }
   
   .each-restaurant {
     /* max-width: 800px; */
@@ -245,7 +288,7 @@
     /* margin-top: 34.93vw; */
     width:34vw;
     /* font-size: large; */
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-between; */
   align-items: center;
   /* font-size: 28pc !important; */
@@ -266,14 +309,14 @@
   /* padding-top: 2rem; */
   overflow: hidden;
   max-height: fit-content;
-  position: absolute;
-  background-color: white;
+  /* position: absolute; */
+  /* background-color: white; */
 }
 
 .desctext{
-    margin-left: 24vw; 
+    margin-left: 18vw; 
   margin-right: 42vw; 
-   padding-top: 2rem;
+   padding-top: 6rem;
    position: relative;
    /* margin-top:  ; */
 }
@@ -286,7 +329,7 @@
 .read-more,
 .read-less {
   display: none;
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
   background: white;
@@ -316,22 +359,24 @@
 
 .info-show{
     /* background-color: #247f9e; */
-    display: inline-flex;
+    display: relative;
     /* flex-direction: row; */
     max-height: 2vw;
-    max-width: 100%;
+    /* max-width: 100%; */
     align-items: center;
     column-count: 3;
+    margin-right: 4.7vw;
     /* display: inline-grid; */
     /* grid-template-columns: auto auto auto auto; */
     /* grid-template-rows: auto; */
-    margin-top: 16px;
-    margin-left: 7vw;
-    padding-left: 2vw;
+    margin-top: 10px;
+    /* /* margin-left: 7vw; */
+    padding-left: 12vw;
 }
 
 .underDes{
   padding-top: 20px;
+  margin-top: 6vw;
 }
 
   /* .o-button {
@@ -447,7 +492,7 @@
 
 .att{
   margin-bottom: -1px;
-  margin-left: -1vw;
+  margin-left: -7vw;
 }
 
 .img-div img {
@@ -511,7 +556,7 @@ img .img-div-index{
   color: yellowgreen;
   /* max-width: 100%; */
   /* height: auto; */
-  margin-top: -26vw;
+  margin-top: -5.5vw;
   /* position: relative; */
   justify-content: center;
 } 
@@ -536,15 +581,15 @@ img .img-div-index{
 }
 
 .m-icon{
-  margin-bottom: -1.3vw;
+  /* margin-bottom: -1.3vw; */
 }
 
 .p-icon{
-  margin-bottom: -1.2vw;
+  /* margin-bottom: -1.2vw; */
 }
 
 .a-icon{
-  margin-bottom: -1.3vw;                                                                         
+  /* margin-bottom: -1.3vw;                                                                          */
 }
 
 .cuisine{
@@ -564,7 +609,7 @@ img .img-div-index{
   color:gold;
   margin-top:11px; */
   /* align-items: baseline; */
-  margin-left: -1.3vw;
+  margin-left: -2.3vw;
   /* border: #333 solid; */
   /* background-color: green; */
   margin-bottom: -4px;
@@ -572,7 +617,7 @@ img .img-div-index{
 
 .priceCon{
   margin-bottom: -4px;
-  margin-left: -1vw;
+  margin-left: -5vw;
 }
 
 .price{
@@ -607,13 +652,13 @@ img .img-div-index{
 }
 
 .info-container{
-  /* margin-top: 9vw; */
+  margin-top: 9vw;
   display: contents;
 }
 
 .location_route{
   position: relative;
-  /* margin-top: 3vw; */
+  margin-top: 3vw;
   height: 2.4vw;
   top: -2vw;
 }
@@ -739,7 +784,6 @@ button{
     font-weight: bold;
     color: #247f9e;
     font-weight: normal;
-
 }
 
 a:hover .index-name {
@@ -780,3 +824,8 @@ a:hover .index-name {
   text-align: center;
   align-self: center;
 }
+
+.write-review-button{
+  margin-left: 20vw;
+}
+
