@@ -11,6 +11,7 @@ import steakbooklogo from './steakbooklogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SearchModule from '../context/searchModule';
 import CalanderButton from './CalanderButton';
+import UpdatesButton from './UpdatesButton';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -70,6 +71,9 @@ function Navigation() {
           {sessionUser ? <div className='user_logged'>
           <ProfileButton user={sessionUser} /> 
           <CalanderButton user={sessionUser} /> 
+          <UpdatesButton user={sessionUser} /> 
+
+
           {/* <i class="fa-regular fa-calendar"></i>
           <i class="fa-regular fa-bell"></i> */}
           </div>

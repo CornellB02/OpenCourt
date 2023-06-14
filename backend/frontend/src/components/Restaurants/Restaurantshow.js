@@ -69,7 +69,7 @@ const RestaurantShowPage = () => {
               <button class="o-button ">Photos</button>
               <button class="o-button">Menu</button>
               <button class="o-button">Reviews</button>
-              </div>
+              {/* </div> */}
               <div className='under-buttons'>
               {/* <h1 className='names'>{restaurant.name}</h1>
       <p>Review Stars&Num &nbsp;&nbsp; <i class="fa-thin fa-messages"></i> {restaurant.price_range} {restaurant.neighborhood}</p> */}
@@ -114,9 +114,13 @@ const RestaurantShowPage = () => {
       </div>
       </div>
       <div class="descrip" id="description">
+      <div class="desctext" id="description">
+
         <p>{restaurant.description}</p>
           <a href="#description" class="read-more">... Read more</a>
           <a href="#d" class="read-less">Read less</a>
+      </div>
+      </div>
       </div>
                 <div className='underDes'>
                 <div className='reviewSec'>
