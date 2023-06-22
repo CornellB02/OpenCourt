@@ -71,7 +71,7 @@ function Reviews({ restaurant }) {
                         </div>
                     </div>
                         <div className="review-body">{review.body}</div>
-                        {review.reviewer_firstname === user  && (
+                        {review.reviewer_firstname === user.email   && (
   <div className="review-crud">
     <div className="review-delete">
     <DeleteReviewButton reviewId={review.id} />
