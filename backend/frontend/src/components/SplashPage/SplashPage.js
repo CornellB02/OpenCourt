@@ -48,6 +48,12 @@ function SplashPage() {
     setIsCalendarVisible(false);
   };
 
+const handleKeyDown = (e) => {
+  if (e.key === "Enter") {
+    handleSearchSubmit();
+  }
+};
+
   const handleSearchSubmit = () => {
     const matchedRestaurant = restaurants.find(
       (restaurant) =>
@@ -78,23 +84,50 @@ function SplashPage() {
                 isVisible={isCalendarVisible}
                 onClose={() => setIsCalendarVisible(false)}
               />
+             <select className='time_selector'>
+                {Array.from({ length: 48 }, (_, i) => {
+                const hour = Math.floor(i / 2);
+                const minute = i % 2 === 0 ? '00' : '30';
+                const isAM = hour < 12;
+                // const isPM = hour >= 12;
+                const hour12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
+                const time = `${hour12}:${minute} ${isAM ? 'AM' : 'PM'}`;
+                const value = `${hour.toString().padStart(2, '0')}:${minute}`;
+                return (
+                    <option key={i} value={value}>
+                    {time}
+                    </option>
+                            );
+                })}
+            </select>
+            <select className='num_of_ppl_selector'>
+            {Array.from({length: 20}, (_, i) => {
+                return <option key={i+1} value={i+1}>{i+1} {i+1 === 1 ? 'person' : 'people'}</option>;
+                     })}
+                <option value="larger">Larger Party</option>
+            </select>
             </div>
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
             <div className='splashinput'>
-              <input
-                className="splash_search_input"
-                type="text"
-                placeholder="Location, Restaurant, or Cuisine"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                list="restaurantList"
-              />
-              <datalist id="restaurantList">
-                {matchedRestaurants.map((restaurant) => (
-                  <option key={restaurant.id} value={restaurant.name} />
-                ))}
-              </datalist>
+          <input
+            className="splash_search_input"
+            type="text"
+            placeholder="Location, Restaurant, or Cuisine"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            list="restaurantList"
+            onKeyDown={handleKeyDown}
+          />
+<datalist id="restaurantList">
+  {matchedRestaurants.map((restaurant) => {
+    const isExactMatch = restaurant.name.toLowerCase() === searchQuery.toLowerCase();
+    return !isExactMatch ? (
+      <option key={restaurant.id} value={restaurant.name} />
+    ) : null;
+  })}
+</datalist>
+
               <>&nbsp;&nbsp;&nbsp;&nbsp;</>
               <button className="submit" onClick={handleSearchSubmit}>Let's go</button>
             </div>
