@@ -71,6 +71,7 @@ import SplashPage from "./components/SplashPage/SplashPage";
 import RestaurantsIndexPage from "./components/Restaurants/RestaurantsIndexPage";
 import RestaurantShowPage from "./components/Restaurants/Restaurantshow";
 import ReviewsBox from "./components/Reviews/reviewbox";
+import Userprofile from "./components/UserPage";
 
 function App() {
   // debugger
@@ -88,6 +89,9 @@ function App() {
           <ModalProvider>
             <LoginFormPage />
           </ModalProvider>
+        </Route>
+        <Route path="/profile">
+          <Userprofile />
         </Route>
         <Route path="/restaurants/:restaurantId" component={RestaurantShowPage} />
         <Route exact path="/restaurant/:restaurantId/review" component={ReviewsBox}/>
