@@ -11,6 +11,7 @@ import { faStar, faMessage, faMoneyBill, faUtensils } from "@fortawesome/free-so
 import Reviews from '../Reviews/restaurantsReviews'
 import ReviewsBox from '../Reviews/reviewbox'
 import PhotosCarousel from './pictures'
+import ReservationForm from '../Reservations/reservationform'
 
 
 const RestaurantShowPage = () => {
@@ -126,8 +127,12 @@ const RestaurantShowPage = () => {
                 <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" >
           Write a review
         </Link>
+        <Link to={`/restaurant/${restaurant.id}/reservs`}  className="write-review-button" >
+          Make A Reservation
+        </Link>
                   {/* llklkl */}
                 <Reviews restaurant={restaurant}/>
+                {/* <ReservationForm restaurant={restaurant}/> */}
 {/* //  <ReviewsBox restaurant={restaurant}/> */}
                 </div>
                 </div>

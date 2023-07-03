@@ -6,6 +6,7 @@ import NavBar from "../Navigation/NavBar";
 import Restaurant_item from "./Restaurant_item";
 import Map from "../context/map";
 import mapbutton from './mapbutton.png';
+import ReservationForm from "../Reservations/reservationform";
 
 // import Map from "../context/map";
 
