@@ -271,6 +271,46 @@ button {
       }
       
 
+      .current-loca {
+        align-items: center;
+        display: flex;
+        height: 95%;
+        list-style: none;
+        margin-right: 1.3125rem;
+        position: relative;
+        padding-top: -10rem;
+        margin-top: 0.6rem;
+        /* padding-bottom: 2rem; */
+    }
+    
+    .current-loca:not(:last-child)::before {
+        border-bottom: 1rem solid #0000;
+        border-left: .6rem solid #0003;
+        border-top: 1rem solid #0000;
+        top: -.0625rem;
+        content: "";
+        left: 100%;
+        margin-left: .25rem;
+        position: absolute;
+    }
+    
+    .current-loca:not(:last-child)::after {
+        border-bottom: .96rem solid #0000;
+        border-left: .56rem solid #fff;
+        border-top: .96rem solid #0000;
+        top: 0;
+        content: "";
+        left: 100%;
+        margin-left: .25rem;
+        position: absolute;
+    }
+    
+    .current-loca p {
+        color: #247f9e;
+        font-size: 11px;
+        font-weight: 300;
+    }   
+
   
     .nav-container {
         display: flex;

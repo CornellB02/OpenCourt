@@ -12,7 +12,7 @@ import Reviews from '../Reviews/restaurantsReviews'
 import ReviewsBox from '../Reviews/reviewbox'
 import PhotosCarousel from './pictures'
 import ReservationForm from '../Reservations/reservationform'
-
+import "./restaurants.css"
 
 const RestaurantShowPage = () => {
   // debugger
@@ -44,15 +44,14 @@ const RestaurantShowPage = () => {
     <div className='show_container'>
       <div className='info-container'>
       <ol className='location_route'>
-            <li className='home-location-list'>
-                {/* ::before */}
-                <a href='/' className='link-style'>Home</a>
-                {/* ::after */}
+            <li className='current-loca'>
+                <a href='/' className='home_class'>Home</a>
             </li>
-            <li className='Usa'>
-                {/* ::before */}
+            <li className='current-loca'>
                 <div className='country_class' >United States</div>
-                {/* ::after */}
+            </li>
+            <li className='current-loca'>
+                <div className='city_class' >New York</div>
             </li>
         </ol>
         <div className='img_d'>
@@ -64,20 +63,28 @@ const RestaurantShowPage = () => {
         <div className='under-pic'>
           {/* <div className='main_whole_show'> */}
           <div className='main_left_show'>
-              <div className='outer_opmr'>
+              <section className='outer_opmr'>
                 <div className='opmr'>
-                  <div className='obuttns'>
+                    <ol>
+                    <li className="opmr-li-1">
               <button class="o-button active">Overview</button>
+              </li>
+              <li className="opmr-li">
               <button class="o-button ">Photos</button>
+              </li>
+              <li className="opmr-li">
               <button class="o-button">Menu</button>
+              </li>
+              <li className="opmr-li">
               <button class="o-button">Reviews</button>
+              </li>
               {/* </div> */}
+              </ol>
+                </div>
               <div className='under-buttons'>
+            </div>
               {/* <h1 className='names'>{restaurant.name}</h1>
       <p>Review Stars&Num &nbsp;&nbsp; <i class="fa-thin fa-messages"></i> {restaurant.price_range} {restaurant.neighborhood}</p> */}
-              </div>
-            </div>
-          </div>
           {/* <div className='under-pic'> */}
       <h1 className='names'>{restaurant.name}</h1>
       <div className='info-show'
@@ -105,12 +112,15 @@ const RestaurantShowPage = () => {
                 {/* &nbsp;&nbsp;  */}
 
                 </div> 
+                <div className="res_form">
+                <ReservationForm  restaurant={restaurant}/>
+                </div>
                 <ul className='toptags'>
                   <button className='tagbuttons'>1</button>
                   <button className='tagbuttons'>2</button>
                   <button className='tagbuttons'>3</button>
                 </ul>
-      </div>
+      </section>
       </div>
       <div class="descrip" id="descrip">
       <div class="desctext">
@@ -127,9 +137,9 @@ const RestaurantShowPage = () => {
                 <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" >
           Write a review
         </Link>
-        <Link to={`/restaurant/${restaurant.id}/reservs`}  className="write-review-button" >
+        {/* <Link to={`/restaurant/${restaurant.id}/reservs`}  className="write-review-button" >
           Make A Reservation
-        </Link>
+        </Link> */}
                   {/* llklkl */}
                 <Reviews restaurant={restaurant}/>
                 {/* <ReservationForm restaurant={restaurant}/> */}

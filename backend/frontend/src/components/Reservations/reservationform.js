@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { composeReserv } from "../../store/reservs";
 import { useHistory, useParams } from "react-router-dom";
-
+import "./reservation.css"
 
 function ReservationForm() {
 
@@ -14,7 +14,7 @@ function ReservationForm() {
     party_size: "",
     date: "",
     time: "",
-    first_name: user.email.split("@")[0],
+    first_name: user ? user.email.split("@")[0] : "",
     phone_number: ""
   });
 
@@ -30,7 +30,7 @@ function ReservationForm() {
   };
 
   return (
-    <div>
+    <div className="full_form">
       <h2>Reservation Form</h2>
       <form onSubmit={handleSubmit}>
         <div>
