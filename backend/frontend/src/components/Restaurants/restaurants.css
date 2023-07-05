@@ -60,6 +60,7 @@
     /* padding-right: 90vw; */
     /* margin-right: 190vw; */
     /* padding */
+    border-bottom: 1px;
   }
 
 
@@ -254,7 +255,7 @@
     /* position: relative; */
     /* width: 60vw; */
     height: 100vw;
-    margin-top: -24.7vw;
+    margin-top: -26.4vw;
   }
 
   /* .opmr{
@@ -458,7 +459,7 @@ color: red;
 }
 
 .underDes{
- 
+ /* padding-bottom: 1vw; */
 }
 
   /* .o-button {
@@ -470,6 +471,7 @@ color: red;
   /* margin-right: 30vw; */
   padding-top: 1vw;
   margin-right: 8vw;
+  padding-bottom: 1vw;
 }
   
   
@@ -553,6 +555,10 @@ color: red;
     /* border-bottom: 2rem #ff5a5f; */
     /* color: #ff5a5f;  */
   /* } */
+
+  .o-button:hover {
+    color: red;
+  }
 
   .o-button.active{
     align-items: flex-start;

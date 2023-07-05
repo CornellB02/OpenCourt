@@ -96,7 +96,7 @@ const RestaurantShowPage = () => {
               <button class="o-button active">Overview</button>
               </li>
               <li className="opmr-li">
-              <button class="o-button ">Photos</button>
+              <button href='#photos"' class="o-button ">Photos</button>
               </li>
               <li className="opmr-li">
               <button class="o-button">Menu</button>
@@ -161,21 +161,15 @@ const RestaurantShowPage = () => {
       </div>
       </div>
                 <div className='underDes'>
-                <PhotosCarousel restaurant={restaurant}/>
+                <PhotosCarousel restaurant={restaurant} id="photos"/>
                 <div className="reviewSec">
                 {isLoggedIn && (
                   <Link to={`/restaurant/${restaurant.id}/review`} className="write-review-button">
                     Write a review
                   </Link>
                 )}
-        {/* <Link to={`/restaurant/${restaurant.id}/reservs`}  className="write-review-button" >
-          Make A Reservationa
-        </Link> */}
-                  {/* llklkl */}
-                <Reviews restaurant={restaurant}/>
-                {/* <ReservationForm restaurant={restaurant}/> */}
-{/* //  <ReviewsBox restaurant={restaurant}/> */}
         </div>
+                <Reviews restaurant={restaurant}/>
       </div>
                 </div>
                 </div>

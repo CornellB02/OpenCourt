@@ -36,18 +36,21 @@ function Reviews({ restaurant }) {
         }
       };
       
+  const reviewCount = reviews.length;
+  const reviewStatement = reviewCount === 1 ? `What ${reviewCount} person is saying` : `What ${reviewCount} people are saying`;
+
 
     return (
         <div className="review-list">
-        <h3>Reviews:</h3>
+        <h3>{reviewStatement}</h3>
     {reviews.length === 0 ? (
       <div>No reviews found for this restaurant.</div>
     ) : 
             reviews.map((review) => (
             <div key={review.id} className="review-container">
                 <div className="reviewer-info">
-                  <div className="reviewer-circle">{review.reviewer_firstname.slice(0,1)} </div> 
-                  <div className="reviewer-email"> {review.reviewer_firstname}</div> 
+                <div className="reviewer-circle">{review.reviewer_firstname[0].toUpperCase()} </div>
+                  <div className="reviewer-email"> {review.reviewer_firstname.split('@')[0]}</div>
                 </div>
                 <div className="review-details">
                 <div className="review-date">
