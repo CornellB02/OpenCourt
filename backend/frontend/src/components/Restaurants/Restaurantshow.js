@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
@@ -19,7 +19,7 @@ const RestaurantShowPage = () => {
     const dispatch = useDispatch()
     const { restaurantId } = useParams()
     const restaurant = useSelector((state) => state.restaurants[restaurantId])
-    
+    const [showFullDescription, setShowFullDescription] = useState(false);
     
     useEffect(() => {dispatch(getRestaurant(restaurantId))}, [dispatch])
 
@@ -35,6 +35,26 @@ const RestaurantShowPage = () => {
   //     priceRange = "$$";
   //   }
   // }
+
+  
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
+  const renderDescription = () => {
+    const linesToShow = showFullDescription ? '100%' : '3'; // Number of lines to show
+
+    return (
+      <div
+        className={`desctext ${showFullDescription ? 'expanded' : ''}`}
+        style={{ '--linesToShow': linesToShow }}
+      >
+        <p>{restaurant.description}</p>
+        {restaurant.description.length > 3 }
+      </div>
+    );
+  };
+
 
     if (!restaurant){
       // debugger
@@ -118,20 +138,24 @@ const RestaurantShowPage = () => {
                 <div className="tags">
               <span className="top-tags">Top Tags:
                 <ul className='toptags'>
-                  <li className='tagbuttons'><p>Neighborhood Gem</p></li>
-                  <li className='tagbuttons'><p>Lively</p></li>
-                  <li className='tagbuttons'><p>Good For Special Occasions</p></li>
+                  <li className='tagli'><p>Neighborhood Gem</p></li>
+                  <li className='tagli'><p>Lively</p></li>
+                  <li className='tagli'><p>Good For Special Occasions</p></li>
                 </ul>
               </span>
               </div> 
       </div>
       </section>
       <div class="descrip" id="descrip">
+      <div className="descrip">
       <div class="desctext">
-
-        <p>{restaurant.description}</p>
-          <a href="#descrip" class="read-more">... Read more</a>
-          <a href="#descri" class="read-less">Read less</a>
+      {renderDescription()}</div>
+      <div className="description-toggle" onClick={toggleDescription}>
+        {showFullDescription ? 'Read less' : 'Read more'}
+      </div>
+        {/* <p>{restaurant.description}</p> */}
+          {/* <a href="#descrip" class="read-more">... Read more</a>
+          <a href="#descri" class="read-less">Read less</a> */}
       </div>
       </div>
                 <div className='underDes'>
@@ -141,7 +165,7 @@ const RestaurantShowPage = () => {
           Write a review
         </Link>
         {/* <Link to={`/restaurant/${restaurant.id}/reservs`}  className="write-review-button" >
-          Make A Reservation
+          Make A Reservationa
         </Link> */}
                   {/* llklkl */}
                 <Reviews restaurant={restaurant}/>

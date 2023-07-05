@@ -1,14 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import  './restaurants.css';
 const PhotosCarousel = () => {
   const dispatch = useDispatch();
   const { restaurantId } = useParams();
   const restaurant = useSelector((state) => state.restaurants[restaurantId]);
 
   return (
-    <div>
+    <div className='photos-container'>
       <h2>Photos</h2>
       <div className="carousel">
         <div className='c_pics'>

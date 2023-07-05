@@ -28,6 +28,7 @@
   .carousel {
     padding: 11px;
     overflow: hidden;
+    justify-content: center;
   } 
 
 
@@ -49,26 +50,35 @@
       white-space: nowrap;
     width: 76vw;
     max-height: 6px; */
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     /* flex-wrap: wrap; */
     /* justify-content: center; */
-    overflow: auto;
-    padding-left: 6.6vw;
+    /* overflow: auto; */
+    /* padding-left: 6.6vw; */
+    margin-left: 1.3vw;
     /* padding-right: 90vw; */
     /* margin-right: 190vw; */
     /* padding */
   }
 
+
+
   h2{
-    margin-left: 19vw;
+    /* padding-top: 3vw;/ */
+    /* margin-top: 2vw; */
+    /* margin-bottom: 2vw; */
+    border-bottom: 1px solid #ccc;
+    margin-left: 2vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: larger;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 1vw;
   }
 
   .other{
-    height: 12vw; 
-    width: 15vw; 
+    height: 10vw; 
+    width: 13vw; 
     justify-content: center;
     padding-right: 8px;
   }
@@ -79,6 +89,7 @@
     flex-direction: row;
     /* width: 52.5vw; */
     padding: 20px;
+    /* margin-right: 3vw; */
     /* border: none; */
     background-color: #ffffff;
     /* border-bottom: 1px solid #ccc; */
@@ -268,12 +279,13 @@
     border-bottom: 1px solid #ccc;
     text-align: left;
     font-size: 45px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 6rem;
     margin-top: -.95vw;
     padding-left: 12px;
     /* margin-left: 12vw; */
     /* margin-right: 6vw; */
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   }
 
   .opmr {
@@ -350,58 +362,79 @@
 
 .descrip {
   font-size: 1rem;
-  /* margin-left: 24vw; */
-  /* margin-right: 42vw; */
-  padding-top: 9rem;
+  padding-top: 7.2rem;
   overflow: hidden;
-  max-height: fit-content;
-  position: relative;
-  /* background-color: white; */
+  /* max-height: 50px; */
+  justify-content: flex-start;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
 }
 
-.desctext{
-    margin-left: 3vw; 
-  margin-right: 6vw; 
-   padding-top: 6rem;
-   position: relative;
-   /* margin-top:  ; */
+.desctext {
+  margin-left: 1vw;
+  margin-right: 6vw;
+  /* margin-top: 3rem; */
+  position: relative;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 }
 
 .descrip p {
   /* margin: 0; */
-  /* background-color: green; */
+}
+
+.desctext {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--linesToShow, 3);
+  -webkit-box-orient: vertical;
+}
+
+.desctext::after {
+  content: '';
+  position: absolute;
+  bottom: 5;
+  right: 0;
+  width: 100%;
+  height: 1.5em;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+.desctext.expanded::after {
+  display: none;
+}
+
+.description-toggle {
+  position: relative;
+  z-index: 1;
+  color: black;
+  cursor: pointer;
+  margin-top: 0.2rem;
+  margin-left: 2rem;
+  font-size: 12px;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+}
+
+.description-toggle:hover {
+color: red;
 }
 
 .read-more,
 .read-less {
   display: none;
   position: relative;
-  bottom: 0;
-  right: 0;
-  background: white;
-  border: none;
+  z-index: 1;
+  color:black;
   cursor: pointer;
-  font-size: 13px;
-  padding-right: 0.3rem;
-  padding-left: 0.4rem;
+  margin-top: 0.5rem;
 }
 
-.read-more {
-  display: block;
+.read-more.show,
+.read-less.show {
+  display: inline;
 }
-
-.descrip:target {
-  max-height: none;
-}
-
-.descrip:target .read-more {
-  display: none;
-}
-
-.descrip:target .read-less {
-  display: block;
-}
-
 
 .info-show{
   font-size: 14px;
@@ -425,8 +458,7 @@
 }
 
 .underDes{
-  padding-top: 20px;
-  margin-top: 6vw;
+ 
 }
 
   /* .o-button {
@@ -434,7 +466,11 @@
     font-size: 2pc;
   } */
 
-
+.photos-container {
+  /* margin-right: 30vw; */
+  padding-top: 1vw;
+  margin-right: 8vw;
+}
   
   
   .o-button {
@@ -452,8 +488,12 @@
     background-color: rgb(0, 0, 0, 0);
     color: rgb(115, 115, 123);
   }
+  
 
-  .tagbuttons {
+  .tagli p:hover {
+    cursor: pointer;
+    border-color: red;
+
     /* margin-right: 2vw; */
     /* text-align: center; */
     /* margin-left: 2vw; */
@@ -462,7 +502,8 @@
     /* height: 30px; set a fixed height for the button */
   }
   
-  .tagbuttons p {
+  .tagli p {
+    /* cursor: pointer; */
     border: 1px solid #d8d9db;
     border-radius: 1rem;
     padding: .3125rem 16px;
@@ -470,7 +511,18 @@
     font-weight: 400;
     line-height: 1.25rem;
     margin-left: 10px;
+    color: black
     /* justify-content: space-between; */
+    /* background-color: #247f9e; */
+  }
+
+  /* .top-tags li:hover {
+    border-color: red;
+
+  } */
+
+  .tags {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   }
 
 .toptags{
@@ -483,6 +535,7 @@
   width: 519.05px;
   height: 32px;
   margin-top: 1vw;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 }
 
   .opmr button {
@@ -726,6 +779,8 @@ img .img-div-index{
   padding-right: 0.4vw;
 
 }
+
+
 
 .each-restaurant-sp{
   max-height: 22vw;
