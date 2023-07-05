@@ -20,7 +20,9 @@ const RestaurantShowPage = () => {
     const { restaurantId } = useParams()
     const restaurant = useSelector((state) => state.restaurants[restaurantId])
     const [showFullDescription, setShowFullDescription] = useState(false);
-    
+    const isLoggedIn = useSelector((state) => state.session.user);
+
+
     useEffect(() => {dispatch(getRestaurant(restaurantId))}, [dispatch])
 
     // useEffect(() =)
@@ -160,10 +162,12 @@ const RestaurantShowPage = () => {
       </div>
                 <div className='underDes'>
                 <PhotosCarousel restaurant={restaurant}/>
-                <div className='reviewSec'>
-                <Link to={`/restaurant/${restaurant.id}/review`}  className="write-review-button" >
-          Write a review
-        </Link>
+                <div className="reviewSec">
+                {isLoggedIn && (
+                  <Link to={`/restaurant/${restaurant.id}/review`} className="write-review-button">
+                    Write a review
+                  </Link>
+                )}
         {/* <Link to={`/restaurant/${restaurant.id}/reservs`}  className="write-review-button" >
           Make A Reservationa
         </Link> */}
