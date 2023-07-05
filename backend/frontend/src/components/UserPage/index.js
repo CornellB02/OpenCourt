@@ -1,21 +1,15 @@
-function UsersIndex ({users}) {
-    return (
-        <ul>
-            {users.map(user => {
-                let photo;
-                if (user.photoUrl) {
-                    photo = <img src={user.photoUrl} style={{ height: '100px', width: '100px' }} />
-                }
+import { useSelector } from "react-redux";
+import { useLocation, useHistory } from "react-router-dom";
 
-                return (
-                    <li key={user.id}>
-                        <h2>{user.email}</h2>
-                        {photo}
-                    </li>
-                )
-            })}
-        </ul>
-    )
+const Userprofile = () => {
+  const sessionUser = useSelector((state) => state.session.user);
+
+  const location = useLocation();
+  const history = useHistory();
+
+  return (
+    <h1>{sessionUser.email}</h1>
+  );
 }
 
-export default UsersIndex;
+export default Userprofile;

@@ -214,11 +214,13 @@
   /* flex-wrap: wrap; */
   justify-content: center;
   overflow: auto;
-  padding-left: 89vw;
+  padding-left: 95vw;
   /* padding-right: 90vw; */
   /* margin-right: 190vw; */
   /* padding */
 }
+
+
 
 .restaurant-box {
   display: flex;

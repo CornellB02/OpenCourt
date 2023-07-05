@@ -7,7 +7,7 @@
   background-color: #fff;
   box-sizing: border-box;
   display: flex;
-  height: 1.6rem;
+  height: 3rem;
   justify-content: space-between;
   padding: 0 16px;
   position: relative;
@@ -17,6 +17,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 
 .Navpage {
@@ -31,6 +32,7 @@
 }
   nav {
     display: block;
+    /* height: fit-content; */
     }
   
   .navbar-brand {
@@ -38,12 +40,7 @@
     font-weight: bold;
     margin-left: 20px;
   }
-  
-  .navbar-nav {
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
-  }
+
   
   .nav-item {
     margin: 0 10px;
@@ -71,7 +68,7 @@
     height: 228px;
     /* size: -399pc; */
     position: absolute;
-    bottom: -7.8pc;
+    bottom: -6.6pc;
     left: -34px;
     /* align-self: left; */
 }
@@ -274,6 +271,46 @@ button {
       }
       
 
+      .current-loca {
+        align-items: center;
+        display: flex;
+        height: 95%;
+        list-style: none;
+        margin-right: 1.3125rem;
+        position: relative;
+        padding-top: -10rem;
+        margin-top: 0.6rem;
+        /* padding-bottom: 2rem; */
+    }
+    
+    .current-loca:not(:last-child)::before {
+        border-bottom: 1rem solid #0000;
+        border-left: .6rem solid #0003;
+        border-top: 1rem solid #0000;
+        top: -.0625rem;
+        content: "";
+        left: 100%;
+        margin-left: .25rem;
+        position: absolute;
+    }
+    
+    .current-loca:not(:last-child)::after {
+        border-bottom: .96rem solid #0000;
+        border-left: .56rem solid #fff;
+        border-top: .96rem solid #0000;
+        top: 0;
+        content: "";
+        left: 100%;
+        margin-left: .25rem;
+        position: absolute;
+    }
+    
+    .current-loca p {
+        color: #247f9e;
+        font-size: 11px;
+        font-weight: 300;
+    }   
+
   
     .nav-container {
         display: flex;
@@ -329,6 +366,24 @@ button {
 }
 
 
+.calander-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+  /* background-color: transparent; */
+  /* background: rgb(242, 240, 240); */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  /* font-size: 24px; */
+  margin-top: 9px;
+  /* border: 1px solid grey; */
+  /* margin-left: 3em; */
+  /* padding-left: 3ch; */
+
+}
+
 .profile-button {
   display: flex;
   align-items: center;
@@ -345,6 +400,14 @@ button {
   /* margin-left: 3em; */
   /* padding-left: 3ch; */
 
+}
+
+.user_logged{
+  display: flex;
+  /* background-color: #2c86a4; */
+  justify-content: space-between;
+  position: center;
+  margin-top: 0.2pc;
 }
 
 .dropdown-user {
@@ -383,6 +446,12 @@ button {
 
 .profile-icon {
   font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent; 
+}
+
+.calander-icon {
+  font-size: 1rem;
   cursor: pointer;
   background-color: transparent; 
 }

@@ -39,7 +39,7 @@ function Reviews({ restaurant }) {
 
     return (
         <div className="review-list">
-       <h3>Reviews:</h3>
+        <h3>Reviews:</h3>
     {reviews.length === 0 ? (
       <div>No reviews found for this restaurant.</div>
     ) : 
@@ -71,17 +71,17 @@ function Reviews({ restaurant }) {
                         </div>
                     </div>
                         <div className="review-body">{review.body}</div>
-                        {review.reviewer_firstname === user  && (
+                        <div></div>
+                        {user && review.reviewer_firstname === user.email && (
   <div className="review-crud">
     <div className="review-delete">
-    <DeleteReviewButton reviewId={review.id} />
+      <DeleteReviewButton reviewId={review.id} />
     </div>
     <div className="review-update">
-    <UpdateReviewButton review={review} />
+      <UpdateReviewButton review={review} />
     </div>
-
   </div>
-)} 
+)}
                 </div>
             </div>
             ))}

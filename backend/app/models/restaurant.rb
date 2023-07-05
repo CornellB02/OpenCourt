@@ -30,7 +30,7 @@ class Restaurant < ApplicationRecord
     # validates :opentime, :closetime, format: { with: /\A([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]\z/ }
     validates :longitude, :latitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
 
-    # has_many :reservations
+    has_many :reservs
     has_many :reviews
    
 

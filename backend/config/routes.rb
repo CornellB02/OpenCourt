@@ -7,8 +7,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :show, :destroy]
     resources :users, only: [:create, :show, :update, :destroy]
     resources :reviews
+    resources :reservs
     resources :restaurants do
       resources :reviews
+      resources :reservs
     end
   end
 

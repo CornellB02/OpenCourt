@@ -17,12 +17,17 @@ function NavBar() {
        <ol className='location_route'>
             <li className='home-location-list'>
                 {/* ::before */}
-                <a href='/' className='link-style'>Home</a>
+                <param className='link-style'>Home</param>
                 {/* ::after */}
             </li>
             <li className='Usa'>
                 {/* ::before */}
                 <div className='country_class' >United States</div>
+                {/* ::after */}
+            </li>
+            <li className='city'>
+                {/* ::before */}
+                <div className='city_class' >New York</div>
                 {/* ::after */}
             </li>
         </ol>

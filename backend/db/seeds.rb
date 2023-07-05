@@ -150,7 +150,6 @@ ApplicationRecord.transaction do
           delivery: true,
           description: "Wolfgang's Steakhouse is a modern steakhouse with a focus on classic cuts and quality ingredients. Their menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its stylish atmosphere and friendly service, Wolfgang's is the perfect spot for a special occasion or a night out with friends."
           },
-          
           {
           name: "Morton's The Steakhouse",
           phone_number: "(212)972-3315",
@@ -166,7 +165,6 @@ ApplicationRecord.transaction do
           price_range: "$50 and over",
           description: "Morton's The Steakhouse is a classic steakhouse with a focus on quality ingredients and exceptional service. Their menu features a variety of juicy steaks, as well as a selection of sides and sauces to complement your meal. With its elegant atmosphere and top-notch service, Morton's is the perfect place for a special occasion or a night out with friends."
           },
-          
           {
           name: "BLT Steak",
           phone_number: "(212)752-7470",
