@@ -20,6 +20,7 @@ const RestaurantShowPage = () => {
     const { restaurantId } = useParams()
     const restaurant = useSelector((state) => state.restaurants[restaurantId])
     
+    
     useEffect(() => {dispatch(getRestaurant(restaurantId))}, [dispatch])
 
     // useEffect(() =)
@@ -61,6 +62,9 @@ const RestaurantShowPage = () => {
         {/* <a href="https://placeholder.com"><img src="https://via.placeholder.com/1440x460"></img></a> */}
         </div>
         <div className='under-pic'>
+        <div className="main_right_show">
+                <ReservationForm  restaurant={restaurant}/>
+            </div>
           {/* <div className='main_whole_show'> */}
           <div className='main_left_show'>
               <section className='outer_opmr'>
@@ -82,7 +86,6 @@ const RestaurantShowPage = () => {
               </ol>
                 </div>
               <div className='under-buttons'>
-            </div>
               {/* <h1 className='names'>{restaurant.name}</h1>
       <p>Review Stars&Num &nbsp;&nbsp; <i class="fa-thin fa-messages"></i> {restaurant.price_range} {restaurant.neighborhood}</p> */}
           {/* <div className='under-pic'> */}
@@ -112,23 +115,23 @@ const RestaurantShowPage = () => {
                 {/* &nbsp;&nbsp;  */}
 
                 </div> 
-                <div className="res_form">
-                <ReservationForm  restaurant={restaurant}/>
-                </div>
+                <div className="tags">
+              <span className="top-tags">Top Tags:
                 <ul className='toptags'>
-                  <button className='tagbuttons'>1</button>
-                  <button className='tagbuttons'>2</button>
-                  <button className='tagbuttons'>3</button>
+                  <li className='tagbuttons'><p>Neighborhood Gem</p></li>
+                  <li className='tagbuttons'><p>Lively</p></li>
+                  <li className='tagbuttons'><p>Good For Special Occasions</p></li>
                 </ul>
-      </section>
+              </span>
+              </div> 
       </div>
+      </section>
       <div class="descrip" id="descrip">
       <div class="desctext">
 
         <p>{restaurant.description}</p>
           <a href="#descrip" class="read-more">... Read more</a>
           <a href="#descri" class="read-less">Read less</a>
-      </div>
       </div>
       </div>
                 <div className='underDes'>
@@ -144,6 +147,8 @@ const RestaurantShowPage = () => {
                 <Reviews restaurant={restaurant}/>
                 {/* <ReservationForm restaurant={restaurant}/> */}
 {/* //  <ReviewsBox restaurant={restaurant}/> */}
+        </div>
+      </div>
                 </div>
                 </div>
             </div>

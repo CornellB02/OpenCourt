@@ -30,6 +30,7 @@
     overflow: hidden;
   } 
 
+
   .res_form {
 
   }
@@ -220,6 +221,12 @@
     margin-top: 4.2vw;
   }
 
+  .main_right_show{
+    margin-left: 50vw;
+    max-height: 100vw;
+
+  }
+
   .main_left_show{
     /* background-color: rgb(210, 36, 36); */
     /* border-radius: 4px; */
@@ -236,6 +243,7 @@
     /* position: relative; */
     /* width: 60vw; */
     height: 100vw;
+    margin-top: -24.7vw;
   }
 
   /* .opmr{
@@ -249,20 +257,20 @@
     /* display: inline; */
     width: 100vw;
     max-height: 100rem;
-    /* margin-top: 29vw; */
+    /* margin-left: 4vw; */
     position: absolute;
     
   }
 
   
   .names{
-    border-top: 2px solid #ccc;
+    border-top: 1.6px solid #ccc;
     border-bottom: 1px solid #ccc;
     text-align: left;
     font-size: 45px;
     font-weight: 700;
     line-height: 6rem;
-    margin-top: -1vw;
+    margin-top: -.95vw;
     padding-left: 12px;
     /* margin-left: 12vw; */
     /* margin-right: 6vw; */
@@ -280,10 +288,10 @@
     /* border-bottom: 1px solid #ccc; */
   }
 
-  /* .under-buttons {
-    flex: 1;
-    text-align: right;
-  } */
+  .under-buttons {
+    margin-left: 1.8vw;
+    max-height: 100vw;
+  }
   
   .opmr {
     /* position: relative; */
@@ -329,7 +337,7 @@
     box-shadow: rgb(218, 55, 67);
     text-align: left;
     text-size-adjust: 100%;
-    border-bottom: 2px solid rgb(218, 55, 67);
+    border-bottom: 1.4px solid rgb(218, 55, 67);
 }
 
 
@@ -344,16 +352,16 @@
   font-size: 1rem;
   /* margin-left: 24vw; */
   /* margin-right: 42vw; */
-  /* padding-top: 2rem; */
+  padding-top: 9rem;
   overflow: hidden;
   max-height: fit-content;
-  /* position: absolute; */
+  position: relative;
   /* background-color: white; */
 }
 
 .desctext{
-    margin-left: 18vw; 
-  margin-right: 42vw; 
+    margin-left: 3vw; 
+  margin-right: 6vw; 
    padding-top: 6rem;
    position: relative;
    /* margin-top:  ; */
@@ -396,6 +404,9 @@
 
 
 .info-show{
+  font-size: 14px;
+    font-weight: 300;
+    line-height: 1.25rem;
     /* background-color: #247f9e; */
     display: relative;
     /* flex-direction: row; */
@@ -403,13 +414,14 @@
     /* max-width: 100%; */
     align-items: center;
     column-count: 3;
-    margin-right: 4.7vw;
+    /* margin-right: 4vw; */
     /* display: inline-grid; */
     /* grid-template-columns: auto auto auto auto; */
     /* grid-template-rows: auto; */
-    margin-top: 10px;
-    /* /* margin-left: 7vw; */
-    padding-left: 12vw;
+    margin-top: 17px;
+    /* margin-left: 7vw;
+    /* padding-left: 12vw; */
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 }
 
 .underDes{
@@ -442,21 +454,35 @@
   }
 
   .tagbuttons {
-    margin-right: 2vw;
-    text-align: center;
-    margin-left: 2vw;
-    border-radius: 30%; /* make the border a circle shape */
-    width: 110px; /* set a fixed width for the button */
-    height: 30px; /* set a fixed height for the button */
+    /* margin-right: 2vw; */
+    /* text-align: center; */
+    /* margin-left: 2vw; */
+    /* border-radius: 30%; make the border a circle shape     */
+    /* width: 110px; set a fixed width for the button/ */
+    /* height: 30px; set a fixed height for the button */
   }
   
+  .tagbuttons p {
+    border: 1px solid #d8d9db;
+    border-radius: 1rem;
+    padding: .3125rem 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin-left: 10px;
+    /* justify-content: space-between; */
+  }
 
 .toptags{
   background-color: white;
   display: inline-flex;
-  margin-left: 7vw;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  /* margin-left: 7vw; */
+  /* padding-top: 10px; */
+  /* padding-bottom: 5px; */
+  list-style: none;
+  width: 519.05px;
+  height: 32px;
+  margin-top: 1vw;
 }
 
   .opmr button {
@@ -499,8 +525,8 @@
   /* background-color: green ; */
   /* border-radius: 4px; */
   /* border-bottom: 4px solid transparent; */
-  max-width: 50vw;
-  margin-right: rem;
+  /* max-width: 50vw; */
+  /* padding-right: 2rem; */
   margin-top: -4rem;
   /* padding-left: 7vw; */
   max-height: 19vw;
@@ -570,7 +596,7 @@ img .img-div-index{
   display: flex;
   position: relative;
   line-height: 0;
-  margin-top: -1.5rem;
+  margin-top: -1.65rem;
 }
 
 .img_c {
@@ -613,8 +639,8 @@ img .img-div-index{
 }
 
 .cuisine{
-  margin-left: 1.3vw;
-  margin-right: 2vw;
+  margin-left: -9vw;
+  /* margin-right: 2vw; */
   align-items: center;
   margin-bottom: 1.4vw;
 }
@@ -629,10 +655,10 @@ img .img-div-index{
   color:gold;
   margin-top:11px; */
   /* align-items: baseline; */
-  margin-left: -2.3vw;
+  /* margin-left: -2vw; */
   /* border: #333 solid; */
   /* background-color: green; */
-  margin-bottom: -4px;
+  /* margin-bottom: -4px; */
 }
 
 .priceCon{
@@ -641,25 +667,25 @@ img .img-div-index{
 }
 
 .price{
-  margin-left: 1.6vw;
-  margin-right: 2vw;
+  margin-left: -6.5vw;
+  /* margin-right: 2vw; */
   align-items: center;
   margin-bottom: 1.5vw;
 }
 
 .reviewstext{
-  margin-left: 1.5vw;
-  margin-right: 2vw;
+  margin-left: -4.5vw;
+  /* margin-right: 21vw; */
   /* max-width: 4vw; */
-  align-items: center;
+  /* align-items: center; */
   /* background-color: #8b0000; */
-  margin-bottom: 1.4vw;
+  /* margin-bottom: 1.4vw; */
 }
 
 .starsshow{
   /* font-size: 15px; */
     font-size: .995rem;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.25rem;
   letter-spacing: -0.3px;
   color: #da3743;
