@@ -88,6 +88,35 @@ const RestaurantShowPage = () => {
           <div className='reservation_st'>
                 <ReservationForm  restaurant={restaurant}/>
                 </div>
+                <div className='additional_info'>
+                  <h2 className="add-h2">Additional Info</h2>
+                  <ol>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.neighborhood}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.phoneNumber}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.parkingDetails}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.dressCode}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.executiveChef}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.delivery}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.opentime}</p>
+                  </li>
+                  <li className='additional-list'>
+                  <p className='add-p'>{restaurant.closetime}</p>
+                  </li>
+                  </ol>
+                </div>
             </div>
           {/* <div className='main_whole_show'> */}
           <div className='main_left_show'>

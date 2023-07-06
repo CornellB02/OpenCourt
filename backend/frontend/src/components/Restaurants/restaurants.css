@@ -67,6 +67,27 @@ ol {
   margin-right: -1vw;
 }
 
+.additional_info {
+  margin-left: 5vw;
+  padding-top: 2vw;
+  margin-right: 6vw;
+}
+
+.add-h2{
+     /* padding-top: 3vw;/ */
+    /* margin-top: 2vw; */
+    /* margin-bottom: 2vw; */
+    border-bottom: 1px solid #ccc;
+    margin-left: 4vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 11vw;
+    /* padding-left: 6vw; */
+}
+
   h2{
     /* padding-top: 3vw;/ */
     /* margin-top: 2vw; */
@@ -240,8 +261,8 @@ ol {
   .main_right_show{
     margin-left: 50vw;
     max-height: 100vw;
-
   }
+
 
   .main_left_show{
     /* background-color: rgb(210, 36, 36); */
