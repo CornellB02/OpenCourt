@@ -85,7 +85,9 @@ const RestaurantShowPage = () => {
         </div>
         <div className='under-pic'>
         <div className="main_right_show">
+          <div className='reservation_st'>
                 <ReservationForm  restaurant={restaurant}/>
+                </div>
             </div>
           {/* <div className='main_whole_show'> */}
           <div className='main_left_show'>
@@ -96,7 +98,7 @@ const RestaurantShowPage = () => {
               <button class="o-button active">Overview</button>
               </li>
               <li className="opmr-li">
-              <button href='#photos"' class="o-button ">Photos</button>
+              <button href='#photos' class="o-button">Photos</button>
               </li>
               <li className="opmr-li">
               <button class="o-button">Menu</button>
