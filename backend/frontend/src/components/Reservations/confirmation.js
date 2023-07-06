@@ -1,25 +1,24 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const ReservationConfirmation = () => {
-  const history = useHistory();
-  const user = useSelector((state) => state.session.user);
-
-  // Redirect the user to the homepage if they are not logged in
-  if (!user) {
-    history.push("/");
-    return null;
-  }
+function ReservationConfirmation() {
+  const location = useLocation();
+  const reservation = location.state?.reservation;
 
   return (
     <div>
-      <h4>Reservation Confirmation</h4>
-      <p>Thank you for making a reservation, {user.email.split("@")[0]}!</p>
-      <p>Your reservation details:</p>
-      {/* Display reservation details here */}
+      <h2>Reservation Confirmation</h2>
+      {reservation && (
+        <div>
+          <p>Reservation Details:</p>
+          <p>Party Size: {reservation.party_size}</p>
+          <p>Date: {reservation.date}</p>
+          <p>Time: {reservation.time}</p>
+          {/* Add more details as needed */}
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default ReservationConfirmation;

@@ -40,7 +40,13 @@ function App() {
             <SplashPage />
             <Link to="/reserv">Make a Reservation</Link>
           </Route>
-            <ReservationConfirmation />
+          <Switch>
+          <Route exact path="/" component={ReservationForm} />
+          <Route
+            path="/reservation-confirmation"
+            component={ReservationConfirmation}
+          />
+        </Switch>
           <Route path="/restaurants">
             <RestaurantsIndexPage />
           </Route>

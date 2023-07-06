@@ -30,7 +30,10 @@ function ReservationForm() {
       first_name: user.email.split("@")[0]
     };
     await dispatch(composeReserv(reservData, restaurantId));
-    history.push("/reservation-confirmation");
+    history.push({
+      pathname: "/reservation-confirmation",
+      state: { reservation: reservData },
+    });
   };
 
   return (
