@@ -15,20 +15,22 @@ function ReservationForm() {
     date: "",
     time: "",
     first_name: user ? user.email.split("@")[0] : "",
-    phone_number: ""
+    phone_number: user ? user.phone_number : ""
   });
 
-  const timesBooked = Math.floor(Math.random() * 101);
+  const [timesBooked] = useState(Math.floor(Math.random() * 101));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const reservData = {
       ...formData,
       restaurant_id: restaurantId,
-      user_id: user.id
+      user_id: user.id,
+      phone_number: "0000000000",
+      first_name: user.email.split("@")[0]
     };
     await dispatch(composeReserv(reservData, restaurantId));
-    history.push(""); 
+    history.push("/reservation-confirmation");
   };
 
   return (
@@ -85,7 +87,7 @@ function ReservationForm() {
             required
           />
         <div className="time-sec">
-          <label htmlFor="time" className="timetext">Time:</label>
+          <label htmlFor="time" className="timetext">Time</label>
           <input
             type="time"
             id="time"
@@ -97,7 +99,7 @@ function ReservationForm() {
           />
         </div>
               </div>
-        <div>
+        {/* <div>
           <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
@@ -108,8 +110,8 @@ function ReservationForm() {
             }
             required
           />
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <label htmlFor="phoneNumber">Phone Number:</label>
           <input
             type="tel"
@@ -122,8 +124,8 @@ function ReservationForm() {
             pattern="[0-9]{10}"
             title="Please enter a 10-digit phone number."
           />
-        </div>
-        <button type="submit">Make Reservation</button>
+        </div> */}
+        <button type="submit" className="submit2">Find A Table</button>
         <div className="times_booked">
           Booked {timesBooked} times today 
         </div>

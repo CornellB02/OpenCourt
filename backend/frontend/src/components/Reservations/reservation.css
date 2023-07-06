@@ -37,6 +37,32 @@
   /* padding-bottom: 24px; */
 }
 
+.submit2 {
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 15px;
+  max-width: 360px;
+  top: 15vw;
+  height: 1.3cm;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* left: 30vw; */
+  /* padding-left: -22vw; */
+  position: absolute;
+}
+
+.times_booked {
+  padding-top: 8vw;
+  align-items: right;
+  justify-content: right;
+  padding-right: 9vw;
+  font-size: 15px;
+}
+
 .time-sec{
 position: absolute;
 /* width: 2vw; */
