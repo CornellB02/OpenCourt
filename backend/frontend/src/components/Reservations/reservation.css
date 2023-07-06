@@ -24,6 +24,11 @@
   height: 22vw;
 }
 
+.page-details {
+  margin-left: 6vw;
+  margin-right: 36vw;
+}
+
 .timetext {
   /* left: vw; */
   /* top: vw; */
@@ -35,6 +40,38 @@
   color: rgb(0, 0, 0);
   position: absolute;
   /* padding-bottom: 24px; */
+}
+
+.nav-bar1 {
+  margin-top: 2vw;
+}
+
+h5 {
+  border-bottom: 1px solid #ccc;
+  /* justify-content: center; */
+    padding-left: 7vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 24vw;
+}
+.confirm-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.detail {
+  font-size: 23px;
+  /* padding-top: 21vw; */
+  padding-left: 1vw;
+}
+
+.reserv_det {
+  font-size: 11px;
+  padding-top: 1vw;
+  padding-bottom: 2vw;
+  padding-left: 2vw;
 }
 
 .submit2 {
