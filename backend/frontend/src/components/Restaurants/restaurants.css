@@ -85,7 +85,42 @@ ol {
     padding-bottom: 1vw;
     margin-bottom: 1vw;
     margin-right: 11vw;
-    /* padding-left: 6vw; */
+    padding-left: 3px;
+}
+
+.add-ol{
+  padding-left: 4.2vw;
+}
+
+.add-p {
+  font-weight: 300;
+}
+
+.add-icon{
+  font-size: 28px;
+  margin-right: 3px;
+  position: absolute;
+  /* left: 19px; */
+  padding-top: 5px;
+}
+
+.add-icon-phone{
+  font-size: 25px;
+  margin-right: 3px;
+  position: absolute;
+  /* left: 19px; */
+  left: 58.9vw;
+  padding-top: 9px;
+}
+
+.additional-list {
+  margin-left: 1.8vw;
+  font-size: 14px;
+  color: black;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: -webkit-match-parent;
+    font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 }
 
   h2{
