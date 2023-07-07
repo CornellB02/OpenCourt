@@ -14,8 +14,8 @@ import PhotosCarousel from './pictures'
 import ReservationForm from '../Reservations/reservationform'
 import "./restaurants.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding } from '@fortawesome/free-regular-svg-icons';
-import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+// import { faBuilding } from '@fortawesome/free-regular-svg-icons';
+// import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 // import { faCircleParking } from '@fortawesome/free-solid-svg-icons';
 // import 'font-awesome/css/font-awesome.css';
 
@@ -52,6 +52,8 @@ const RestaurantShowPage = () => {
   const renderDescription = () => {
     const linesToShow = showFullDescription ? '100%' : '3'; // Number of lines to show
 
+
+    
     return (
       <div
         className={`desctext ${showFullDescription ? 'expanded' : ''}`}
@@ -61,6 +63,14 @@ const RestaurantShowPage = () => {
         {restaurant.description.length > 3 }
       </div>
     );
+  };
+
+  const renderDeliveryStatus = () => {
+    if (restaurant.delivery) {
+      return <p className="add-p">Available</p>;
+    } else {
+      return <p className="add-p">Unavailable</p>;
+    }
   };
 
 
@@ -150,7 +160,7 @@ const RestaurantShowPage = () => {
                   </span>
                   <li className='additional-list'>
                     Delivery
-                  <p className='add-p'>{restaurant.delivery}</p>
+                  <p className='add-p'>{renderDeliveryStatus()}</p>
                   </li>
                   <span className='add-icon'>
                   <svg xmlns="http://www.w3.org/2000/svg">

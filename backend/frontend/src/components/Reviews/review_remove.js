@@ -18,10 +18,12 @@ function DeleteReviewButton({ reviewId }) {
     <>
       <button class="delete" onClick={() => setIsDeleting(true)}>Delete</button>
       {isDeleting && (
-        <div>
-          <p>Are you sure you want to delete this review?</p>
-          <button onClick={handleDelete}>Yes</button>
-          <button onClick={() => setIsDeleting(false)}>No</button>
+        <div className="delete-con">
+          <p className="deleteor">Are you sure you want to delete this review?</p>
+          <div className="del-but">
+          <button className="del-yes" onClick={handleDelete}>Yes</button>
+          <button className="del-no" onClick={() => setIsDeleting(false)}>No </button>
+          </div>
         </div>
       )}
     </>

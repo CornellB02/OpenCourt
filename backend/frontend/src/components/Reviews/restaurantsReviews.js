@@ -77,12 +77,8 @@ function Reviews({ restaurant }) {
                         <div></div>
                         {user && review.reviewer_firstname === user.email && (
   <div className="review-crud">
-    <div className="review-delete">
       <DeleteReviewButton reviewId={review.id} />
-    </div>
-    <div className="review-update">
       <UpdateReviewButton review={review} />
-    </div>
   </div>
 )}
                 </div>
