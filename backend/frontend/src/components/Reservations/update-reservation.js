@@ -34,8 +34,8 @@ function UpdateReservationButton({ reservation }) {
   };
 
   return (
-    <>
-      <button onClick={handleUpdate}>Update</button>
+    <div className="update-whole">
+      <button  className="reserv-update" onClick={handleUpdate}>Update</button>
       {isUpdating && (
         <form onSubmit={handleSubmit}>
           <div>
@@ -121,7 +121,7 @@ function UpdateReservationButton({ reservation }) {
           </button>
         </form>
       )}
-    </>
+    </div>
   );
 }
 

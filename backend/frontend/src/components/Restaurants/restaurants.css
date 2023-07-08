@@ -1014,6 +1014,8 @@ a:hover .index-name {
   align-self: center;
 }
 
+
+
 .write-review-button {
   background-color: red;
 }
@@ -1023,6 +1025,21 @@ a:hover .index-name {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: white;
 }
+
+#partySize:focus {
+  outline-color: transparent
+}
+
+#date:focus {
+  outline-color: transparent
+}
+
+#time:focus {
+  outline-color: transparent
+}
+/* #partySize:focus {
+  outline-color: red;
+} */
 
 .write-rev{
   background-color: red;

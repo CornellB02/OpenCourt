@@ -74,6 +74,58 @@ h5 {
   padding-left: 2vw;
 }
 
+.confirm-btn {
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+}
+
+.update-whole {
+  padding-left: 12vw;
+  margin-top: -2.2vw;
+}
+
+.reserv-update {
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+}
+
+.reserv-update:hover {
+  color: red;
+  border-color: red;
+}
+
+.delete-reserv:hover {
+  color: red;
+  border-color: red;
+}
+
+.confirm-btn:hover {
+  color: red;
+  border-color: red;
+}
+
+.delete-reserv {
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+}
+
+.delete-whole {
+  padding-left: 19.5vw;
+  margin-top: -2.2vw;
+}
+
 .submit2 {
   background-color: red;
   border-radius: 4px;

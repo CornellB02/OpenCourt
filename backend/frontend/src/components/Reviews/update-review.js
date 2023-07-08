@@ -37,9 +37,9 @@ function UpdateReviewButton({ review }) {
     <div className="update-container">
       <button className="update-b" onClick={handleUpdate}>Update</button>
       {isUpdating && (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="nickname">Nickname:</label>
+        <form onSubmit={handleSubmit}  className="full-form3">
+          <div className="label-div">
+            <label htmlFor="nickname" className="review-label">Nickname:</label>
             <input
               type="text"
               id="nickname"
@@ -50,8 +50,8 @@ function UpdateReviewButton({ review }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="body">Review:</label>
+          <div className="label-div">
+            <label htmlFor="body" className="review-label">Review:</label>
             <textarea
               id="body"
               value={formData.body}
@@ -61,8 +61,8 @@ function UpdateReviewButton({ review }) {
               required
             ></textarea>
           </div>
-          <div>
-            <label htmlFor="food">Food:</label>
+          <div className="label-div">
+            <label htmlFor="food" className="review-label">Food:</label>
             <input
               type="number"
               id="food"
@@ -75,8 +75,8 @@ function UpdateReviewButton({ review }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="service">Service:</label>
+          <div className="label-div">
+            <label htmlFor="service" className="review-label">Service:</label>
             <input
               type="number"
               id="service"
@@ -89,8 +89,8 @@ function UpdateReviewButton({ review }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="ambience">Ambience:</label>
+          <div className="label-div">
+            <label htmlFor="ambience" className="review-label">Ambience:</label>
             <input
               type="number"
               id="ambience"
@@ -103,8 +103,8 @@ function UpdateReviewButton({ review }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="value">Value:</label>
+          <div className="label-div">
+            <label htmlFor="value" className="review-label">Value:</label>
             <input
               type="number"
               id="value"
@@ -117,8 +117,8 @@ function UpdateReviewButton({ review }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="overall">Overall:</label>
+          <div className="label-div">
+            <label htmlFor="overall" className="review-label">Overall:</label>
             <input
               type="number"
               id="overall"
@@ -132,7 +132,7 @@ function UpdateReviewButton({ review }) {
             />
           </div>
             <button type="submit">Update</button>
-            Save Changes
+
       <button type="button" onClick={handleCancel}>
         Cancel
       </button>

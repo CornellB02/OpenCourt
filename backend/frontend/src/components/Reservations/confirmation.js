@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import restaurantsReducer from "../../store/restaurants";
 import UpdateReservationButton from "./update-reservation";
+import DeleteReservationButton from "./reservation_remove";
 // import Navigation from "../Navigation/index";
 
 function ReservationConfirmation() {
@@ -39,12 +40,9 @@ function ReservationConfirmation() {
             <button className="confirm-btn">Confirm Reservation</button>
           </Link>
           <div className="reserv-crud">
-            <div className="reserv-delete">
-                {/* <DeleteReservationButton reservationId={Reservation.id} /> */}
-            </div>
-            <div className="reserv-update">
             <UpdateReservationButton reservation={reservation} />
-    </div>
+                <DeleteReservationButton reservationId={reservation.id} />
+
   </div>
         </div>
           </div>
