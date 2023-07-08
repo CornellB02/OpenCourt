@@ -60,9 +60,70 @@
     /* padding-right: 90vw; */
     /* margin-right: 190vw; */
     /* padding */
+    border-bottom: 1px;
   }
 
+ol {
+  margin-right: -1vw;
+}
 
+.additional_info {
+  margin-left: 5vw;
+  padding-top: 2vw;
+  margin-right: 6vw;
+}
+
+
+
+.add-h2{
+     /* padding-top: 3vw;/ */
+    /* margin-top: 2vw; */
+    /* margin-bottom: 2vw; */
+    border-bottom: 1px solid #ccc;
+    margin-left: 4vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 11vw;
+    padding-left: 3px;
+}
+
+.add-ol{
+  padding-left: 4.2vw;
+}
+
+.add-p {
+  font-weight: 300;
+}
+
+.add-icon{
+  font-size: 28px;
+  margin-right: 3px;
+  position: absolute;
+  /* left: 19px; */
+  padding-top: 5px;
+}
+
+.add-icon-phone{
+  font-size: 25px;
+  margin-right: 3px;
+  position: absolute;
+  /* left: 19px; */
+  left: 58.9vw;
+  padding-top: 9px;
+}
+
+.additional-list {
+  margin-left: 1.8vw;
+  font-size: 14px;
+  color: black;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: -webkit-match-parent;
+    font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
 
   h2{
     /* padding-top: 3vw;/ */
@@ -74,6 +135,8 @@
     font-size: 26px;
     font-weight: 700;
     padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    margin-right: 11vw;
   }
 
   .other{
@@ -229,20 +292,20 @@
   } */
   
   .main_whole_show{
-    margin-top: 4.2vw;
+    /* margin-top: 4.2vw; */
   }
 
   .main_right_show{
     margin-left: 50vw;
     max-height: 100vw;
-
   }
+
 
   .main_left_show{
     /* background-color: rgb(210, 36, 36); */
     /* border-radius: 4px; */
     /* box-sizing: border-box; */
-    margin-right: 38vw;
+    margin-right: 33vw;
     /* padding-top: 127.75px; */
     /* padding-right: 16px; */
     /* padding-bottom: 0; */
@@ -254,7 +317,7 @@
     /* position: relative; */
     /* width: 60vw; */
     height: 100vw;
-    margin-top: -24.7vw;
+    margin-top: -53.5vw;
   }
 
   /* .opmr{
@@ -267,10 +330,14 @@
     /* color: white; */
     /* display: inline; */
     width: 100vw;
-    max-height: 100rem;
+    max-height: 100vw;
     /* margin-left: 4vw; */
-    position: absolute;
+    /* position: absolute; */
     
+  }
+
+  .foot {
+    margin-top: 2.6vw;
   }
 
   
@@ -281,10 +348,11 @@
     font-size: 45px;
     font-weight: 600;
     line-height: 6rem;
-    margin-top: -.95vw;
-    padding-left: 12px;
+    /* margin-top: -.35vw; */
+    padding-left: 15px;
     /* margin-left: 12vw; */
     /* margin-right: 6vw; */
+    margin-top: -1.29vw;
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   }
 
@@ -309,17 +377,19 @@
     /* position: relative; */
     background-color: rgb(255, 255, 255);
     /* padding: 0.5rem; */
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
     /* box-shadow: 0 0.05rem 0.5rem rgba(0, 0, 0, 0.1); */
     /* display: flex; */
     /* margin-right: 4vw; */
+    margin-left: 2vw;
     /* margin-bottom: 2vw; */
     /* margin-top: 34.93vw; */
     /* padding-top: -3vw; */
     /* height: 22vw; */
     /* padding-bottom: 1.28vw; */
     width: 106%;
+    max-height: 5p;
     /* font-size: large; */
     /* display: flex; */
     /* justify-content: space-between; */
@@ -328,6 +398,12 @@
   display: relative;
   /* font-size: 28pc !important; */
   /* font-display: ; */
+  margin-top: 5.8vw;
+  }
+
+  .reservation_st {
+    height: 100%;
+    /* overflow: auto; */
   }
 
   .opmr-li {
@@ -337,14 +413,16 @@
     box-shadow: rgb(218, 55, 67);
     text-align: left;
     text-size-adjust: 100%;
+    margin-left: -1.5vw;
   }
 
   .opmr-li-1 {
     display: inline-block;
     width: 57.7969px;
     margin-right: 4vw;
+    margin-left: 1.5vw;
     /* padding-right: 12px; */
-    padding-bottom: .5vw;
+    padding-bottom: .6vw;
     color: rgb(45, 51, 63);
     box-shadow: rgb(218, 55, 67);
     text-align: left;
@@ -362,7 +440,7 @@
 
 .descrip {
   font-size: 1rem;
-  padding-top: 7.2rem;
+  padding-top: 10.2rem;
   overflow: hidden;
   /* max-height: 50px; */
   justify-content: flex-start;
@@ -458,7 +536,7 @@ color: red;
 }
 
 .underDes{
- 
+ /* padding-bottom: 1vw; */
 }
 
   /* .o-button {
@@ -470,6 +548,7 @@ color: red;
   /* margin-right: 30vw; */
   padding-top: 1vw;
   margin-right: 8vw;
+  padding-bottom: 1vw;
 }
   
   
@@ -487,6 +566,7 @@ color: red;
     border-style: none;
     background-color: rgb(0, 0, 0, 0);
     color: rgb(115, 115, 123);
+    /* margin-left: 1vw; */
   }
   
 
@@ -554,11 +634,15 @@ color: red;
     /* color: #ff5a5f;  */
   /* } */
 
+  .o-button:hover {
+    color: red;
+  }
+
   .o-button.active{
     align-items: flex-start;
     box-sizing: border-box;
     display: inline-block;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
     padding: 0px;
     font-size: 13px;
     font-stretch: 100%;
@@ -568,7 +652,7 @@ color: red;
     border-style: none;
     background-color: rgb(0, 0, 0, 0);
     color: rgb(218, 55, 67);
-    padding-left: 1.3vw;
+    padding-left: .3vw;
     
 }
 
@@ -607,7 +691,7 @@ color: red;
 .img-div img {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  width: 234px;
+  width: 255.3px;
   height: 132px;
   object-fit: cover;
 }
@@ -649,7 +733,7 @@ img .img-div-index{
   display: flex;
   position: relative;
   line-height: 0;
-  margin-top: -1.65rem;
+  margin-top: -2rem;
 }
 
 .img_c {
@@ -733,6 +817,10 @@ img .img-div-index{
   /* align-items: center; */
   /* background-color: #8b0000; */
   /* margin-bottom: 1.4vw; */
+}
+
+.show_container {
+  /* margin-top: 14px; */
 }
 
 .starsshow{
@@ -926,7 +1014,36 @@ a:hover .index-name {
   align-self: center;
 }
 
-.write-review-button{
-  margin-left: 20vw;
+.write-review-button {
+  background-color: red;
+}
+.write-rev2 {
+  padding-left: 8.6vw;
+  padding-top: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
 }
 
+.write-rev{
+  background-color: red;
+  /* font-size: 12px; */
+  /* margin-left: 8.6vw; */
+  height: 1.6vw;
+  width: 24vw;
+  border-radius: 43px;
+  color: rgb(0, 0, 0);
+  border: 5px solid #d8d9db;
+  border-color: red;
+  margin-left: 9.5vw;
+  /* padding-bottom: 1vw; */
+}
+
+.write-rev:hover{
+  background-color: white;
+  color: red;
+}
+
+.write-rev2:hover{
+  color: red;
+
+}

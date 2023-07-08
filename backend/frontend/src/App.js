@@ -10,6 +10,8 @@ import RestaurantShowPage from "./components/Restaurants/Restaurantshow";
 import ReviewsBox from "./components/Reviews/reviewbox";
 import Userprofile from "./components/UserPage";
 import ReservationForm from "./components/Reservations/reservationform";
+import ReservationConfirmation from "./components/Reservations/confirmation"; // Import the ReservationConfirmation component
+import Footer from "./components/context/footer";
 
 function App() {
   return (
@@ -31,16 +33,26 @@ function App() {
             <Userprofile />
           </Route>
           <Route path="/restaurant/:restaurantId/reservs" component={ReservationForm} />
+          {/* <Route exact path="/restaurant-confirmation" component={ReservationConfirmation}> Reservation confirmation route */}
+          {/* </Route> */}
           <Route path="/restaurants/:restaurantId" component={RestaurantShowPage} />
           <Route exact path="/restaurant/:restaurantId/review" component={ReviewsBox} />
           <Route exact path="/">
             <SplashPage />
             <Link to="/reserv">Make a Reservation</Link>
           </Route>
+          <Switch>
+          <Route exact path="/" component={ReservationForm} />
+          <Route
+            path="/reservation-confirmation"
+            component={ReservationConfirmation}
+          />
+        </Switch>
           <Route path="/restaurants">
             <RestaurantsIndexPage />
           </Route>
         </Switch>
+        {/* <Footer /> */}
       </>
     </BrowserRouter>
   );

@@ -153,13 +153,13 @@
 }
 
 .splash_select{
-    margin-left: 12vw;
+    margin-left: 14vw;
     display: flex;
     background-color: white;
     border-radius: 4px;
     height: 1.38cm;
     border: 1px solid black;
-    width: 33vw;
+    width: 30vw;
     
 }
 
@@ -214,7 +214,7 @@
   /* flex-wrap: wrap; */
   justify-content: center;
   overflow: auto;
-  padding-left: 95vw;
+  padding-left: 86.5vw;
   /* padding-right: 90vw; */
   /* margin-right: 190vw; */
   /* padding */

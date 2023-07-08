@@ -1,17 +1,21 @@
 .review-list {
     display: flexbox;
-    padding-left: 16vw;
-
+    /* padding-left: 16vw; */
+    margin-right: 8vw;
+    padding-top: 1.5vw;
 }
 .review-container {
     display: flex;
     flex-direction: column;
-    max-width: 48.5%;
+    /* max-width: 48.5%; */
+    margin-left: 18px;
+
     /* padding: 2px; */
     /* margin-bottom: px; */
     background-color: #fff;
     border-bottom: 1px solid #e6e6e6;
     /* border-radius: 20px; */
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
   }
   
   .review-header {
@@ -19,6 +23,17 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
+  }
+
+  h3 {
+    border-bottom: 1px solid #ccc;
+    margin-left: 2vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 1.7vw;
+    margin-bottom: 1vw;
+    margin-right: 11vw;
   }
   
   .review-nickname {
@@ -30,6 +45,7 @@
     display: flex;
     align-items: center;
     padding-right: 3px;
+    /* margin-left: 2vw; */
   }
   
   .review-rating-star {
@@ -41,6 +57,10 @@
   .review-body {
     margin-top: 22px;
     padding-bottom: 25px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
   }
   
   .review-overall {
@@ -80,6 +100,7 @@
     padding-bottom: 10px;
 }
 
+
   .review-ambience {
     display: flex;
     margin-right: 1vw;
@@ -92,13 +113,20 @@
 }
   
 .review-details {
-    margin-left: 7.5vw;
+    margin-left: 9.5vw;
     margin-top: -4.8vw;
+}
+
+.reviewer-email {
+  justify-content: center;
+  margin-left: 15px;
+  padding-top: 12px;
 }
 
 .reviewer-info{
     margin-top: 20px;
     max-width: 7vw;
+    margin-left: 2vw;
 }
 
 .reviewer-circle {
@@ -117,19 +145,109 @@
   }
 
 .review-crud {
-    background-color: #f9a825;
+    background-color: #ffffff;
     height: 2.7vw;
     display: flex;
     margin-bottom: 1.7vw;
+    
 }
 
-.review-update {
-    padding-left: 4vw;
-    color: red
+.update-container {
+  padding-left: .6cm;
+}
+
+.update-b {
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+}
+
+.update-b:hover {
+  color: red;
+  border-color: red;
+}
+
+.delete:hover {
+  color: red;
+  border-color: red;
+}
+
+.del-yes:hover {
+  color: red;
+  border-color: red;
+}
+
+.del-no:hover {
+  color: red;
+  border-color: red;
+}
+
+.del-no{
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+  margin-left: 2vw;
+  position: absolute;
+  /* margin-bottom: 3vw; */
+  top: 3.3vw;
+  right: 6vw;
+}
+
+.del-yes {
+  position: absolute;
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+  /* margin-bottom: 7px; */
+  margin-top: 2vw;
+  /* padding-right: 1vw; */
+  top: 1.2vw;
+  right: 13vw;
+}
+
+
+
+.delete-con {
+  position: absolute;
+  /* padding-top: 5vw; */
+  margin-top: 3.5vw;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 0, 0);
+  /* display: flex; */
+  /* bottom: 3vw; */
+  height: 6vw;
+  border-radius: 30px;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+  font-weight: 200;
+}
+
+.deleteor {
+  /* width: 23vw; */
+  padding-top: 2vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-size: 12px;
+  
 }
 
 .delete{
-    color: red;
+  font-size: 12px;
+  border-radius: 23px;
+  color: rgb(0, 0, 0);
+  border: .5px solid #d8d9db;
+  border-color: rgb(169, 159, 159);
+  background-color: white;
+  margin-bottom: 7px;
+  /* padding-right: 1vw; */
 }
 
 /* .rev */

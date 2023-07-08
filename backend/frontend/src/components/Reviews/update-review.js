@@ -34,8 +34,8 @@ function UpdateReviewButton({ review }) {
   };
 
   return (
-    <>
-      <button onClick={handleUpdate}>Update</button>
+    <div className="update-container">
+      <button className="update-b" onClick={handleUpdate}>Update</button>
       {isUpdating && (
         <form onSubmit={handleSubmit}>
           <div>
@@ -138,7 +138,7 @@ function UpdateReviewButton({ review }) {
       </button>
     </form>
   )}
-</>
+</div>
 );
 }
 
