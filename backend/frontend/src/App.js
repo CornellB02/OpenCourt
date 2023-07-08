@@ -11,6 +11,7 @@ import ReviewsBox from "./components/Reviews/reviewbox";
 import Userprofile from "./components/UserPage";
 import ReservationForm from "./components/Reservations/reservationform";
 import ReservationConfirmation from "./components/Reservations/confirmation"; // Import the ReservationConfirmation component
+import Footer from "./components/context/footer";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             <RestaurantsIndexPage />
           </Route>
         </Switch>
+        {/* <Footer /> */}
       </>
     </BrowserRouter>
   );

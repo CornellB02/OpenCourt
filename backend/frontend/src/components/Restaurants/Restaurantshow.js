@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 // import { faCircleParking } from '@fortawesome/free-solid-svg-icons';
 // import 'font-awesome/css/font-awesome.css';
+import Footer from '../context/footer'
 
 
 const RestaurantShowPage = () => {
@@ -262,6 +263,9 @@ const RestaurantShowPage = () => {
       </div>
                 </div>
                 </div>
+            </div>
+            <div className='foot'>
+            <Footer/>
             </div>
         </div>
     // </div>

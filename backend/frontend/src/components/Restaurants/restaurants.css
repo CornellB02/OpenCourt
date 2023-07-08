@@ -330,10 +330,14 @@ ol {
     /* color: white; */
     /* display: inline; */
     width: 100vw;
-    max-height: 100rem;
+    max-height: 100vw;
     /* margin-left: 4vw; */
-    position: absolute;
+    /* position: absolute; */
     
+  }
+
+  .foot {
+    margin-top: 2.6vw;
   }
 
   
