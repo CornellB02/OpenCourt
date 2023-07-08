@@ -2,13 +2,14 @@
     display: flexbox;
     /* padding-left: 16vw; */
     margin-right: 8vw;
-
+    padding-top: 1.5vw;
 }
 .review-container {
     display: flex;
     flex-direction: column;
     /* max-width: 48.5%; */
     margin-left: 18px;
+
     /* padding: 2px; */
     /* margin-bottom: px; */
     background-color: #fff;

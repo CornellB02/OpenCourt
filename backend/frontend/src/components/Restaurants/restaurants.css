@@ -73,6 +73,8 @@ ol {
   margin-right: 6vw;
 }
 
+
+
 .add-h2{
      /* padding-top: 3vw;/ */
     /* margin-top: 2vw; */
@@ -1008,7 +1010,36 @@ a:hover .index-name {
   align-self: center;
 }
 
-.write-review-button{
-  margin-left: 20vw;
+.write-review-button {
+  background-color: red;
+}
+.write-rev2 {
+  padding-left: 8.6vw;
+  padding-top: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
 }
 
+.write-rev{
+  background-color: red;
+  /* font-size: 12px; */
+  /* margin-left: 8.6vw; */
+  height: 1.6vw;
+  width: 24vw;
+  border-radius: 43px;
+  color: rgb(0, 0, 0);
+  border: 5px solid #d8d9db;
+  border-color: red;
+  margin-left: 9.5vw;
+  /* padding-bottom: 1vw; */
+}
+
+.write-rev:hover{
+  background-color: white;
+  color: red;
+}
+
+.write-rev2:hover{
+  color: red;
+
+}

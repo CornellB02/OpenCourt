@@ -254,7 +254,7 @@ const RestaurantShowPage = () => {
                 <div className="reviewSec">
                 {isLoggedIn && (
                   <Link to={`/restaurant/${restaurant.id}/review`} className="write-review-button">
-                    Write a review
+                    <div className="write-rev"><p className='write-rev2'>Write a review</p></div>
                   </Link>
                 )}
         </div>
