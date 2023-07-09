@@ -35,7 +35,7 @@ function CalanderButton({ user }) {
   };
 
   return (
-    <div className="right_side">
+    <div className="midd">
     <div className='calander-button'>
       <button onClick={openMenu} className='calander-icon'>
         {/* <i className="fa-solid fa-user-circle" /> */}

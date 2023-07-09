@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { getRestaurant } from '../../store/restaurants'
+import { getRestaurantReviews } from '../../store/reviews'
 import { useParams } from 'react-router-dom'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faMessages } from '@fortawesome/free-solid-svg-icons';
@@ -30,7 +31,10 @@ const RestaurantShowPage = () => {
     const isLoggedIn = useSelector((state) => state.session.user);
 
 
-    useEffect(() => {dispatch(getRestaurant(restaurantId))}, [dispatch])
+    useEffect(() => {
+      dispatch(getRestaurant(restaurantId));
+      dispatch(getRestaurantReviews(restaurantId)); // Fetch reviews for the restaurant
+    }, [dispatch, restaurantId]);
 
     // useEffect(() =)
 

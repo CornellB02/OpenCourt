@@ -52,6 +52,7 @@ function ReviewsBox() {
         // user_id: userId,
         // restaurant_id: restaurantId,
       });
+      history.push(`/restaurants/${restaurantId}`);
     });
   };
 
@@ -61,6 +62,17 @@ function ReviewsBox() {
 
   return (
     <div>
+       <ol className='location_route'>
+            <li className='current-loca'>
+                <a href='/' className='home_class'>Home</a>
+            </li>
+            <li className='current-loca'>
+                <div className='country_class' >United States</div>
+            </li>
+            <li className='current-loca'>
+                <div className='city_class' >New York</div>
+            </li>
+        </ol>
       {/* <h2>Reviews:</h2> */}
       {/* <ul> */}
         {/* {Object.values(reviews)
@@ -80,9 +92,10 @@ function ReviewsBox() {
             </li>
           ))} */}
       {/* </ul> */}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="nickname">Nickname:</label>
+      <form onSubmit={handleSubmit} className="full-form2">
+      <h6 className="dubR">Rate & Review</h6>
+        <div className="label-div">
+          <label htmlFor="nickname" className="review-label">Nickname:</label>
           <input
             type="text"
             id="nickname"
@@ -93,8 +106,8 @@ function ReviewsBox() {
             required
           />
         </div>
-        <div>
-          <label htmlFor="body">Review:</label>
+        <div className="label-div">
+          <label htmlFor="body" className="review-label">Review:</label>
           <textarea
             id="body"
             value={formData.body}
@@ -102,8 +115,8 @@ function ReviewsBox() {
             required
           ></textarea>
         </div>
-        <div>
-          <label htmlFor="food">Food:</label>
+        <div className="label-div">
+          <label htmlFor="food" className="review-label">Food:</label>
           <input
             type="number"
             id="food"
@@ -116,8 +129,8 @@ function ReviewsBox() {
             required
           />
         </div>
-        <div>
-          <label htmlFor="service">Service:</label>
+        <div className="label-div">
+          <label htmlFor="service" className="review-label">Service:</label>
           <input
             type="number"
             id="service"
@@ -129,8 +142,8 @@ function ReviewsBox() {
               required
               />
               </div>
-              <div>
-              <label htmlFor="ambience">Ambience:</label>
+              <div className="label-div">
+              <label htmlFor="ambience" className="review-label">Ambience:</label>
               <input
               type="number"
               id="ambience"
@@ -143,8 +156,8 @@ function ReviewsBox() {
               required
               />
               </div>
-              <div>
-              <label htmlFor="value">Value:</label>
+              <div className="label-div">
+              <label htmlFor="value" className="review-label">Value:</label>
               <input
               type="number"
               id="value"
@@ -157,8 +170,8 @@ function ReviewsBox() {
               required
               />
         </div>
-        <div>
-            <label htmlFor="overall">Overall:</label>
+        <div className="label-div">
+            <label htmlFor="overall" className="review-label">Overall:</label>
               <input
               type="number"
               id="overall"

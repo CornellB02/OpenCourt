@@ -69,9 +69,16 @@ function Navigation() {
       <NavLink className='nav-logo' exact to='/'><span className='Logo'><img className='nav-logo-img' src={steakbooklogo} alt="" /></span></NavLink>
         <div className="navbar-nav">
           {sessionUser ? <div className='user_logged'>
-          <ProfileButton user={sessionUser} /> 
+            {/* <div className='pro-btn'></div> */}
+            <div className='profile1'>
+            <ProfileButton user={sessionUser} /> 
+            </div>
+            <div className='profile1'>
           <CalanderButton user={sessionUser} /> 
+          </div>
+          <div className='profile1'>
           <UpdatesButton user={sessionUser} /> 
+          </div>
 
 
           {/* <i class="fa-regular fa-calendar"></i>
@@ -82,13 +89,19 @@ function Navigation() {
               <button type="button" className="signup" onClick={handleSignupClick}>Sign Up</button>
                 &nbsp;
               <button type="button" className="login" onClick={handleLoginClick}>Sign In</button>
-              <button class="search-button" onClick={handleSearchClick}>
+              {/* <button class="search-button" onClick={handleSearchClick}>
+                 {isSearchOpen && <SearchModule isOpen={isSearchOpen} isClose={handleCloseSearch} />}
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button> */}
+            </div>
+          )}
+          {/* <div className='magnifi'>cs</div> */}
+        </div>
+        <button class="search-button" onClick={handleSearchClick}>
                  {isSearchOpen && <SearchModule isOpen={isSearchOpen} isClose={handleCloseSearch} />}
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-            </div>
-          )}
-        </div>
+        {/* <i class="fa-solid fa-magnifying-glass" id='magni'></i> */}
       </nav>
       {isModalOpen && !sessionUser && (
         <Modal onClose={handleCloseModal}>

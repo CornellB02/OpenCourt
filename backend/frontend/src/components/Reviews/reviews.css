@@ -35,6 +35,33 @@
     margin-bottom: 1vw;
     margin-right: 11vw;
   }
+
+  #nickname{
+    font-size: 19px;
+    width: 20vw;
+    /* padding-bottom: -3px; */
+    /* margin-bottom: 3vw; */
+    /* max-height: 2px; */
+  }
+
+  #overall:focus,
+  #value:focus,
+  #ambience:focus,
+  #service:focus,
+  #food:focus,
+  #body:focus,
+  #nickname:focus,
+textarea:focus {
+  outline-color: red;
+}
+
+  #body {
+    width: 19.5vw;
+    height: 5vw;
+    padding-bottom: 1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 1.2px;
+  }
   
   .review-nickname {
     font-weight: bold;
@@ -149,7 +176,7 @@
     height: 2.7vw;
     display: flex;
     margin-bottom: 1.7vw;
-    
+    max-width: 22vw;
 }
 
 .update-container {
@@ -163,6 +190,49 @@
   border: .5px solid #d8d9db;
   border-color: rgb(169, 159, 159);
   background-color: white;
+}
+
+.full-form3{
+  /* color: red; */
+  /* display: flex; */
+  /* height: 35vw; */
+  border: 2.5px solid rgb(255, 0, 0);
+  background-color: white;
+  /* position: absolute; */
+  /* right: 16vw;
+  top: 2vw; */
+  margin-left: 23vw;
+  margin-top: -13vw;
+  height: 33vw;
+}
+
+.full-form2{
+  /* color: red; */
+  /* display: flex; */
+  /* height: 35vw; */
+  border: 2.5px solid rgb(255, 0, 0);
+}
+
+.review-label{
+  margin-right: 20vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  margin-top: -3vw;
+  /* font-size: 1px; */
+}
+
+.label-div{
+  padding-bottom: .6vw;
+}
+
+.dubR {
+  border-bottom: 1px solid gray;
+  font-size: 25px;
+  padding-bottom: .6vw;
+  margin-bottom: 1.6vw;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .update-b:hover {
