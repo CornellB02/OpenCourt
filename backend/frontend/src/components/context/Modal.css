@@ -90,6 +90,7 @@
 .footer {
   background-color: #2d333f;
   display: flex;
+  margin-top: -2vw;
   justify-content: center;
   flex-wrap: wrap;
   padding: 1.5vw 1vw;

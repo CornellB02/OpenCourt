@@ -337,7 +337,10 @@ ol {
   }
 
   .foot {
-    margin-top: 2.6vw;
+    /* margin-top: 2.6vw; */
+    position: absolute;
+    margin-top: 18vw;
+    margin-left: -9vw;
   }
 
   

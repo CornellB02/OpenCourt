@@ -39,7 +39,7 @@ function App() {
           <Route exact path="/restaurant/:restaurantId/review" component={ReviewsBox} />
           <Route exact path="/">
             <SplashPage />
-            <Link to="/reserv">Make a Reservation</Link>
+            {/* <Link to="/reserv">Make a Reservation</Link> */}
           </Route>
           <Switch>
           <Route exact path="/" component={ReservationForm} />
@@ -52,8 +52,8 @@ function App() {
             <RestaurantsIndexPage />
           </Route>
         </Switch>
-        {/* <Footer /> */}
       </>
+        {/* <Footer /> */}
     </BrowserRouter>
   );
 }
