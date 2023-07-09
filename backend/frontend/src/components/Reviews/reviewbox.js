@@ -14,6 +14,10 @@ function ReviewsBox() {
   // const [validationErrors, setValidationErrors] = useState([]);
   const user = useSelector((state) => state.session.user);
   // const location = useLocation();
+  // const reloadPage = () => {
+  //   location.reload();
+  // };
+
   const [formData, setFormData] = useState({
     nickname: "",
     body: "",
@@ -53,6 +57,8 @@ function ReviewsBox() {
         // restaurant_id: restaurantId,
       });
       history.push(`/restaurants/${restaurantId}`);
+      // reloadPage();
+      window.location.reload();
     });
   };
 

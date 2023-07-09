@@ -29,11 +29,17 @@ const RestaurantShowPage = () => {
     const restaurant = useSelector((state) => state.restaurants[restaurantId])
     const [showFullDescription, setShowFullDescription] = useState(false);
     const isLoggedIn = useSelector((state) => state.session.user);
+    const [shouldRender, setShouldRender] = useState(false);
 
+    // const reloadPage = () => {
+    //     location.reload();
+    //   };
 
     useEffect(() => {
       dispatch(getRestaurant(restaurantId));
       dispatch(getRestaurantReviews(restaurantId)); // Fetch reviews for the restaurant
+      // window.location.reload();
+      setShouldRender(true);
     }, [dispatch, restaurantId]);
 
     // useEffect(() =)
@@ -57,7 +63,6 @@ const RestaurantShowPage = () => {
   const renderDescription = () => {
     const linesToShow = showFullDescription ? '100%' : '3'; // Number of lines to show
 
-
     
     return (
       <div
@@ -76,10 +81,11 @@ const RestaurantShowPage = () => {
     } else {
       return <p className="add-p">Unavailable</p>;
     }
+    
   };
 
 
-    if (!restaurant){
+    if (!restaurant || !shouldRender){
       // debugger
         return "loading..."
     }
@@ -265,11 +271,11 @@ const RestaurantShowPage = () => {
         </div>
                 <Reviews restaurant={restaurant}/>
       </div>
-                </div>
-                </div>
-            </div>
             <div className='foot'>
             <Footer/>
+            </div>
+                </div>
+                </div>
             </div>
         </div>
     // </div>
