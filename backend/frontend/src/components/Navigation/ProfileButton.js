@@ -38,17 +38,35 @@ function ProfileButton({ user }) {
     <div className="right_side">
       <div className='profile-button'>
         <button onClick={openMenu} className='profile-icon'>
-          <i class="fa-regular fa-user"></i>
+        <div className='pro-btn'>
+        <div className='pro-btn-text'>{user.email[0].toUpperCase()}1</div>
+        </div>
         </button>
         {showMenu && (
-          <ul className="profile-dropdown">
+          <div className="profile-dropdown">
             <div className="dropdown-user">Hello, {user.email}!</div>
+            <div className="earnings">
+              <div className="current-e">
+                <div className="earned">Earned</div>
+                <div className="earn-num">
+                  0
+                  <span className="pts">PTS</span>
+                </div>
+              </div>
+              <div className="next-e">
+                <div className="nexre">Next reward</div>
+                <span className="pts1"><p className="pts-num">2000</p>PTS</span>
+              </div>
+            </div>
+              <div className="pts-bar">
+              </div>
+              <span className="learn">Learn more about points</span>
             <button className="user-button" onClick={goToProfile}>My Profile</button>
             <button className="user-button">My Dining History</button>
             <button className="user-button">My Saved Restaurants</button>
 
             <button className="my-button-logout" onClick={logout}>Sign Out</button>
-          </ul>
+          </div>
         )}
       </div>
     </div>
