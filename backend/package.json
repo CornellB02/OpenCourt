@@ -11,13 +11,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "16.x"
+  "bugs": {
+    "url": "http://github.com/cornellb02/Steak-book/issues"
   },
   "homepage": "http://github.com/cornellb02/Steak-book#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {}
 }
