@@ -51,7 +51,7 @@ function Splash_item_rs({restaurant}) {
             <div className="img-div">
                {/* <Link to={`/restaurants/${restaurant.id}`}> */}
                 <a href="#">
-                  <img src={`https://steak-book-seeds.s3.amazonaws.com/picture${restaurant.id}.jpeg`} alt="Restaurant" className="restaurant-image"/></a>
+                  <img src={`https://steak-book-seeds.s3.amazonaws.com/picture${restaurant.id}.jpeg`} alt="Restaurant" className="restaurant-image" id="small-pic"/></a>
                 {/* </Link> */}
             </div>
           <div className="pcn">

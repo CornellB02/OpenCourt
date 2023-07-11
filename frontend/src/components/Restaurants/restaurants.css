@@ -21,6 +21,7 @@
     /* margin: 5px; add margin to create a gap between the items */
   }
 
+
   /* .idx-img{ */
     /* margin-bottom: 170vw; */
   /* } */
@@ -73,6 +74,9 @@ ol {
   margin-right: 6vw;
 }
 
+.restaurant-image {
+  /* padding-bottom: 2vw; */
+}
 
 
 .add-h2{
@@ -871,7 +875,13 @@ img .img-div-index{
 
 }
 
-
+#small-pic{
+  /* color: red;
+  padding-right: 3vw; */
+  width: 16.28vw;
+  border-bottom-left-radius: 1.5px;
+  border-bottom-right-radius: 1.5px;
+}
 
 .each-restaurant-sp{
   max-height: 22vw;

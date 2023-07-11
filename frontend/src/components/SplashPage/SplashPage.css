@@ -221,7 +221,7 @@
   /* flex-wrap: wrap; */
   justify-content: center;
   overflow: auto;
-  padding-left: 86.5vw;
+  padding-left: 89.5vw;
   /* padding-right: 90vw; */
   /* margin-right: 190vw; */
   /* padding */
@@ -285,6 +285,9 @@
   text-decoration: none;
 }
 
+.restaurant-image {
+  padding-right: 22vw;
+}
 
 .first_cat{
   border-bottom: 1px solid #ccc;
