@@ -86,9 +86,9 @@ function Navigation() {
           </div>
            : (
             <div className="authbuttons">
-              <button type="button" className="signup" onClick={handleSignupClick}>Sign Up</button>
+              <button type="button" className="signup" onClick={handleSignupClick}><p className='s-up-words'>Sign Up</p></button>
                 &nbsp;
-              <button type="button" className="login" onClick={handleLoginClick}>Sign In</button>
+              <button type="button" className="login" onClick={handleLoginClick}><p className='s-up-words'>Sign In</p></button>
               {/* <button class="search-button" onClick={handleSearchClick}>
                  {isSearchOpen && <SearchModule isOpen={isSearchOpen} isClose={handleCloseSearch} />}
                 <i class="fa-solid fa-magnifying-glass"></i>
