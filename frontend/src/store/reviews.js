@@ -69,6 +69,7 @@ export const editReview = (reviewId, review) => async (dispatch) => {
         const review = await response.json();
         dispatch(updateReview(review));
         return review;
+        
     }
 }
 
