@@ -916,7 +916,7 @@ img .img-div-index{
   height: 2.1vw;
   margin-top: 1.2vw;
   width: 4.81vw;
-  font-size: 1.1em;
+  font-size: 0.9em;
   text-align: center;
   display: flex;
   /* margin-right: -1.2vw; */
@@ -938,7 +938,7 @@ img .img-div-index{
 .reservebtnidx button{
 margin-right: 10px;
 padding: 10px 15px;
-font-size: 16px;
+font-size: 13px;
 color: white;
 background-color: #bf0e3e;
 border: none;
@@ -961,7 +961,7 @@ align-self: center;
   height: 2.5vw;
   margin-top: 11vw;
   width: 7.81vw;
-  font-size: .8em;
+  font-size: .5em;
   text-align: center;
   display: flex;
   /* letter-spacing: normal; */
