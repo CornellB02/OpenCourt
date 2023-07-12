@@ -12,7 +12,7 @@ import UpdateReviewButton from "./update-review";
 function Reviews({ restaurant }) {
     const dispatch = useDispatch();
     // const { reviewId } = useParams()
-    const reviews = useSelector((state) => Object.values(state.reviews));
+    const reviews = useSelector((state) => Object.values(state.reviews).reverse());
   const user = useSelector((state) => state.session.user);
   
     

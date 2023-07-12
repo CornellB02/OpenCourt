@@ -36,12 +36,20 @@
     margin-right: 11vw;
   }
 
+  .u-tit{
+    margin-left: 1.vw;
+    /* padding-right: 5vw; */
+    width: 28vw;
+  }
+
   #nickname{
     font-size: 19px;
-    width: 20vw;
+    width: 26vw;
+    font-weight: 600;
     /* padding-bottom: -3px; */
     /* margin-bottom: 3vw; */
     /* max-height: 2px; */
+    /* margin-left: 1vw; */
   }
 
   #overall:focus,
@@ -56,11 +64,12 @@ textarea:focus {
 }
 
   #body {
-    width: 19.5vw;
+    width: 25.5vw;
     height: 5vw;
     padding-bottom: 1vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 1.2px;
+  border-radius: 6px ;
   }
   
   .review-nickname {
@@ -223,6 +232,7 @@ textarea:focus {
 
 .label-div{
   padding-bottom: .6vw;
+  margin-right: 4vw;
 }
 
 .dubR {
@@ -315,9 +325,11 @@ textarea:focus {
   color: rgb(0, 0, 0);
   border: .5px solid #d8d9db;
   border-color: rgb(169, 159, 159);
-  background-color: white;
-  margin-bottom: 7px;
+  background-color: rgb(255, 255, 255);
+  /* max-height: 12vw; */
+  margin-bottom: 4px;
   /* padding-right: 1vw; */
+  /* margin-top: 1vw; */
 }
 
 /* .rev */

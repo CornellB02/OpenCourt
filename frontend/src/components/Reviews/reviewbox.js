@@ -100,6 +100,7 @@ function ReviewsBox() {
       {/* </ul> */}
       <form onSubmit={handleSubmit} className="full-form2">
       <h6 className="dubR">Rate & Review</h6>
+      <div className="u-tit">
         <div className="label-div">
           <label htmlFor="nickname" className="review-label">Nickname:</label>
           <input
@@ -191,6 +192,7 @@ function ReviewsBox() {
               />
         </div>
       <button type="submit">Submit Review</button>
+      </div>
       </form>
     </div>
   );
