@@ -62,6 +62,7 @@ const handleKeyDown = (e) => {
 
     if (matchedRestaurant) {
       history.push(`/restaurants/${matchedRestaurant.id}`);
+      window.location.reload();
     }
   };
 
@@ -157,7 +158,7 @@ const handleKeyDown = (e) => {
                 <a className="space"></a>
                 {restaurants.slice(0, 10).map(restaurant => (
                   <Link to={`/restaurants/${restaurant.id}`} key={restaurant.id}>
-                    <li className={`restaurant-box ${selectedRestaurant === restaurant ? 'highlight' : ''}`} onClick={() => handleRestaurantClick(restaurant)}>
+                    <li className={`restaurant-box ${selectedRestaurant === restaurant ? 'highlight' : ''}`} onClick={() => {handleRestaurantClick(restaurant); }}>
                       <a href="#"></a>
                       <Splash_item_rs restaurant={restaurant} />
                     </li>

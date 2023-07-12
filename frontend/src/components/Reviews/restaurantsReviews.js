@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
-import { getRestaurantReviews } from "../../store/reviews";
+import { getRestaurantReviews, clearRestaurantReviews } from "../../store/reviews";
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./reviews.css"
@@ -19,10 +19,16 @@ function Reviews({ restaurant }) {
 
 
     useEffect(() => {
-        if (restaurant) {
-            dispatch(getRestaurantReviews(restaurant.id));
-        }
-    }, [dispatch, restaurant]);
+    if (restaurant) {
+      dispatch(getRestaurantReviews(restaurant.id));
+    }
+
+    // Clear the reviews state when the component unmounts
+    return () => {
+      dispatch(clearRestaurantReviews());
+    };
+  }, [dispatch, restaurant]);
+
   
     const getTimeElapsed = (createdAt) => {
         const currentTime = moment();

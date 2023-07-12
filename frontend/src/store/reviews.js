@@ -6,7 +6,11 @@ const RECEIVE_RESTAURANT_REVIEWS = "reviews/receiveRestaurantReviews"
 const ADD_NEW_REVIEW ="reviews/addNewReview"
 const UPDATE_REVIEW ="reviews/updateReview"
 const DELETE_REVIEW = "reviews/removeReviews"
+const CLEAR_RESTAURANT_REVIEWS = "reviews/clearRestaurantReviews";
 
+export const clearRestaurantReviews = () => ({
+  type: CLEAR_RESTAURANT_REVIEWS
+});
 
 const receiveUserReviews = (reviews) => ({
     type: RECEIVE_USER_REVIEWS,
@@ -96,6 +100,8 @@ export const removeReview = (reviewId) => async (dispatch) => {
 
 const reviewsReducer = (state = {}, action) => {
   switch (action.type) {
+    case CLEAR_RESTAURANT_REVIEWS:
+      return {};
     case RECEIVE_RESTAURANT_REVIEWS:
       return {
         ...state,

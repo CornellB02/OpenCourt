@@ -36,9 +36,9 @@ const RestaurantShowPage = () => {
     //   };
 
     useEffect(() => {
+      // window.location.reload();
       dispatch(getRestaurant(restaurantId));
       dispatch(getRestaurantReviews(restaurantId)); // Fetch reviews for the restaurant
-      // window.location.reload();
       setShouldRender(true);
     }, [dispatch, restaurantId]);
 
