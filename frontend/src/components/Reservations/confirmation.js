@@ -11,12 +11,16 @@ function ReservationConfirmation() {
   const restaurants = location.state?.restaurants;
 //   console.log(location.state);
 
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
 
   const formatTime = (time) => {
     const [hour, minute] = time.split(":");
     const parsedHour = parseInt(hour);
     const isPM = parsedHour >= 12;
     const hour12 = parsedHour === 0 ? 12 : parsedHour > 12 ? parsedHour - 12 : parsedHour;
+
     return `${hour12}:${minute} ${isPM ? "PM" : "AM"}`;
   };
 
@@ -29,10 +33,10 @@ function ReservationConfirmation() {
         <h5>Reservation Confirmation</h5>
         {reservation && (
           <div>
-            <span className="detail">Name<p className="reserv_det">{reservation.first_name}</p></span>
+            <span className="detail">Name<p className="reserv_det">{capitalizeFirstLetter(reservation.first_name)}</p></span>
             {/* <span className="detail">Name<p className="reserv_det">{restaurants.name}</p></span> */}
             <span className="detail">Phone Number<p className="reserv_det">{reservation.phone_number}</p></span>
-            <span className="detail">Party Size<p className="reserv_det">{reservation.party_size}</p></span>
+            <span className="detail">Party Size<p className="reserv_det">{reservation.party_size || 1}</p></span>
             <span className="detail">Date<p className="reserv_det">{reservation.date}</p></span>
             <span className="detail">Time<p className="reserv_det">{formatTime(reservation.time)}</p></span>
             <div className="confirm-button">
