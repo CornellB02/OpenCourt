@@ -28,5 +28,4 @@ class Reserv < ApplicationRecord
     def assign_default_party_size
       self.party_size ||= 1 if self.party_size.nil?
     end
-end
- xx                                                                                                                                                                                                 x
+end                                                                                                                                                                                           
