@@ -6,7 +6,11 @@ const RECEIVE_RESTAURANT_RESERVS = "reviews/receiveRestaurantReservs"
 const ADD_NEW_RESERV ="reservs/addNewReserv"
 const UPDATE_RESERV ="reservs/updateReserv"
 const DELETE_RESERV = "reservs/removeReservs"
+const CLEAR_USER_RESERVS = "reviews/clearRestaurantReviews";
 
+export const clearUserReservs = () => ({
+  type: CLEAR_USER_RESERVS
+});
 
 const receiveUserReservs = (reservs) => ({
     type: RECEIVE_USER_RESERVS,
@@ -42,14 +46,32 @@ export const getRestaurantReservs = (restaurantId) => async dispatch => {
     }
 }
 
-export const getUserReservs = (userId) => async dispatch => {
-    const res = await csrfFetch(`/api/users/${userId}/reservs`)
-    // debugger
+// export const getUserReservs = (userId) => async dispatch => {
+//     const res = await csrfFetch(`/api/users/${userId}/reservs`)
+//     // debugger
+//     if (res.ok) {
+//       const data = await res.json();
+//     //   debugger
+//       dispatch(receiveUserReservs(data))
+//     }
+// };
+
+export const getUserReservs = () => async (dispatch, getState) => {
+  const state = getState();
+  const sessionUser = state.session.user;
+
+  if (sessionUser) {
+    const res = await csrfFetch(`/api/session/reservs`);
     if (res.ok) {
       const data = await res.json();
-    //   debugger
-      dispatch(receiveUserReservs(data))
+      console.log(data);
+      const reservationsArray = Object.values(data);
+      const userReservs = reservationsArray.filter(
+        (reserv) => reserv.firstName === sessionUser.email.split("@")[0]
+      );
+      dispatch(receiveUserReservs(userReservs));
     }
+  }
 };
 
 export const editReserv = (reservId, reserv) => async (dispatch) => {
@@ -96,6 +118,8 @@ export const removeReserv = (reservId) => async (dispatch) => {
 
 const reservsReducer = (state = {}, action) => {
   switch (action.type) {
+    case CLEAR_USER_RESERVS:
+      return {};
     case RECEIVE_RESTAURANT_RESERVS:
       return {
         ...state,

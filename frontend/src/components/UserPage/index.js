@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getUserReviews } from "../../store/reviews"
 import UserReviews from "../Reviews/userReviews";
+import UserReservs from "../Reservations/userReservations";
+import { getUserReservs } from "../../store/reservs";
 import "./userpage.css";
 
 const Userprofile = () => {
@@ -25,7 +27,8 @@ const Userprofile = () => {
 
   useEffect(() => {
     if (sessionUser) {
-      dispatch(getUserReviews(sessionUser.id));
+      // dispatch(getUserReviews(sessionUser.id));
+      dispatch(getUserReservs(sessionUser.id));
     }
   }, [dispatch, sessionUser]);
 
@@ -61,6 +64,9 @@ const Userprofile = () => {
       </div>
       <div className="review-cont">
         <div id="user-reviews"><UserReviews user={sessionUser}/></div>
+        </div>
+        <div className="review-cont">
+        <div id="user-reviews"><UserReservs /></div>
         </div>
     </div>
   );

@@ -7,7 +7,7 @@ import DeleteReservationButton from "./reservation_remove";
 
 function ReservationConfirmation() {
   const location = useLocation();
-  const reservation = location.state?.reservation;
+  const reservation = location.state?.reservation
   // const restaurants = location.state?.restaurants;
 //   console.log(location.state);
 

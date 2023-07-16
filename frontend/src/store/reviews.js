@@ -54,6 +54,7 @@ export const getUserReviews = () => async (dispatch, getState) => {
     const res = await csrfFetch(`/api/session/reviews`);
     if (res.ok) {
       const data = await res.json();
+      console.log(data)
       const userReviews = data.filter((review) => review.reviewer_firstname === sessionUser.email);
       dispatch(receiveUserReviews(userReviews));
     }
