@@ -1,12 +1,16 @@
-import { useSelector } from "react-redux";
-import { useLocation, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+// import { useLocation, useHistory } from "react-router-dom";
+import { useEffect } from "react";
+import { getUserReviews } from "../../store/reviews"
+import UserReviews from "../Reviews/userReviews";
 import "./userpage.css";
 
 const Userprofile = () => {
   const sessionUser = useSelector((state) => state.session.user);
-
-  const location = useLocation();
-  const history = useHistory();
+  const dispatch = useDispatch();
+  // const userReviews = useSelector((state) => state.reviews.userReviews);
+  // const location = useLocation();
+  // const history = useHistory();
 
   // Extract the part of the email before the "@" sign
   const emailParts = sessionUser.email.split("@");
@@ -18,6 +22,12 @@ const Userprofile = () => {
   // Format the creation date
   const creationDate = new Date(sessionUser.createdAt);
   const formattedDate = `${creationDate.toLocaleString("en-US", { month: "long" })} ${creationDate.getDate()}, ${creationDate.getFullYear()}`;
+
+  useEffect(() => {
+    if (sessionUser) {
+      dispatch(getUserReviews(sessionUser.id));
+    }
+  }, [dispatch, sessionUser]);
 
   return (
     <div className="full-pro">
@@ -48,6 +58,7 @@ const Userprofile = () => {
           </span>
           <p className="join-date">Member since {formattedDate}</p> {/* Display the formatted creation date */}
         </div>
+        <UserReviews user={sessionUser}/>
       </div>
     </div>
   );

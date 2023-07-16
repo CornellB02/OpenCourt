@@ -46,14 +46,18 @@ export const getRestaurantReviews = (restaurantId) => async dispatch => {
     }
 }
 
-export const getUserReviews = (userId) => async dispatch => {
-    const res = await csrfFetch(`/api/users/${userId}/reviews`)
-    // debugger
+export const getUserReviews = () => async (dispatch, getState) => {
+  const state = getState();
+  const sessionUser = state.session.user;
+
+  if (sessionUser) {
+    const res = await csrfFetch(`/api/session/reviews`);
     if (res.ok) {
       const data = await res.json();
-    //   debugger
-      dispatch(receiveUserReviews(data))
+      const userReviews = data.filter((review) => review.reviewer_firstname === sessionUser.email);
+      dispatch(receiveUserReviews(userReviews));
     }
+  }
 };
 
 export const editReview = (reviewId, review) => async (dispatch) => {

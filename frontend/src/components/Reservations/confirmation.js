@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
-import restaurantsReducer from "../../store/restaurants";
+// import restaurantsReducer from "../../store/restaurants";
 import UpdateReservationButton from "./update-reservation";
 import DeleteReservationButton from "./reservation_remove";
 // import Navigation from "../Navigation/index";
@@ -8,7 +8,7 @@ import DeleteReservationButton from "./reservation_remove";
 function ReservationConfirmation() {
   const location = useLocation();
   const reservation = location.state?.reservation;
-  const restaurants = location.state?.restaurants;
+  // const restaurants = location.state?.restaurants;
 //   console.log(location.state);
 
 const capitalizeFirstLetter = (string) => {
