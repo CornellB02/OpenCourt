@@ -9,11 +9,11 @@ import moment from 'moment';
 import DeleteReviewButton from "./review_remove";
 import UpdateReviewButton from "./update-review";
 
-function UserReviews({  }) {
+function UserReviews({ user }) {
     const dispatch = useDispatch();
     // const { reviewId } = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews).reverse());
-  const user = useSelector((state) => state.session.user);
+//   const user = useSelector((state) => state.session.user);
   
     
 
@@ -22,6 +22,10 @@ function UserReviews({  }) {
     if (user) {
       dispatch(getUserReviews(user.id));
     }
+
+    return () => {
+        dispatch(clearRestaurantReviews());
+      };
   }, [dispatch, user]);
 
   

@@ -96,6 +96,7 @@ function SignupFormPage() {
     return dispatch(sessionActions.signup({ email, password }))
       .then(() => {
         history.push("/"); 
+        window.location.reload();
       })
       .catch(async (res) => {
         let data;
