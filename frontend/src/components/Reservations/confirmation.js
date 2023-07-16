@@ -34,7 +34,7 @@ const capitalizeFirstLetter = (string) => {
         {reservation && (
           <div>
             <span className="detail">Name<p className="reserv_det">{capitalizeFirstLetter(reservation.first_name)}</p></span>
-            {/* <span className="detail">Name<p className="reserv_det">{restaurants.name}</p></span> */}
+            <span className="detail">Restaurant Name<p className="reserv_det">{reservation.rname}</p></span>
             <span className="detail">Phone Number<p className="reserv_det">{reservation.phone_number}</p></span>
             <span className="detail">Party Size<p className="reserv_det">{reservation.party_size || 1}</p></span>
             <span className="detail">Date<p className="reserv_det">{reservation.date}</p></span>

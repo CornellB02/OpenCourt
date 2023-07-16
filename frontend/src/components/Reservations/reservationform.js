@@ -10,12 +10,14 @@ function ReservationForm() {
   const {restaurantId} = useParams();
   const history = useHistory();
   const user = useSelector((state) => state.session.user);
+  const restaurant = useSelector((state) => state.restaurants[restaurantId]); // Get the restaurant data from the Redux store
   const [formData, setFormData] = useState({
     party_size: "",
     date: "",
     time: "",
     first_name: user ? user.email.split("@")[0] : "",
-    phone_number: user ? user.phone_number : ""
+    phone_number: user ? user.phone_number : "",
+    rname: restaurant ? restaurant.name : ""
   });
 
   const [timesBooked] = useState(Math.floor(Math.random() * 101));
@@ -27,7 +29,8 @@ function ReservationForm() {
       restaurant_id: restaurantId,
       user_id: user.id,
       phone_number: "0000000000",
-      first_name: user.email.split("@")[0]
+      first_name: user.email.split("@")[0],
+      rname: restaurant.name
     };
     await dispatch(composeReserv(reservData, restaurantId));
     history.push({

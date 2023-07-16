@@ -16,7 +16,7 @@
 #
 class Reserv < ApplicationRecord
     validates :phone_number, presence: true, length: { is: 10 }, format: { with: /\A[0-9]{10}\z/, message: "Your phone number format is invalid." }
-    validates_presence_of :restaurant_id, :user_id, :date, :time, :first_name
+    validates_presence_of :restaurant_id, :user_id, :date, :time, :first_name, :rname
     # validates :party_size, presence: true
     belongs_to :restaurant
     belongs_to :user
