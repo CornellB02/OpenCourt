@@ -13,6 +13,7 @@ function ReviewsBox() {
   // const [rating, setRating] = useState(5);
   // const [validationErrors, setValidationErrors] = useState([]);
   const user = useSelector((state) => state.session.user);
+  const restaurant = useSelector((state) => state.restaurants[restaurantId]); // Get the restaurant data from the Redux store
   // const location = useLocation();
   // const reloadPage = () => {
   //   location.reload();
@@ -26,7 +27,8 @@ function ReviewsBox() {
     ambience: "",
     value: "",
     overall: "",
-    reviewer_firstname: user.email 
+    reviewer_firstname: user.email,
+    restaurant_name: restaurant.name
     // user_id: userId,
     // restaurant_id: restaurantId,
   });

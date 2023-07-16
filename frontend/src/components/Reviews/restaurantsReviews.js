@@ -48,7 +48,7 @@ function Reviews({ restaurant }) {
 
     return (
         <div className="review-list">
-        <h3>{reviewStatement}</h3>
+        <h3 className="rest-rev-st">{reviewStatement}</h3>
     {reviews.length === 0 ? (
       <div>No reviews found for this restaurant.</div>
     ) : 

@@ -14,8 +14,13 @@ function UserReviews({ user }) {
     // const { reviewId } = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews).reverse());
 //   const user = useSelector((state) => state.session.user);
-  
-    
+const restaurants = useSelector((state) => state.restaurants); // Assuming you have the restaurants data in Redux state
+
+const emailParts = user.email.split("@");
+const emailPrefix = emailParts[0];
+
+// Capitalize the first letter of the email prefix
+const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slice(1);
 
 
   useEffect(() => {
@@ -42,12 +47,12 @@ function UserReviews({ user }) {
       };
       
   const reviewCount = reviews.length;
-  const reviewStatement = reviewCount === 1 ? `What ${reviewCount} person is saying` : `What ${reviewCount} people are saying`;
+  const reviewStatement = reviewCount === 1 ? `${capitalizedPrefix} has ${reviewCount} Review` : `${capitalizedPrefix} has ${reviewCount} Reviews`;
 
 
     return (
         <div className="review-list">
-        <h3>{reviewStatement}</h3>
+        <h3 className="user-rev-st">{reviewStatement}</h3>
     {reviews.length === 0 ? (
       <div>No reviews found for this user.</div>
     ) : 
@@ -58,6 +63,7 @@ function UserReviews({ user }) {
                   <div className="reviewer-email"> {review.reviewer_firstname.split('@')[0]}</div>
                 </div>
                 <div className="review-details">
+                        <div className="review-rest-name">{review.restaurant_name}</div>
                 <div className="review-date">
                 Review Left {getTimeElapsed(review.created_at)} Ago
                 </div>
@@ -79,7 +85,7 @@ function UserReviews({ user }) {
                         </div>
                     </div>
                         <div className="review-body">{review.body}</div>
-                        <div></div>
+                        {/* <div></div> */}
                         {user && review.reviewer_firstname === user.email && (
   <div className="review-crud">
       <DeleteReviewButton reviewId={review.id} />

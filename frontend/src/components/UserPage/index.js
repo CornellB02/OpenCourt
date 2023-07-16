@@ -58,8 +58,10 @@ const Userprofile = () => {
           </span>
           <p className="join-date">Member since {formattedDate}</p> {/* Display the formatted creation date */}
         </div>
-        <UserReviews user={sessionUser}/>
       </div>
+      <div className="review-cont">
+        <div id="user-reviews"><UserReviews user={sessionUser}/></div>
+        </div>
     </div>
   );
 };

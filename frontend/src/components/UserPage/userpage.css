@@ -24,6 +24,28 @@
     /* border: 1px solid black; */
 }
 
+#user-reviews{
+    /* margin-top: 2vw; */
+    /* border-top: solid 1px gray; */
+    /* border-bottom: solid 1px gray; */
+    /* max-height: 33vw; */
+    /* color: red; */
+    /* margin-top: 1vw; */
+    /* width: 100%; */
+}
+
+.review-cont {
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    margin-top: 2vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    /* position: absolute; */
+    max-height: 400px; /* Set a fixed maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    /* padding-left  : 10px; Optional: Add padding for better spacing */
+  }
+
 #name-pro {
     margin-left: 2vw;
     font-size: 42px;
