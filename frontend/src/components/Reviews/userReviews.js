@@ -22,6 +22,64 @@ const emailPrefix = emailParts[0];
 // Capitalize the first letter of the email prefix
 const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slice(1);
 
+const getRandomColor = () => {
+    const colors = [
+        "#330000", // Dark Maroon
+        "#660000", // Maroon
+        "#990000", // Crimson Red
+        "#CC0000", // Red
+        "#FF0000", // Pure Red
+        "#CC3333", // Persian Red
+        "#FF3333", // Light Persian Red
+        "#CC6666", // Fuzzy Wuzzy
+        "#FF6666", // Light Fuzzy Wuzzy
+        "#CC9999", // Dust Storm
+        "#FF9999", // Light Dust Storm
+        "#CC0033", // Scarlet
+        "#FF0033", // Light Scarlet
+        "#CC3366", // Dark Ruby
+        "#FF3366", // Ruby
+        "#CC6699", // French Rose
+        "#FF6699", // Light French Rose
+        "#CC99CC", // Thistle
+        "#FF99CC", // Light Thistle
+        "#CC0066", // Rosewood
+        "#FF0066", // Light Rosewood
+        "#CC3399", // Fuchsia Pink
+        "#FF3399", // Light Fuchsia Pink
+        "#CC66CC", // Medium Lavender Magenta
+        "#FF66CC", // Light Medium Lavender Magenta
+        "#CC99FF", // Bright Lavender
+        "#FF99FF", // Light Bright Lavender
+        "#CC0099", // Purple Pizzazz
+        "#FF0099", // Light Purple Pizzazz
+        "#CC33CC", // Medium Orchid
+        "#FF33CC", // Light Medium Orchid
+        "#CC66FF", // Orchid
+        "#FF66FF", // Light Orchid
+        "#CC00CC", // Heliotrope
+        "#FF00CC", // Light Heliotrope
+        "#CC33FF", // Electric Violet
+        "#FF33FF", // Light Electric Violet
+        "#CC00FF", // Fuchsia
+        "#FF00FF", // Light Fuchsia
+        "#CC66FF", // Bright Lavender
+        "#FF66FF", // Light Bright Lavender
+        "#CC99FF", // Bright Lilac
+        "#FF99FF", // Light Bright Lilac
+    ]; // Add more colors as needed
+
+    // Get a random index within the current length of the colors array
+    const randomIndex = Math.floor(Math.random() * colors.length);
+
+    // Extract the color at the random index from the colors array
+    const randomColor = colors[randomIndex];
+
+    // Remove the selected color from the colors array to avoid repetition
+    colors.splice(randomIndex, 1);
+
+    return randomColor;
+  };
 
   useEffect(() => {
     if (user) {
@@ -59,7 +117,7 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
             reviews.map((review) => (
             <div key={review.id} className="review-container">
                 <div className="reviewer-info">
-                <div className="reviewer-circle">{review.reviewer_firstname[0].toUpperCase()} </div>
+                <div className="reviewer-circle"  style={{ backgroundColor: getRandomColor() }}>{review.reviewer_firstname[0].toUpperCase()} </div>
                   <div className="reviewer-email"> {review.reviewer_firstname.split('@')[0]}</div>
                 </div>
                 <div className="review-details">
