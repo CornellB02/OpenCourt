@@ -98,7 +98,7 @@ function Navigation() {
           {/* <div className='magnifi'>cs</div> */}
         </div>
         <button class="search-button" onClick={handleSearchClick}>
-                 {isSearchOpen && <SearchModule isOpen={isSearchOpen} isClose={handleCloseSearch} />}
+                 {/* {isSearchOpen && <SearchModule isOpen={isSearchOpen} isClose={handleCloseSearch} />} */}
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
         {/* <i class="fa-solid fa-magnifying-glass" id='magni'></i> */}

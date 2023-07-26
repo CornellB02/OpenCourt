@@ -118,8 +118,6 @@ export const removeReserv = (reservId) => async (dispatch) => {
 
 const reservsReducer = (state = {}, action) => {
   switch (action.type) {
-    case CLEAR_USER_RESERVS:
-      return {};
     case RECEIVE_RESTAURANT_RESERVS:
       return {
         ...state,

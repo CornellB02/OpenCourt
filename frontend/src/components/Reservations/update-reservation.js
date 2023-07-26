@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { editReview } from "../../store/reviews";
-import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory, useParams} from "react-router-dom";
+import { editReserv } from "../../store/reservs";
 
 function UpdateReservationButton({ reservation }) {
+  const { restaurantId } = useParams()
+  const restaurant = useSelector((state) => state.restaurants[restaurantId])
+  // const reservation = useSelector((state) => state.reservs[reservationId])
   const dispatch = useDispatch();
   const [isUpdating, setIsUpdating] = useState(false);
   const [formData, setFormData] = useState({
@@ -14,18 +17,17 @@ function UpdateReservationButton({ reservation }) {
     time: reservation.time,
     special_request: reservation.special_request,
     restaurant_id: reservation.restaurant_id,
-    // reservation_id: reservation.id
   });
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const handleUpdate = () => {
-    history.push(`/reservation/${reservation.id}/edit`);
+    setIsUpdating(true);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await dispatch(editReview(reservation.id, formData));
+    await dispatch(editReserv(reservation.id, formData));
     setIsUpdating(false);
   };
 
@@ -66,8 +68,6 @@ function UpdateReservationButton({ reservation }) {
             <input
               type="number"
               id="party_size"
-              min="1"
-              max="5"
               value={formData.party_size}
               onChange={(e) =>
                 setFormData({ ...formData, party_size: e.target.value })
@@ -78,10 +78,8 @@ function UpdateReservationButton({ reservation }) {
           <div>
             <label htmlFor="date">Date</label>
             <input
-              type="number"
+              type="date"
               id="date"
-              min="1"
-              max="5"
               value={formData.date}
               onChange={(e) =>
                 setFormData({ ...formData, date: e.target.value })
@@ -92,10 +90,8 @@ function UpdateReservationButton({ reservation }) {
           <div>
             <label htmlFor="time">Time:</label>
             <input
-              type="number"
+              type="time"
               id="time"
-              min="1"
-              max="5"
               value={formData.time}
               onChange={(e) =>
                 setFormData({ ...formData, time: e.target.value })
@@ -108,11 +104,11 @@ function UpdateReservationButton({ reservation }) {
             <input
               type="text"
               id="special_request"
+              placeholder="optional"
               value={formData.special_request}
               onChange={(e) =>
                 setFormData({ ...formData, special_request: e.target.value })
               }
-              required
             />
           </div>
           <button type="submit">Save Changes</button>
