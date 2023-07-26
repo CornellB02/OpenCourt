@@ -90,20 +90,39 @@ export const editReserv = (reservId, reserv) => async (dispatch) => {
     }
 }
 
-export const composeReserv = (reservData, restaurantId) => async (dispatch) => {
-    const response = await csrfFetch(`/api/restaurants/${restaurantId}/reservs`, {
-        method: 'POST',
-        // headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(reservData)
-    });
+// export const composeReserv = (reservData, restaurantId) => async (dispatch) => {
+//     const response = await csrfFetch(`/api/restaurants/${restaurantId}/reservs`, {
+//         method: 'POST',
+//         // headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(reservData)
+//     });
 
-    if (response.ok) {
-        const data = await response.json();
-        dispatch(addNewReserv(data));
-        // return data;
-    }
-    return response;
-}
+//     if (response.ok) {
+//         const data = await response.json();
+//         dispatch(addNewReserv(data));
+//         // return data;
+//     }
+//     return response;
+// }
+
+// Modify composeReserv function to handle response and set id correctly
+export const composeReserv = (reservData, restaurantId) => async (dispatch) => {
+  const response = await csrfFetch(`/api/restaurants/${restaurantId}/reservs`, {
+    method: 'POST',
+    body: JSON.stringify(reservData)
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    // Assuming the response data contains the newly created reservation with the 'id' property set
+    // Modify the data to include the id in the reservData object
+    const updatedReservData = { ...reservData, id: data.id };
+    dispatch(addNewReserv(updatedReservData));
+    return updatedReservData;
+  }
+  return response;
+};
+
 
 
 

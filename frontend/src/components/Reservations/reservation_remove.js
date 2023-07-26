@@ -11,6 +11,7 @@ function DeleteReservationButton({ reservationId }) {
     setIsDeleting(true);
     dispatch(removeReserv(reservationId)).then(() => {
       setIsDeleting(false);
+      window.history.back();
     });
   };
 

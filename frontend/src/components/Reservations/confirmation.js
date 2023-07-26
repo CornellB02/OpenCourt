@@ -4,14 +4,16 @@ import { useLocation, Link } from "react-router-dom";
 import UpdateReservationButton from "./update-reservation";
 import DeleteReservationButton from "./reservation_remove";
 // import Navigation from "../Navigation/index";
+import { useSelector } from "react-redux";
 
 function ReservationConfirmation() {
   const location = useLocation();
-  const reservation = location.state?.reservation
+  const reservation = useSelector((state) => Object.values(state.reservs)[0]);
   // const restaurants = location.state?.restaurants;
 //   console.log(location.state);
 
 const capitalizeFirstLetter = (string) => {
+  if (!string) return ''; // Return an empty string if the input is not defined
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 

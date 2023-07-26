@@ -5,6 +5,7 @@ import { editReserv } from "../../store/reservs";
 
 function UpdateReservationButton({ reservation }) {
   const { restaurantId } = useParams()
+  const history = useHistory();
   const restaurant = useSelector((state) => state.restaurants[restaurantId])
   // const reservation = useSelector((state) => state.reservs[reservationId])
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function UpdateReservationButton({ reservation }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await dispatch(editReserv(reservation.id, formData));
+    history.push("/profile");
     setIsUpdating(false);
   };
 
