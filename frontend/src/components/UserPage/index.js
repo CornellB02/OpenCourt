@@ -129,7 +129,7 @@ const Userprofile = () => {
         <div id="user-reviews"><UserReviews user={sessionUser}/></div>
         </div>
         <div className="review-cont">
-        <div id="user-reviews"><UserReservs /></div>
+        <div id="user-reviews"><UserReservs user={sessionUser}/></div>
         </div>
         <div>
         <Footer />

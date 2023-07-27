@@ -163,7 +163,7 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
               }`}
             ><div className="s-r">Special Requests:</div>{" "}
             {reservation.specialRequest || "N/A"}</div>
-                        <div>
+                        <div className="d-u-b">
                           <UpdateReservationButton reservation={reservation}/>
                           <DeleteReservationButton reservationId={reservation.id}/>
                         </div>

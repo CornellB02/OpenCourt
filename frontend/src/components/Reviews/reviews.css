@@ -330,14 +330,14 @@ textarea:focus {
   font-weight: 200;
 }
 
-.deleteor {
-  /* width: 23vw; */
-  padding-top: 2vw;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  font-size: 12px;
-  
-}
+  .deleteor {
+    /* width: 23vw; */
+    padding-top: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: 12px;
+    
+  }
 
 .delete{
   font-size: 12px;

@@ -19,11 +19,13 @@ function DeleteReservationButton({ reservationId }) {
     <div className="delete-whole">
       <button class="delete-reserv" onClick={() => setIsDeleting(true)}>Delete</button>
       {isDeleting && (
-        <div className="delete-con">
-          <p className="deleteor">Are you sure you want to delete this reservation?</p>
-          <div className="del-but">
-          <button className="del-yes" onClick={handleDelete}>Yes</button>
-          <button className="del-no" onClick={() => setIsDeleting(false)}>No </button>
+        <div className="delete-con1">
+          <span className="deleteor1">Are you sure you want to delete this reservation?</span>
+          <div className="level">
+          <div className="del-but-yes">
+          <button className="del-yes1" onClick={handleDelete}>Yes</button>
+          <button className="del-no1" onClick={() => setIsDeleting(false)}>No </button>
+          </div>
           </div>
         </div>
       )}
