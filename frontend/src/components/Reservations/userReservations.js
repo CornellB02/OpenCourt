@@ -1,16 +1,15 @@
 import { useEffect } from "react";
-import { useParams, useLocation } from 'react-router-dom'
+import { useParams, useLocation, useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 // import { getUserReviews, clearRestaurantReviews } from "../../store/reviews";
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import "./reviews.css"
 import moment from 'moment';
-import DeleteReservationButton from "./reservation_remove";
+import DeleteReservationProfileButton from "./reservation_userpro_delete";
 import UpdateReservationButton from "./update-reservation";
 import { getUserReservs, clearUserReservs } from "../../store/reservs";
 
 function UserReservs({  }) {
+    const history = useHistory();
     const dispatch = useDispatch();
 //   const location = useLocation();
     // const { reviewId } = useParams()
@@ -165,7 +164,7 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
             {reservation.specialRequest || "N/A"}</div>
                         <div className="d-u-b">
                           <UpdateReservationButton reservation={reservation}/>
-                          <DeleteReservationButton reservationId={reservation.id}/>
+                          <DeleteReservationProfileButton reservationId={reservation.id} history={history}/>
                         </div>
                         {/* {user && reservation.first_name === user.email.split("@") && (
    <div className="review-crud">
