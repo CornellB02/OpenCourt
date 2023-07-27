@@ -41,8 +41,8 @@ function UpdateReservationButton({ reservation }) {
     <div className="update-whole">
       <button  className="reserv-update" onClick={handleUpdate}>Update</button>
       {isUpdating && (
-        <form onSubmit={handleSubmit}>
-          <div>
+        <form onSubmit={handleSubmit} className="res-up-form" >
+          <div className="inner-upres-form">
             <label htmlFor="first_name">Name:</label>
             <input
               type="text"
@@ -54,8 +54,8 @@ function UpdateReservationButton({ reservation }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="phone_number">Phone Number</label>
+          <div className="phone_number">
+            <label htmlFor="phone_number">Phone Number:</label>
             <textarea
               id="phone_number"
               value={formData.phone_number}
@@ -65,8 +65,8 @@ function UpdateReservationButton({ reservation }) {
               required
             ></textarea>
           </div>
-          <div>
-            <label htmlFor="party_size">Party Size</label>
+          <div className="party_size">
+            <label htmlFor="party_size">Party Size:</label>
             <input
               type="number"
               id="party_size"
@@ -77,11 +77,11 @@ function UpdateReservationButton({ reservation }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="date">Date</label>
+          <div className="date1">
+            <label htmlFor="date">Date:</label>
             <input
               type="date"
-              id="date"
+              id="date1"
               value={formData.date}
               onChange={(e) =>
                 setFormData({ ...formData, date: e.target.value })
@@ -89,11 +89,11 @@ function UpdateReservationButton({ reservation }) {
               required
             />
           </div>
-          <div>
+          <div className="time1">
             <label htmlFor="time">Time:</label>
             <input
               type="time"
-              id="time"
+              id="time1"
               value={formData.time}
               onChange={(e) =>
                 setFormData({ ...formData, time: e.target.value })
@@ -101,7 +101,7 @@ function UpdateReservationButton({ reservation }) {
               required
             />
           </div>
-          <div>
+          <div className="s-rq">
             <label htmlFor="special_request">Special Request:</label>
             <input
               type="text"
@@ -113,10 +113,12 @@ function UpdateReservationButton({ reservation }) {
               }
             />
           </div>
-          <button type="submit">Save Changes</button>
-          <button type="button" onClick={handleCancel}>
+          {/* <div className="sub-can"> */}
+          <button type="submit" className="submit3">Save Changes</button>
+          <button type="button" className="cancel2" onClick={handleCancel}>
             Cancel
           </button>
+          {/* </div> */}
         </form>
       )}
     </div>

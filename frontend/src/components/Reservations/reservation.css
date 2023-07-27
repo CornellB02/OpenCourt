@@ -62,6 +62,75 @@
   margin-top: 2vw;
 }
 
+.res-up-form{
+  border: 5px solid red;
+  max-height: 325vw;
+}
+
+.inner-upres-form{
+  /* background-color: rebeccapurple; */
+  margin-right: 16vw;
+}
+
+.date1{
+  /* background-color: rebeccapurple; */
+  margin-right: 24.8vw;
+  margin-top: 1vw;
+}
+
+#time1{
+  margin-top: 4vw;
+  position: absolute;
+  top: 66.4vw;
+  right: 65.7vw;
+  /* margin-bottom: 4vw; */
+}
+
+.time1{
+  /* background-color: rebeccapurple; */
+  margin-right: 24.5vw;
+  margin-top: 2.8vw;
+}
+
+.s-rq{
+  /* background-color: rebeccapurple; */
+  margin-right: 16.3vw;
+  width: max-content;
+  margin-top: 2.7vw;
+  margin-bottom: 2.7vw;
+}
+
+#date1{
+  margin-top: 4vw;
+  position: absolute;
+  top: 62.7vw;
+  right: 64.2vw;
+}
+
+.phone_number{
+  margin-top: 1vw;
+  
+}
+
+.party_size{
+  margin-top: 1vw;
+
+}
+
+#party_size{
+  /* background-color: rebeccapurple; */
+  margin-right: 17vw;
+  padding-bottom: -4vw;
+  /* padding-right: vw; */
+  max-width: 35vw;
+}
+
+#phone_number{
+  /* background-color: rebeccapurple; */
+  margin-right: 14vw;
+  padding-bottom: -4vw;
+}
+
 h5 {
   border-bottom: 1px solid #ccc;
   /* justify-content: center; */
@@ -161,6 +230,46 @@ h5 {
 .s-r{
   /* font-size: 16px; */
   /* margin-top: 15px */
+}
+
+.cancel2{
+  margin-bottom: 1.2vw;
+  background-color: rgb(241, 237, 237);
+  border-radius: 4px;
+  color: red;
+  font-size: 16px;
+  padding: 12px 15px;
+  width: 221px;
+  top: 17vw;
+  height: 1.3cm;
+  /* width: 2vw; */
+  /* text-align: center; */
+  /* display: flex; */
+  justify-content: center;
+  /* align-items: center; */
+  /* left: 30vw; */
+  /* padding-left: -22vw; */
+  /* position: absolute; */
+}
+
+.submit3 {
+  background-color: red;
+  /* padding-bottom: 3.2vw; */
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 15px;
+  max-width: 221px;
+  top: 17vw;
+  height: 1.3cm;
+  /* width: 2vw; */
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* left: 30vw; */
+  /* padding-left: -22vw; */
+  /* position: absolute; */
 }
 
 .submit2 {

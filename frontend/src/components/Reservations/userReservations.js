@@ -30,6 +30,7 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
     if (user) {
       dispatch(getUserReservs(user.id));
     }
+    
 
     return () => {
         dispatch(clearUserReservs());
