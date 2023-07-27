@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import "./reviews.css"
 import moment from 'moment';
-// import DeleteReviewButton from "./review_remove";
-// import UpdateReviewButton from "./update-review";
+import DeleteReservationButton from "./reservation_remove";
+import UpdateReservationButton from "./update-reservation";
 import { getUserReservs, clearUserReservs } from "../../store/reservs";
 
 function UserReservs({  }) {
@@ -30,7 +30,7 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
     if (user) {
       dispatch(getUserReservs(user.id));
     }
-    
+
 
     return () => {
         dispatch(clearUserReservs());
@@ -163,7 +163,10 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
               }`}
             ><div className="s-r">Special Requests:</div>{" "}
             {reservation.specialRequest || "N/A"}</div>
-                        {/* <div></div> */}
+                        <div>
+                          <UpdateReservationButton reservation={reservation}/>
+                          <DeleteReservationButton reservationId={reservation.id}/>
+                        </div>
                         {/* {user && reservation.first_name === user.email.split("@") && (
    <div className="review-crud">
       <DeleteReviewButton reviewId={review.id} />
