@@ -282,6 +282,11 @@ margin-left: 7vw;
 width: 3vw;
 }
 
+.d-u-b{
+  margin-left: -12.5vw;
+  padding-top: 1.5vw;
+}
+
 .level{
   /* background-color: yellow; */
   margin-bottom: 2vw;
