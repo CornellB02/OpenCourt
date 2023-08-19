@@ -287,10 +287,8 @@ width: 3vw;
   padding-top: 1.5vw;
 }
 
-
-
 .level{
-  /* background-color: yellow; */
+  background-color: transparent
   margin-bottom: 2vw;
   height: 52px;
   justify-content: center;
