@@ -173,17 +173,6 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
         </div>
     );      
 
-    // return (
-    //   <div className="review-list">
-    //     <h3>Reviews:</h3>
-    //     {reviews &&
-    //       reviews.map((review) => (
-    //         <div key={review.id}>
-    //           <div>{review.id} - {review.user_id} - {review.nickname} - {review.body} - {review.food} - {review.service} - {review.value} - {review.overall}</div>
-    //         </div>
-    //       ))}
-    //   </div>
-    // );
   }
 
 export default UserReservs;
