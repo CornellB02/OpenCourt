@@ -166,6 +166,7 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
                           <UpdateReservationButton reservation={reservation}/>
                           <DeleteReservationProfileButton reservationId={reservation.id} history={history}/>
                         </div>
+                        
                 </div>
             </div>
             ))}
