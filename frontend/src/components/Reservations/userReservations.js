@@ -168,7 +168,6 @@ const capitalizedPrefix = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slic
                         </div>
                     
                 </div>
-                
             </div>
             ))}
         </div>
