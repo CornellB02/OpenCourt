@@ -31,6 +31,7 @@ const Userprofile = () => {
     const colors = [
         "#330000", // Dark Maroon
         "#0000FF", // Blue
+        "#006600", // Green
   "#660000", // Maroon
   "#990000", // Crimson Red
   "#CC0000", // Red
