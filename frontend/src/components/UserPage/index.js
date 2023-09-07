@@ -39,6 +39,7 @@ const Userprofile = () => {
   "#FF0000", // Pure Red
   "#CC3333", // Persian Red
   "#FF3333", // Light Persian Red
+  "#000080", // Navy Blue
   "#CC6666", // Fuzzy Wuzzy
   "#FF6666", // Light Fuzzy Wuzzy
   "#CC9999", // Dust Storm
