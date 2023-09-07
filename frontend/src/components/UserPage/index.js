@@ -30,6 +30,7 @@ const Userprofile = () => {
   const getRandomColor = () => {
     const colors = [
         "#330000", // Dark Maroon
+        "#0000FF", // Blue
   "#660000", // Maroon
   "#990000", // Crimson Red
   "#CC0000", // Red
