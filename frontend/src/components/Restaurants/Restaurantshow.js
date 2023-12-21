@@ -116,7 +116,7 @@ const RestaurantShowPage = () => {
                 <ReservationForm  restaurant={restaurant}/>
                 </div>
                 <div className='additional_info'>
-                  <h2 className="add-h2">Additional Info</h2>
+                  <h2 className="add-h2">Additional Info!</h2>
                   <ol className='add-ol'>
                     <span className='add-icon'>
                     <svg xmlns="http://www.w3.org/2000/svg">
