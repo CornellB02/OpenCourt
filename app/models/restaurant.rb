@@ -22,7 +22,7 @@
 #  delivery        :boolean          default(FALSE)
 #
 class Restaurant < ApplicationRecord
-    validates :name, :phone_number, :neighborhood, :cuisines, :dress_code, :parking_details, :opentime, :closetime, :executive_chef
+    validates :name, :phone_number, :neighborhood, :cuisines, :dress_code, :parking_details, :opentime, :closetime, :executive_chef, presence: true
     validates :phone_number, length: { minimum: 10, maximum: 15 }, format: { with: /\A\d{10}\z|\A\d{3}-\d{3}-\d{4}\z|\A\(\d{3}\)\d{3}-\d{4}\z/ }
     # 1234567890 (10 digits)
     # 123-456-7890 (3 digits, dash, 3 digits, dash, 4 digits)
