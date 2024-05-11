@@ -69,7 +69,6 @@ function Navigation() {
       <NavLink className='nav-logo' exact to='/'><span className='Logo'><img className='nav-logo-img' src={steakbooklogo} alt="" /></span></NavLink>
         <div className="navbar-nav">
           {sessionUser ? <div className='user_logged'>
-            {/* <div className='pro-btn'></div> */}
             <div className='profile1'>
             <ProfileButton user={sessionUser} /> 
             </div>
@@ -79,10 +78,6 @@ function Navigation() {
           <div className='profile1'>
           <UpdatesButton user={sessionUser} /> 
           </div>
-
-
-          {/* <i class="fa-regular fa-calendar"></i>
-          <i class="fa-regular fa-bell"></i> */}
           </div>
            : (
             <div className="authbuttons">
@@ -91,13 +86,10 @@ function Navigation() {
               <button type="button" className="login" onClick={handleLoginClick}><p className='s-up-words'>Sign In</p></button>
             </div>
           )}
-          {/* <div className='magnifi'>cs</div> */}
         </div>
         <button class="search-button" onClick={handleSearchClick}>
-                 {/* {isSearchOpen && <SearchModule isOpen={isSearchOpen} isClose={handleCloseSearch} />} */}
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-        {/* <i class="fa-solid fa-magnifying-glass" id='magni'></i> */}
       </nav>
       {isModalOpen && !sessionUser && (
         <Modal onClose={handleCloseModal}>

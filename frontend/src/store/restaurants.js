@@ -14,7 +14,6 @@ const receiveRestaurants = (restaurants) => ({
     type: RECEIVE_RESTAURANTS,
     restaurants
 })
-
 export const fetchRestaurants = (state) => {
     return state.restaurants ? Object.values(state.restaurants) : [];
 };

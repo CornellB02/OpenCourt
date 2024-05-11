@@ -98,15 +98,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_212549) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name
     t.string "email", null: false
     t.string "phone_number"
-    t.string "review_display_name", default: ""
     t.string "session_token", null: false
-    t.string "primary_dining_location", default: ""
-    t.string "dietary_preferences", default: ""
-    t.string "special_requests", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest", null: false

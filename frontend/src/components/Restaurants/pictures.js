@@ -12,7 +12,7 @@ const PhotosCarousel = () => {
       <h2>Photos</h2>
       <div className="carousel">
         <div className='c_pics'>
-          <div className='space'></div>
+          <div className='space'><>space</></div>
           <a href={`https://steak-book-seeds.s3.amazonaws.com/${restaurant.id}.1.jpeg`} target="_blank" rel="noopener noreferrer">
             <img src={`https://steak-book-seeds.s3.amazonaws.com/${restaurant.id}.1.jpeg`} alt="Restaurant" className="other" />
           </a>
