@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 // import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 // import { faCircleParking } from '@fortawesome/free-solid-svg-icons';
-// import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/css/font-awesome.css';
 import Footer from '../context/footer'
 
 
