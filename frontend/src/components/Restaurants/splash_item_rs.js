@@ -25,7 +25,7 @@ function Splash_item_rs({restaurant}) {
     let minutes = now.getMinutes() + 30 * buttonIndex;
     const hour = now.getHours() + Math.floor(minutes / 60);
     minutes = minutes % 60;
-    return `${hour % 12 || 12}:${minutes.toString().padStart(2, '0')} ${hour < 12 ? 'AM' : 'PM'}`;
+    return `${hour % 12 || 12}:${minutes.toString().padStart(2, '0')} ${hour < 12 ? 'am' : 'pm'}`;
   };
   
 
